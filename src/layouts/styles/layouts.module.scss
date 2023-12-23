@@ -1,0 +1,11 @@
+.autocontainer {
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 55px;
+  &--lg {
+    max-width: 1240px;
+  }
+  &--sm {
+    max-width: 1040px;
+  }
+}

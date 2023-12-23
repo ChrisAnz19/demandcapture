@@ -1,0 +1,60 @@
+@import "styles/main/variables.scss";
+
+.nav {
+  flex-grow: 1;
+  &__inner {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    &-group {
+      display: flex;
+      align-items: center;
+    }
+    &-link {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 8px 20px;
+      //font
+      color: $white;
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1;
+      transition: 0.3s ease-out;
+
+      &._sm {
+        padding: 5px 10px;
+      }
+      svg {
+        width: 1.5em;
+        height: 1.5em;
+        margin-right: 0.7em;
+      }
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        height: 0;
+        width: 60%;
+        background: $primary;
+        opacity: 0;
+        transition: 0.3s ease-out;
+        transform: translateX(-50%);
+      }
+      &:hover {
+        color: $primary;
+
+        &:after {
+          opacity: 1;
+          height: 2px;
+          width: 80%;
+        }
+      }
+    }
+  }
+}
