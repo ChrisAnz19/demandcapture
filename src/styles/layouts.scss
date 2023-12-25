@@ -1,7 +1,9 @@
 .autocontainer {
-  max-width: 1210px;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 55px;
+
   &--lg {
     max-width: 1240px;
   }

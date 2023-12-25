@@ -39,7 +39,7 @@
     font-size: inherit;
     line-height: 1;
     &::placeholder {
-      color: $violet;
+      color: $gray-secondary;
     }
   }
   input:focus,
@@ -460,7 +460,7 @@
   }
 }
 .example {
-  background: $blue-2;
+  background: $black-secondary;
   padding: 20px;
   display: flex;
   flex-direction: column;

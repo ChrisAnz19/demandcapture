@@ -1,23 +1,25 @@
 import React from "react";
-import styles from "./styles/components.module.scss";
 
 export const BUTTON_VARIANTS = {
   DEFAULT: "buttonPrimary--default",
   WHITE: "buttonPrimary--white",
 };
-const shadowClass = "buttonPrimary--shadow";
+const shadowClass = "_shadow";
+const lgClass = "_lg";
 
 const Button = ({
   variant = BUTTON_VARIANTS.DEFAULT,
   shadow = false,
+  lg = false,
   text,
   children,
   ...props
 }) => {
   const getClassName = () => {
-    let className = styles.buttonPrimary;
-    className += ` ${styles[variant]}`;
+    let className = "buttonPrimary";
+    className += ` ${variant}`;
     className += shadow ? ` ${shadowClass}` : "";
+    className += lg ? ` ${lgClass}` : "";
     return className;
   };
 

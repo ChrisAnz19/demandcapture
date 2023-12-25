@@ -19,6 +19,7 @@ const Header = ({ children }) => {
             <Logo />
           </Link>
           {children}
+          <BurgerButton />
         </div>
       </AutoContainer>
     </header>
