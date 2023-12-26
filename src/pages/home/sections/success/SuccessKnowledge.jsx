@@ -1,6 +1,8 @@
 import React from "react";
+import { border1, border2, border3 } from "./svgs/Borders";
 
 const successFolder = process.env.PUBLIC_URL + "/images/success/";
+const borders = [border1, border2, border3];
 
 const SuccessKnowledge = () => {
   return (
@@ -42,9 +44,7 @@ const SuccessKnowledgeItem = ({ iconURl, title, subtitle, index }) => {
   return (
     <div className="successKnowledge__item-wrapper">
       <div className="successKnowledge__item">
-        <div className="successKnowledge__item-bg">
-          <img src={successFolder + `border-${index}.svg`} alt="border" />
-        </div>
+        <div className="successKnowledge__item-bg">{borders[index - 1]}</div>
         <div className="successKnowledge__item-icon">
           <img src={iconURl} alt="incon-finance" />
         </div>

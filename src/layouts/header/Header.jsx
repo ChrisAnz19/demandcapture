@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import { AutoContainer } from "layouts/containers";
 import "./styles.scss";
 
-const Header = ({ children }) => {
+const Header = ({ active, setActive, children }) => {
   return (
-    <header className="header">
+    <header className={`header ${active ? "active" : ""}`}>
       <AutoContainer>
         <div className="header__inner">
           <Link
@@ -19,7 +19,7 @@ const Header = ({ children }) => {
             <Logo />
           </Link>
           {children}
-          <BurgerButton />
+          <BurgerButton active={active} onClick={() => setActive(!active)} />
         </div>
       </AutoContainer>
     </header>
@@ -32,7 +32,9 @@ const BurgerButton = ({ active, ...props }) => {
       type="button"
       className={`burger ${active ? "active" : ""}`}
       {...props}
-    ></button>
+    >
+      <span></span>
+    </button>
   );
 };
 

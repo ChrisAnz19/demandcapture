@@ -8,9 +8,7 @@ const shapeURL =
 const PartnersBanner = () => {
   return (
     <section className="partners">
-      <AutoContainer
-        
-      >
+      <AutoContainer>
         <div className="partners__inner">
           <h3>
             Appointment Setting Is A Facet Of Our Story;
@@ -29,6 +27,7 @@ const PartnersBanner = () => {
                 href={"/"}
                 logoLink={logosURL + "google.png "}
                 title={"google"}
+                addClass="_sm"
               />
               <PartnersItem
                 href={"/"}
@@ -56,9 +55,9 @@ const PartnersBanner = () => {
   );
 };
 
-const PartnersItem = ({ href, logoLink, title }) => {
+const PartnersItem = ({ href, logoLink, title, addClass = "" }) => {
   return (
-    <a className="partners-item" href={href} title={title}>
+    <a className={`partners-item ${addClass}`} href={href} title={title}>
       <img src={logoLink} alt={title} />
     </a>
   );

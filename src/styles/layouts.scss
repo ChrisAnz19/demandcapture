@@ -11,3 +11,23 @@
     max-width: 1040px;
   }
 }
+@include xlg-xxlg {
+  .autocontainer {
+    padding: 0 45px;
+  }
+}
+@include lg-xlg {
+  .autocontainer {
+    padding: 0 34px;
+  }
+}
+@include md-lg {
+  .autocontainer {
+    padding: 0 25px;
+  }
+}
+@include xsm-sm {
+  .autocontainer {
+    padding: 0 18px;
+  }
+}

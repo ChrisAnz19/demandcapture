@@ -3,9 +3,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import "./styles.scss";
-const Nav = () => {
+const Nav = ({ active }) => {
   return (
-    <nav className="nav">
+    <nav className={`nav ${active ? "active" : ""}`}>
       <div className="nav__inner">
         <div className="nav__inner-links">
           <NavLink

@@ -1,4 +1,5 @@
 @import "styles/main/variables.scss";
+@import "styles/main/mixin.scss";
 
 .footer {
   &__contact {
@@ -157,6 +158,95 @@
 
     &:hover {
       opacity: 1;
+    }
+  }
+}
+
+@include xlg-xxlg {
+  .footer {
+    &__inner {
+      row-gap: 40px;
+      &-info {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 15px;
+
+        &-social {
+          width: 100%;
+        }
+
+        p {
+          font-size: 12px;
+          max-width: 360px;
+          padding-left: 1.5em;
+          border-left: 1px solid rgba($white, 0.2);
+        }
+      }
+      &-links {
+        justify-content: space-between;
+        width: calc(100% - 400px);
+        max-width: 500px;
+        flex-grow: unset;
+      }
+      &-news {
+        width: 375px;
+      }
+    }
+  }
+}
+@include md-lg {
+  .footer {
+    &__contact {
+      padding: 25px 20px;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 700px;
+      text-align: center;
+    }
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+
+      &-info {
+        flex-direction: column;
+        width: unset;
+        margin: unset;
+        text-align: center;
+
+        p {
+          padding: 0;
+          border: 0;
+        }
+        &-social {
+          justify-content: center;
+        }
+      }
+
+      &-news {
+        padding: 35px 25px;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        max-width: 500px;
+        border-top: 1px solid rgba($white, 0.1);
+        border-bottom: 1px solid rgba($white, 0.1);
+      }
+      &-links {
+        order: 1;
+        width: 100%;
+      }
+    }
+  }
+}
+@include xxsm-xsm {
+  .footer {
+    &__inner {
+      &-news {
+        padding: 35px 0;
+      }
     }
   }
 }

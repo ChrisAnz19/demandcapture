@@ -5,6 +5,7 @@ import Button from "components/Button";
 
 const bannerURL = process.env.PUBLIC_URL + "/images/hero/hero-1.png";
 const bgURL = process.env.PUBLIC_URL + "/images/hero/hero-bg.png";
+const bgBannerURL = process.env.PUBLIC_URL + "/images/hero/hero.png";
 
 const Hero = () => {
   return (
@@ -30,6 +31,9 @@ const Hero = () => {
           </div>
         </div>
         <div className="bg">
+          <div className="bg__image _man">
+            <img src={bgBannerURL} alt="bg" />
+          </div>
           <div className="bg__image">
             <img src={bgURL} alt="bg" />
           </div>

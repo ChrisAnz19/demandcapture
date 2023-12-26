@@ -13,59 +13,61 @@ const Privilegies = () => {
             <h5>Quality Connections, Measurable Results</h5>
           </div>
           <div className="privilegiesGraph">
-            <div className="privilegiesGraph__column">
-              <div className="privilegiesGraph__column-list">
-                <strong>
-                  Client ICP & <br />
-                  Requirements Defined
-                </strong>
-                <ul>
-                  <li>
-                    <span>Social Profiles</span>
-                  </li>
-                  <li>
-                    <span>Company News</span>
-                  </li>
-                  <li>
-                    <span>Brand Insights</span>
-                  </li>
-                  <li>
-                    <span>Sales Activity</span>
-                  </li>
-                </ul>
+            <div className="privilegiesGraph__columns">
+              <div className="privilegiesGraph__column">
+                <div className="privilegiesGraph__column-list">
+                  <strong>
+                    Client ICP & <br />
+                    Requirements Defined
+                  </strong>
+                  <ul>
+                    <li>
+                      <span>Social Profiles</span>
+                    </li>
+                    <li>
+                      <span>Company News</span>
+                    </li>
+                    <li>
+                      <span>Brand Insights</span>
+                    </li>
+                    <li>
+                      <span>Sales Activity</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="privilegiesGraph__column-list">
+                  <strong>Outbound Activity by DemandCapture</strong>
+                  <span>25,000+ Monthly Calls</span>
+                </div>
               </div>
-              <div className="privilegiesGraph__column-list">
-                <strong>Outbound Activity by DemandCapture</strong>
-                <span>25,000+ Monthly Calls</span>
-              </div>
-            </div>
-            <div className="privilegiesGraph__column">
-              <div className="privilegiesGraph__column-list">
-                <strong>KnowledgeCore Deployed</strong>
-                <ul>
-                  <li>
-                    <span>CoreFocus</span>
-                  </li>
-                  <li>
-                    <span>CoreConnect</span>
-                  </li>
-                  <li>
-                    <span>CoreNow</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="privilegiesGraph__column-list">
-                <strong>Appointments Set by DemandCapture</strong>
-                <span>200+ Integrations</span>
-                <div className="privilegiesGraph-group">
-                  <img
-                    src={imagesURL + "brands/Salesforce.com_logo.png"}
-                    alt="salesforce"
-                  />
-                  <img
-                    src={imagesURL + "brands/2560px-hubspot_logo.png"}
-                    alt="hubspot"
-                  />
+              <div className="privilegiesGraph__column">
+                <div className="privilegiesGraph__column-list">
+                  <strong>KnowledgeCore Deployed</strong>
+                  <ul>
+                    <li>
+                      <span>CoreFocus</span>
+                    </li>
+                    <li>
+                      <span>CoreConnect</span>
+                    </li>
+                    <li>
+                      <span>CoreNow</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="privilegiesGraph__column-list">
+                  <strong>Appointments Set by DemandCapture</strong>
+                  <span>200+ Integrations</span>
+                  <div className="privilegiesGraph-group">
+                    <img
+                      src={imagesURL + "brands/Salesforce.com_logo.png"}
+                      alt="salesforce"
+                    />
+                    <img
+                      src={imagesURL + "brands/2560px-hubspot_logo.png"}
+                      alt="hubspot"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
