@@ -7,7 +7,9 @@ import SystemBanner from "./sections/SystemBanner";
 
 import "./styles.scss";
 import Privilegies from "./sections/Privilegies";
-import Success from "./sections/Success";
+import Success from "./sections/success/Success";
+import CaseStudy from "./sections/CaseStudy";
+import Footer from "layouts/footer/Footer";
 
 const Home = () => {
   return (
@@ -37,6 +39,8 @@ const Home = () => {
         </p>
       </InfoBox>
       <Success />
+      <CaseStudy />
+      <Footer />
     </>
   );
 };

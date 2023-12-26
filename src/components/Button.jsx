@@ -30,6 +30,14 @@ const Button = ({
     </button>
   );
 };
+const IconButton = ({ icoURL, children, ...props }) => {
+  return (
+    <button type="button" className={"buttonIco"} {...props}>
+      {icoURL && <img src={icoURL} />}
+      {children && children}
+    </button>
+  );
+};
 
-export { Button };
+export { Button, IconButton };
 export default Button;
