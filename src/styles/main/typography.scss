@@ -13,6 +13,9 @@ h4 {
 }
 h5 {
   font-size: 26px;
+  &._lg {
+    font-size: 28px;
+  }
   &._sm {
     font-size: 24px;
   }
@@ -88,6 +91,9 @@ p {
   }
   h5 {
     font-size: 24px;
+    &._lg {
+      font-size: 26px;
+    }
     &._sm {
       font-size: 22px;
     }
@@ -120,6 +126,9 @@ p {
   }
   h5 {
     font-size: 20px;
+    &._lg {
+      font-size: 22px;
+    }
     &._sm {
       font-size: 20px;
     }
