@@ -45,8 +45,9 @@ const Hero = () => {
                   <img src={shapeUrl} alt="shape" />
                 </div>
               </div>
+              <div className="hero__item-bg"></div>
             </div>
-            <div className="hero__item _gradient">
+            <div className="hero__item">
               <div className="hero__item-content">
                 <div className="hero__item-group">
                   <h5 className="_lg">Professional</h5>
@@ -75,6 +76,7 @@ const Hero = () => {
                   <img src={shapeUrl} alt="shape" />
                 </div>
               </div>
+              <div className="hero__item-bg _gradient"></div>
             </div>
             <div className="hero__item">
               <div className="hero__item-content">
@@ -105,6 +107,7 @@ const Hero = () => {
                   <img src={shapeUrl} alt="shape" />
                 </div>
               </div>
+              <div className="hero__item-bg"></div>
             </div>
           </div>
           <div className="bg">

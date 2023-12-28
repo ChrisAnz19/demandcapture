@@ -76,8 +76,7 @@
           flex-direction: column;
           gap: 8px;
         }
-        &::before {
-          content: "";
+        &-bg {
           width: 100%;
           height: calc(100% - 70px);
           position: absolute;
@@ -86,9 +85,7 @@
           border-radius: 12px;
           background: $primary-0;
           pointer-events: none;
-        }
-        &._gradient {
-          &::before {
+          &._gradient {
             background: linear-gradient(80deg, #6bf5f6 0%, #a057f8 100%);
           }
         }
