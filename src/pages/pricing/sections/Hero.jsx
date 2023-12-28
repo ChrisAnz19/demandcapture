@@ -103,9 +103,7 @@ const Hero = () => {
                 </div>
                 <div className="hero__item-shape">
                   <img src={shapeUrl} alt="shape" />
-                </div>  <div className="hero__item-shape">
-                <img src={shapeUrl} alt="shape" />
-              </div>
+                </div>
               </div>
             </div>
           </div>
