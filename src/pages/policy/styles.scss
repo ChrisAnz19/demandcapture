@@ -1,0 +1,89 @@
+@import "styles/main/variables.scss";
+@import "styles/main/mixin.scss";
+
+.policy {
+  position: relative;
+  &__inner {
+    padding: 54px 0 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    &-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+  h2 {
+    color: $black-2;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  h6 {
+    font-size: 16px;
+    color: $gray-5;
+  }
+  p {
+    color: $gray-5;
+    line-height: 1.35;
+  }
+  .list {
+    color: $gray-5;
+    font-size: 16px;
+    font-family: $font-primary;
+    padding-left: 10px;
+    gap: 0;
+    line-height: 1.35;
+    &__item {
+      font-size: inherit;
+      font-family: inherit;
+      line-height: inherit;
+      &::before {
+        background: currentColor;
+        top: 8.5px;
+        width: 5px;
+        height: 5px;
+      }
+    }
+  }
+  .bg {
+    max-height: 640px;
+    filter: blur(162px);
+  }
+  .autocontainer {
+    max-width: 995px;
+  }
+}
+
+// 1180
+@include xlg-xxlg {
+  .policy {
+    &__inner {
+      padding: 34px 0 180px;
+    }
+  }
+}
+// 1024
+@include lg-xlg {
+  .policy {
+    &__inner {
+      padding: 0 0 180px;
+      gap: 40px;
+    }
+  }
+}
+// 570
+@include xsm-sm {
+  .policy {
+    &__inner {
+      &-content {
+        gap: 18px;
+      }
+    }
+  }
+}
