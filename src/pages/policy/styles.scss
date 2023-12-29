@@ -63,7 +63,7 @@
 @include xlg-xxlg {
   .policy {
     &__inner {
-      padding: 34px 0 180px;
+      padding: 34px 0 150px;
     }
   }
 }
@@ -71,7 +71,7 @@
 @include lg-xlg {
   .policy {
     &__inner {
-      padding: 0 0 180px;
+      padding: 0 0 130px;
       gap: 40px;
     }
   }
@@ -80,6 +80,7 @@
 @include xsm-sm {
   .policy {
     &__inner {
+      padding: 0 0 100px;
       &-content {
         gap: 18px;
       }
