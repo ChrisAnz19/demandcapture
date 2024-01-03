@@ -51,14 +51,12 @@ const Features = () => {
               className={`features__item ${item.order ? item.order : ""}`}
               key={i}
             >
-              <div className="features__item-image bgBorder">
+              <div className="features__item-image">
                 <div
                   className={`ratioImage ${item.mixBlend ? item.mixBlend : ""}`}
                 >
                   <img src={imagesUrl + item.image} alt={item.alt} />
                 </div>
-                <span className="bgBorder__shape"></span>
-                <span className="bgBorder__shape _top"></span>
               </div>
               <div className="features__item-content">
                 <div className="box box--secondary">

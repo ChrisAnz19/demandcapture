@@ -18,7 +18,7 @@ const Help = () => {
                 details with us. We're here to assist you every step of the way!
               </p>
             </div>
-            <div className="contacts__container bgBorder">
+            <div className="contacts__container">
               <div className="contacts__container-wrapper">
                 <h5>Send us a Message</h5>
                 <div className="contacts__container-form">
@@ -62,8 +62,6 @@ const Help = () => {
                   <span>Contact</span>
                 </button>
               </div>
-              <span className="bgBorder__shape"></span>
-              <span className="bgBorder__shape _top"></span>
             </div>
           </div>
         </AutoContainer>
