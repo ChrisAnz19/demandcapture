@@ -8,6 +8,7 @@ import { Policy, Terms } from "pages/policy";
 import Footer from "layouts/footer/Footer";
 import OurProcess from "pages/OurProcess/OurProcess";
 import Case from "pages/case";
+import Contact from "pages/contact";
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -26,6 +27,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/policy" element={<Policy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/contact-us" element={<Contact />} />
         </Routes>
         <Footer />
       </BrowserRouter>
