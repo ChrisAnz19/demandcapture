@@ -59,7 +59,7 @@
   }
 }
 .features {
-  padding: 155px 0 290px;
+  padding: 155px 0 154px;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -296,7 +296,7 @@
     padding: 100px 0 200px;
   }
   .features {
-    padding: 130px 0 260px;
+    padding: 130px 0 130px;
     &__inner {
       gap: 170px;
     }
@@ -305,7 +305,7 @@
 // 1024
 @include lg-xlg {
   .features {
-    padding: 100px 0 220px;
+    padding: 100px 0 120px;
     &__inner {
       gap: 140px;
     }
@@ -339,7 +339,7 @@
     }
   }
   .features {
-    padding: 80px 0 190px;
+    padding: 80px 0 100px;
     &__inner {
       gap: 100px;
     }
@@ -419,7 +419,7 @@
     }
   }
   .features {
-    padding: 60px 0 160px;
+    padding: 60px 0 80px;
     &__inner {
       gap: 70px;
     }
