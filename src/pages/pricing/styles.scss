@@ -2,6 +2,9 @@
 @import "styles/main/mixin.scss";
 
 .hero {
+  position: relative;
+  z-index: 0;
+
   &--sm {
     min-height: unset;
     .hero {
@@ -145,7 +148,7 @@
     &--sm {
       .hero {
         &__inner {
-          padding: 0 0 196px;
+          padding: 50px 0 196px;
           &-row {
             flex-wrap: wrap;
             justify-content: center;
@@ -168,7 +171,7 @@
     &--sm {
       .hero {
         &__inner {
-          padding: 0 0 166px;
+          padding: 50px 0 166px;
           &-row {
             flex-wrap: wrap;
             justify-content: center;
@@ -197,7 +200,7 @@
       .hero {
         &__inner {
           gap: 40px;
-          padding: 0 0 136px;
+          padding: 50px 0 136px;
           &-row {
             gap: 60px;
           }
@@ -216,7 +219,7 @@
       .hero {
         &__inner {
           gap: 30px;
-          padding: 0 0 100px;
+          padding: 50px 0 100px;
           &-row {
             gap: 30px;
           }

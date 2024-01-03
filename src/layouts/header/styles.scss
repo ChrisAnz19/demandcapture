@@ -30,7 +30,7 @@
     transition-duration: 0.5s;
   }
 
-  & + section {
+  &:not(._white) + section {
     padding-top: 118px;
   }
   &._white {
@@ -101,6 +101,7 @@
   }
 }
 
+//1180px
 @include xlg-xxlg {
   .header {
     &__inner {
@@ -111,6 +112,8 @@
     }
   }
 }
+
+// 1024px
 @include lg-xlg {
   .header {
     padding: 20px 0;
@@ -121,6 +124,59 @@
       .burger {
         display: block;
         z-index: 2;
+      }
+    }
+    &:not(._white) + section {
+      padding-top: 92px;
+    }
+    &._white {
+      & + section {
+        margin-top: 92px;
+      }
+    }
+  }
+}
+
+// 700px
+@include sm-md {
+  .header {
+    padding: 15px 0;
+
+    &__inner {
+      &-logo {
+        .logo {
+          font-size: 16px;
+        }
+      }
+    }
+    &:not(._white) + section {
+      padding-top: 76px;
+    }
+    &._white {
+      & + section {
+        margin-top: 76px;
+      }
+    }
+  }
+}
+// 570px
+@include xsm-sm {
+  .header {
+    padding: 13px 0;
+
+    &__inner {
+      &-logo {
+        .logo {
+          font-size: 14px;
+        }
+      }
+    }
+    &:not(._white) + section {
+      padding-top: 66px;
+    }
+    &._white {
+      & + section {
+        margin-top: 66px;
       }
     }
   }

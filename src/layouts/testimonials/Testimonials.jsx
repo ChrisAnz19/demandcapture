@@ -9,10 +9,6 @@ const Testimonials = () => {
     <>
       <TestimonialsNote />
       <TestimonialsSwiper />
-      <br />
-      <br />
-      <br />
-      <br />
     </>
   );
 };

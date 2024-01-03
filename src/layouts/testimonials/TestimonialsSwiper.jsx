@@ -16,7 +16,9 @@ const TestimonialsSwiper = () => {
         <div className="testimonials__inner">
           <div className="testimonials__inner-title">
             <strong>SATISFIED Clients </strong>
-            <h3>OUR Testimonials</h3>
+            <h3>
+              OUR <br /> Testimonials
+            </h3>
             <p>
               Navigating success through collaboration. Quality Connections,
               Measurable Results.
