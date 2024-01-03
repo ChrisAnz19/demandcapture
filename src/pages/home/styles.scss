@@ -13,7 +13,7 @@
 .hero {
   position: relative;
   display: flex;
-  min-height: calc(100vh - 160px);
+  min-height: 100vh;
 
   &__inner {
     display: flex;
@@ -1025,8 +1025,6 @@
 
 @include xlg-xxlg {
   .hero {
-    min-height: calc(100vh - 135px);
-
     &__inner {
       &-content {
         width: calc(50% - 50px);
@@ -1162,7 +1160,7 @@
 }
 @include md-lg {
   .hero {
-    min-height: calc(100vh - 110px);
+    min-height: 100dvh;
 
     &__inner {
       &-content {
@@ -1404,8 +1402,6 @@
 }
 @include xsm-sm {
   .hero {
-    min-height: 100vh;
-    min-height: 100dvh;
     &__inner {
       h1 {
         font-size: 42px;

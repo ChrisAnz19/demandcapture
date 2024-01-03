@@ -136,11 +136,6 @@
 
 // 1160
 @include xlg-xxlg {
-  .hero {
-    &--about {
-      min-height: calc(100vh - 156px);
-    }
-  }
   .customers {
     &--about {
       .customers {
@@ -171,11 +166,6 @@
 }
 // 1024
 @include lg-xlg {
-  .hero {
-    &--about {
-      min-height: calc(100vh - 127px);
-    }
-  }
   .customers {
     &--about {
       .customers {
@@ -210,11 +200,6 @@
 }
 // 840
 @include md-lg {
-  .hero {
-    &--about {
-      min-height: calc(100vh - 117px);
-    }
-  }
   .customers {
     &--about {
       .customers {
@@ -253,11 +238,6 @@
 }
 // 700
 @include sm-md {
-  .hero {
-    &--about {
-      min-height: calc(100vh - 109px);
-    }
-  }
   .customers {
     &--about {
       .customers {
@@ -298,7 +278,6 @@
 @include xsm-sm {
   .hero {
     &--about {
-      min-height: 100vh;
       .hero {
         &__inner {
           &-content {

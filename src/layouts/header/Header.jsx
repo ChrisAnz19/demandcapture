@@ -16,7 +16,11 @@ const Header = ({ active, setActive, headerStyle, children }) => {
         headerStyle || ""
       }`}
     >
-      <AutoContainer>
+      <AutoContainer
+        style={{
+          maxWidth: 2000,
+        }}
+      >
         <div className="header__inner">
           <Link
             to={"/"}

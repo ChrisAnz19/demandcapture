@@ -3,10 +3,10 @@ import Hero from "./sections/Hero";
 import "./styles.scss";
 import { FAQ, Testimonials } from "layouts";
 
-const Pricing = () => {
+const Pricing = ({ showContactPopup }) => {
   return (
     <>
-      <Hero />
+      <Hero showContactPopup={showContactPopup} />
       <Testimonials />
       <FAQ />
     </>

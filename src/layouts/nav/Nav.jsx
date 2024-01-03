@@ -3,7 +3,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import "./styles.scss";
-const Nav = ({ active, isHome }) => {
+const Nav = ({ active, isHome, showContactPopup }) => {
   return (
     <nav className={`nav ${active ? "active" : ""}`}>
       <div className="nav__inner">
@@ -14,7 +14,11 @@ const Nav = ({ active, isHome }) => {
             children="Our Process"
           />
           <NavLink className="nav-link" to="/about-us" children="About Us" />
-          <NavLink className="nav-link" to="/case-study" children="Case Study" />
+          <NavLink
+            className="nav-link"
+            to="/case-study"
+            children="Case Study"
+          />
           <NavLink className="nav-link" to="/pricing" children="Pricing" />
         </div>
         <div className="nav__inner-buttons">
@@ -22,6 +26,7 @@ const Nav = ({ active, isHome }) => {
             variant={isHome ? BUTTON_VARIANTS.WHITE : BUTTON_VARIANTS.DEFAULT}
             shadow
             text={"Contact Sales"}
+            onClick={showContactPopup}
           />
         </div>
       </div>

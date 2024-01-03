@@ -1,15 +1,31 @@
 import React from "react";
+import { createPortal } from "react-dom";
 
-const PopUp = () => {
+const PopUp = ({ close }) => {
   const iconURL = process.env.PUBLIC_URL + "/images/icons/";
-  return (
+
+  return createPortal(
     <>
       <div className="popUp">
         <div className="popUp__inner">
           <div className="popUp__inner-content">
-            <button className="popUp__inner-close">
+            <button className="popUp__inner-close" onClick={close}>
               <img src={iconURL + "cancel.svg"} alt="canscel" />
             </button>
+            <p
+              style={{
+                color: "red",
+                textAlign: "center",
+                lineHeight: 1,
+              }}
+            >
+              this is info will not exists in production
+              <br />
+              or within next update
+              <br />
+              <br />
+              <strong>ohyzyr@gmail.com</strong>
+            </p>
             <div className="popUp__inner-group">
               <div className="popUp__inner-ico">
                 <img src={iconURL + "logo-sm.svg"} alt="logo" />
@@ -47,6 +63,7 @@ const PopUp = () => {
               <button
                 type="button"
                 className="buttonPrimary buttonPrimary--default _shadow"
+                onClick={close}
               >
                 <span>Submit</span>
               </button>
@@ -54,7 +71,8 @@ const PopUp = () => {
           </div>
         </div>
       </div>
-    </>
+    </>,
+    document.getElementById("popups")
   );
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { AutoContainer } from "layouts/containers";
 
-const Hero = () => {
+const Hero = ({ showContactPopup }) => {
   const bgURL = process.env.PUBLIC_URL + "/images/pricing/hero-bg.png";
   const shapeUrl = process.env.PUBLIC_URL + "/images/pricing/hero-shape.png";
   return (
@@ -26,7 +26,10 @@ const Hero = () => {
                     <br />
                     <span>Accelerate Your Pipeline</span>
                   </p>
-                  <button className="buttonPrimary buttonPrimary--default">
+                  <button
+                    className="buttonPrimary buttonPrimary--default"
+                    onClick={showContactPopup}
+                  >
                     <span>Contact Sales</span>
                   </button>
                 </div>
@@ -56,7 +59,10 @@ const Hero = () => {
                     <br />
                     <span>All Your Requirements</span>
                   </p>
-                  <button className="buttonPrimary buttonPrimary--default">
+                  <button
+                    className="buttonPrimary buttonPrimary--default"
+                    onClick={showContactPopup}
+                  >
                     <span>Contact Sales</span>
                   </button>
                 </div>
@@ -87,7 +93,10 @@ const Hero = () => {
                     <br />
                     <span>Scalability In Mind</span>
                   </p>
-                  <button className="buttonPrimary buttonPrimary--default">
+                  <button
+                    className="buttonPrimary buttonPrimary--default"
+                    onClick={showContactPopup}
+                  >
                     <span>Contact Sales</span>
                   </button>
                 </div>

@@ -4,15 +4,18 @@ import { AutoContainer } from "layouts/containers";
 import "./styles.scss";
 import Button, { BUTTON_VARIANTS, IconButton } from "components/Button";
 import Input, { InputWrapper } from "components/Input";
-import { Link, useNavigate } from "react-router-dom";
+import {
+  Link,
+  // useNavigate
+} from "react-router-dom";
 
 const icoURL = process.env.PUBLIC_URL + "/images/icons/socials/";
 
-const Footer = () => {
+const Footer = ({ showContactPopup }) => {
   return (
     <footer className="footer">
       <AutoContainer>
-        <FooterContact />
+        <FooterContact showContactPopup={showContactPopup} />
         <div className="footer__inner">
           <div className="footer__inner-info">
             <Logo white />
@@ -66,9 +69,9 @@ const Footer = () => {
   );
 };
 
-const FooterContact = () => {
-  const navigate = useNavigate();
-  const navToContacts = () => navigate("/contact-us");
+const FooterContact = ({ showContactPopup }) => {
+  // const navigate = useNavigate();
+  // const navToContacts = () => navigate("/contact-us");
   return (
     <div className="footer__contact">
       <h6>
@@ -79,7 +82,7 @@ const FooterContact = () => {
         variant={BUTTON_VARIANTS.WHITE}
         text="Contact Sales"
         shadow
-        onClick={navToContacts}
+        onClick={showContactPopup}
       />
     </div>
   );
