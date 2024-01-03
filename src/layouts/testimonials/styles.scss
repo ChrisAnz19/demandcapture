@@ -1,0 +1,298 @@
+@import "styles/main/mixin.scss";
+@import "styles/main/variables.scss";
+
+.tNote {
+  position: relative;
+  padding: 25px 0;
+
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: $black-secondary;
+    z-index: -1;
+  }
+  &__inner {
+    position: relative;
+    background: red;
+    display: flex;
+    z-index: 0;
+
+    color: $white;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      width: 100px;
+      height: 100px;
+      z-index: -1;
+    }
+    &:after {
+      top: -20px;
+      right: -20px;
+      background: linear-gradient(91deg, #9575f7 -15.37%, #70e1f6 214.03%);
+    }
+    &:before {
+      bottom: -20px;
+      left: -20px;
+      background: linear-gradient(270deg, #9575f7 -0.8%, #70e1f6 99.19%);
+    }
+
+    &-primary {
+      width: 58%;
+      background: $primary-0;
+      padding: 55px 35px;
+    }
+
+    &-secondary {
+      width: 42%;
+      background: $black-secondary;
+      padding: 55px 25px;
+    }
+
+    p {
+      color: inherit;
+      font-family: $font-primary;
+      font-style: normal;
+      line-height: 1.4;
+      text-align: center;
+      letter-spacing: 0.02em;
+      text-transform: capitalize;
+
+      b {
+        font-weight: 900;
+      }
+    }
+    h5 {
+      color: inherit;
+      font-family: $font-chivo;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 1.2;
+      text-transform: capitalize;
+      margin-bottom: 1em;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      font-size: 20px;
+      gap: 1em;
+
+      li {
+        position: relative;
+        padding-left: 1.5em;
+
+        &:after {
+          position: absolute;
+          content: "";
+          top: 50%;
+          left: 0.5em;
+          width: 6px;
+          height: 6px;
+          background: currentColor;
+          border-radius: 50%;
+          transform: translate(-50%, -55%);
+        }
+      }
+    }
+  }
+}
+.testimonials {
+  overflow: hidden;
+  color: $white;
+  background: $black-secondary;
+  padding: 110px 0 90px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      flex-shrink: 0;
+      width: 350px;
+      padding-right: 25px;
+      h3 {
+        color: inherit;
+        font-family: $font-secondary;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      strong {
+        position: relative;
+
+        color: $primary-2;
+        font-family: $font-secondary;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.1;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+
+        padding: 0 1.8em;
+
+        &:before,
+        &:after {
+          position: absolute;
+          content: "";
+          top: 50%;
+          width: 100%;
+          height: 2px;
+          transform: translateY(-100%);
+          width: 1.2em;
+          background: currentColor;
+        }
+        &:before {
+          left: 0;
+        }
+        &:after {
+          right: 0;
+          display: none;
+        }
+      }
+      p {
+        width: 220px;
+
+        //font
+        color: inherit;
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+      }
+      &-arrows {
+        display: flex;
+        gap: 5px;
+      }
+    }
+    &-swiper {
+      flex-shrink: 0;
+      width: calc(50vw + 160px);
+      .swiper {
+        padding-right: 5vw;
+      }
+      .swiper-slide {
+        height: unset !important;
+        width: 270px;
+      }
+    }
+  }
+  &__slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 70px 25px 30px 30px;
+    background: $primary-0;
+    height: 100%;
+
+    transition: 0.2s ease-out;
+
+    &:before {
+      position: absolute;
+      top: 10px;
+      left: 25px;
+
+      content: "”";
+      display: inline-flex;
+
+      color: inherit;
+      font-family: $font-chivo;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 116px;
+      line-height: 1;
+      text-transform: capitalize;
+    }
+    p {
+      flex-grow: 1;
+
+      //font
+      color: inherit;
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.2;
+      text-transform: capitalize;
+    }
+    .swiper-slide-active & {
+      color: $black;
+      background: $white;
+    }
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+
+    gap: 0.8em;
+    font-size: 16px;
+
+    &-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.65em;
+      height: 2.65em;
+      border: 3px solid $white;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+
+      img {
+        width: 105%;
+        height: 105%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: inherit;
+      }
+    }
+    &-content {
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 3.45em);
+      white-space: nowrap;
+
+      strong {
+        color: inherit;
+        font-family: $font-chivo;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 1em;
+        line-height: 1.1;
+        text-transform: capitalize;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      span {
+        color: inherit;
+        font-family: $font-chivo;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.1;
+        text-transform: capitalize;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

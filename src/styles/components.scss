@@ -859,3 +859,22 @@
     @include transition;
   }
 }
+.fstars {
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  gap: 0.3em;
+
+  &-star {
+    width: 1em;
+    color: $white-5;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+    &._fill {
+      color: $yellow;
+    }
+  }
+}

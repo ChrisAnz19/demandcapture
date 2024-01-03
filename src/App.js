@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "pages/home";
-import { Header, Nav } from "layouts";
+import { Footer, Header, Nav } from "layouts";
 import About from "pages/about";
 import Pricing from "pages/pricing";
 import { Policy, Terms } from "pages/policy";
-import Footer from "layouts/footer/Footer";
 import OurProcess from "pages/OurProcess/OurProcess";
 
 function App() {
