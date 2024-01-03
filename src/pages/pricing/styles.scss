@@ -2,7 +2,7 @@
 @import "styles/main/mixin.scss";
 
 .hero {
-  &--pricing {
+  &--sm {
     min-height: unset;
     .hero {
       &__inner {
@@ -115,7 +115,7 @@
 // 1180
 @include xlg-xxlg {
   .hero {
-    &--pricing {
+    &--sm {
       .hero {
         &__inner {
           gap: 50px;
@@ -142,7 +142,7 @@
 // 1024px
 @include lg-xlg {
   .hero {
-    &--pricing {
+    &--sm {
       .hero {
         &__inner {
           padding: 0 0 256px;
@@ -165,7 +165,7 @@
 // 840
 @include md-lg {
   .hero {
-    &--pricing {
+    &--sm {
       .hero {
         &__inner {
           &-row {
@@ -187,7 +187,7 @@
 // 700
 @include sm-md {
   .hero {
-    &--pricing {
+    &--sm {
       .hero {
         &__inner {
           gap: 40px;
@@ -202,7 +202,7 @@
 // 580
 @include xsm-sm {
   .hero {
-    &--pricing {
+    &--sm {
       .hero {
         &__inner {
           gap: 30px;

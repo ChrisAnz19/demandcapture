@@ -2,8 +2,8 @@ import React from "react";
 import Hero from "./sections/Hero";
 import Partners from "./sections/SubHero";
 import Faq from "layouts/faq/Faq";
-import Features from "./sections/Features";
-import Footer from "layouts/footer/Footer";
+import Features from "../case/sections/Features";
+import PartnersBanner from "./sections/PartnersBanner";
 import "./styles.scss";
 
 const About = () => {
@@ -11,6 +11,7 @@ const About = () => {
     <>
       <Hero />
       <Partners />
+      <PartnersBanner />
       <Features />
       <Faq />
     </>

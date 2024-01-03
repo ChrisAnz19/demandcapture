@@ -1,10 +1,12 @@
 import React from "react";
 import { AutoContainer } from "layouts/containers";
+
+
 const Hero = () => {
   const bgURL = process.env.PUBLIC_URL + "/images/hero/hero-bg.png";
   const shapeUrl = process.env.PUBLIC_URL + "/images/pricing/hero-shape.png";
   return (
-    <section className="hero hero--pricing">
+    <section className="hero hero--sm">
       <AutoContainer>
         <div className="hero__inner">
           <div className="hero__inner-content">
