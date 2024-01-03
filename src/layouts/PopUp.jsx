@@ -12,20 +12,6 @@ const PopUp = ({ close }) => {
             <button className="popUp__inner-close" onClick={close}>
               <img src={iconURL + "cancel.svg"} alt="canscel" />
             </button>
-            <p
-              style={{
-                color: "red",
-                textAlign: "center",
-                lineHeight: 1,
-              }}
-            >
-              this is info will not exists in production
-              <br />
-              or within next update
-              <br />
-              <br />
-              <strong>ohyzyr@gmail.com</strong>
-            </p>
             <div className="popUp__inner-group">
               <div className="popUp__inner-ico">
                 <img src={iconURL + "logo-sm.svg"} alt="logo" />
