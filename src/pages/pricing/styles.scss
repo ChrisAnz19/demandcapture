@@ -191,6 +191,9 @@
       .hero {
         &__inner {
           gap: 40px;
+          &-row {
+            gap: 60px;
+          }
         }
         &__item {
           width: 100%;
@@ -206,6 +209,9 @@
       .hero {
         &__inner {
           gap: 30px;
+          &-row {
+            gap: 30px;
+          }
         }
         &__item {
           p {

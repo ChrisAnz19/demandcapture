@@ -3,7 +3,7 @@ import { AutoContainer } from "layouts/containers";
 
 
 const Hero = () => {
-  const bgURL = process.env.PUBLIC_URL + "/images/hero/hero-bg.png";
+  const bgURL = process.env.PUBLIC_URL + "/images/pricing/hero-bg.png";
   const shapeUrl = process.env.PUBLIC_URL + "/images/pricing/hero-shape.png";
   return (
     <section className="hero hero--sm">
