@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AutoContainer } from "layouts/containers";
 import "./styles.scss";
 
@@ -38,15 +38,7 @@ const Faq = () => {
           </div>
           <div className="faq__inner-column">
             {faqItems.map((item, i) => (
-              <div className="faq__item" key={i}>
-                <div className="faq__item-group">
-                  <h6 className="_lg">{item.title}</h6>
-                  <button className="faq__item-button"></button>
-                </div>
-                <div className="faq__item-content">
-                  <p>{item.text}</p>
-                </div>
-              </div>
+              <FaqItem key={i} {...item} />
             ))}
           </div>
         </div>
@@ -55,4 +47,20 @@ const Faq = () => {
   );
 };
 
+const FaqItem = ({ title, text }) => {
+  const [active, setActive] = useState(true);
+  const toggle = () => setActive(!active);
+
+  return (
+    <div className={`faq__item ${!active ? "_collapse" : ""}`}>
+      <div className="faq__item-group">
+        <h6 className="_lg">{title}</h6>
+        <button className="faq__item-button" onClick={toggle}></button>
+      </div>
+      <div className="faq__item-content">
+        <p>{text}</p>
+      </div>
+    </div>
+  );
+};
 export default Faq;

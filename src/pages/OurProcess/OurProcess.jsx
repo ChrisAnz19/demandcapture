@@ -7,8 +7,11 @@ import { FAQ, Testimonials } from "layouts";
 
 import "./styles.scss";
 
-const OurProcess = () => {
-  useHeaderStyles("white");
+const OurProcess = ({ setHeaderStyle }) => {
+  useHeaderStyles({
+    styleName: "white",
+    setStyle: setHeaderStyle,
+  });
 
   return (
     <>

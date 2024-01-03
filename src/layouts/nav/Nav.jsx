@@ -3,25 +3,25 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import "./styles.scss";
-const Nav = ({ active }) => {
+const Nav = ({ active, isHome }) => {
   return (
     <nav className={`nav ${active ? "active" : ""}`}>
       <div className="nav__inner">
         <div className="nav__inner-links">
           <NavLink
             className="nav-link"
-            to="our-process"
+            to="/our-process"
             children="Our Process"
           />
-          <NavLink className="nav-link" to="about-us" children="About Us" />
-          <NavLink className="nav-link" to="case-study" children="Case Study" />
-          <NavLink className="nav-link" to="pricing" children="Pricing" />
+          <NavLink className="nav-link" to="/about-us" children="About Us" />
+          <NavLink className="nav-link" to="/case-study" children="Case Study" />
+          <NavLink className="nav-link" to="/pricing" children="Pricing" />
         </div>
         <div className="nav__inner-buttons">
           <Button
-            variant={BUTTON_VARIANTS.WHITE}
+            variant={isHome ? BUTTON_VARIANTS.WHITE : BUTTON_VARIANTS.DEFAULT}
             shadow
-            text={"Connect Wallet"}
+            text={"Contact Sales"}
           />
         </div>
       </div>

@@ -1,13 +1,12 @@
 import React from "react";
 
-const useHeaderStyles = (styleName) => {
+const useHeaderStyles = ({ styleName, setStyle }) => {
   React.useEffect(() => {
     const styleClass = styleName && styleName !== "" ? `_${styleName}` : "";
-    const header = document.getElementById("header");
-    header.classList.add(styleClass);
+    setStyle(styleClass);
 
     return () => {
-      header.classList.remove(styleClass);
+      setStyle("");
     };
   }, []);
 };

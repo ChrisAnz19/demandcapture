@@ -4,6 +4,7 @@ import { AutoContainer } from "layouts/containers";
 import "./styles.scss";
 import Button, { BUTTON_VARIANTS, IconButton } from "components/Button";
 import Input, { InputWrapper } from "components/Input";
+import { Link, useNavigate } from "react-router-dom";
 
 const icoURL = process.env.PUBLIC_URL + "/images/icons/socials/";
 
@@ -28,29 +29,27 @@ const Footer = () => {
           <div className="footer__inner-links">
             <div className="footer__inner-links-column">
               <h6>Our Process</h6>
-              <a href="/" className="footer-link">
+              <Link to="/case-study" className="footer-link">
                 Case Studies
-              </a>
+              </Link>
             </div>
             <div className="footer__inner-links-column">
               <h6>Company</h6>
-
-              <a href="/" className="footer-link">
+              <Link to="/about-us" className="footer-link">
                 About
-              </a>
-              <a href="/" className="footer-link">
+              </Link>
+              <Link to="/policy" className="footer-link">
                 Privacy Policy
-              </a>
-              <a href="/" className="footer-link">
+              </Link>
+              <Link to="/terms" className="footer-link">
                 Terms of Use
-              </a>
+              </Link>
             </div>
             <div className="footer__inner-links-column">
               <h6>Pricing</h6>
-
-              <a href="/" className="footer-link">
+              <Link to="/contact-us" className="footer-link">
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
           <div className="footer__inner-news">
@@ -68,13 +67,20 @@ const Footer = () => {
 };
 
 const FooterContact = () => {
+  const navigate = useNavigate();
+  const navToContacts = () => navigate("/contact-us");
   return (
     <div className="footer__contact">
       <h6>
         Is your organization ready to accelerate revenue generation? <br />
         We want to see your company reach its full market potential. 
       </h6>
-      <Button variant={BUTTON_VARIANTS.WHITE} text="Contact Sales" shadow />
+      <Button
+        variant={BUTTON_VARIANTS.WHITE}
+        text="Contact Sales"
+        shadow
+        onClick={navToContacts}
+      />
     </div>
   );
 };
