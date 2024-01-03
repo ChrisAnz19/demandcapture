@@ -1,7 +1,6 @@
 import React from "react";
 import { AutoContainer } from "layouts/containers";
 
-
 const Hero = () => {
   const bgURL = process.env.PUBLIC_URL + "/images/pricing/hero-bg.png";
   const shapeUrl = process.env.PUBLIC_URL + "/images/pricing/hero-shape.png";
@@ -111,13 +110,13 @@ const Hero = () => {
               <div className="hero__item-bg"></div>
             </div>
           </div>
-          <div className="bg">
-            <div className="bg__image">
-              <img src={bgURL} alt="bg" />
-            </div>
-          </div>
         </div>
       </AutoContainer>
+      <div className="bg">
+        <div className="bg__image">
+          <img src={bgURL} alt="bg" />
+        </div>
+      </div>
     </section>
   );
 };
