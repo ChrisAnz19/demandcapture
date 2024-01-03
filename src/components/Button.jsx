@@ -33,7 +33,7 @@ const Button = ({
 const IconButton = ({ icoURL, children, ...props }) => {
   return (
     <button type="button" className={"buttonIco"} {...props}>
-      {icoURL && <img src={icoURL} />}
+      {icoURL && <img src={icoURL} alt="icon" />}
       {children && children}
     </button>
   );

@@ -33,6 +33,13 @@
   & + section {
     padding-top: 118px;
   }
+  &._white {
+    background: $white;
+
+    & + section {
+      margin-top: 118px;
+    }
+  }
 }
 .burger {
   cursor: pointer;

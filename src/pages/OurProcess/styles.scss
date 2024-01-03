@@ -1,0 +1,190 @@
+@import "styles/main/variables.scss";
+@import "styles/main/mixin.scss";
+
+.ourprocess {
+  position: relative;
+  min-height: 100vh;
+  padding: 75px 0 100px 0;
+
+  &__inner {
+    color: $white;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.4em;
+    }
+  }
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    z-index: 0;
+    padding-top: 70px;
+    padding-bottom: 30px;
+
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: 30px;
+      left: 25%;
+      width: 12%;
+      transform: translate(-55%, -50%);
+      border-radius: 50%;
+      box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.2),
+        0 0 15px 5px rgba(0, 0, 0, 0.4);
+    }
+    &-item {
+      position: relative;
+      padding-left: 60%;
+      min-height: 130px;
+
+      &-image {
+        position: absolute;
+        left: 25%;
+        top: 7%;
+        height: 120%;
+        transform: translate(-55%, -50%);
+        display: flex;
+
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+      &-line {
+        position: absolute;
+        display: block;
+        top: 13px;
+        right: 41.5%;
+        width: 9%;
+        height: 0;
+        color: $primary-0;
+        border-bottom: 2px dashed currentColor;
+
+        &:before,
+        &:after {
+          position: absolute;
+          content: "";
+          top: 50%;
+          width: 8.5px;
+          height: 8.5px;
+          background: currentColor;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &:after {
+          left: 100%;
+        }
+        &:before {
+          left: 0;
+        }
+      }
+      &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35em;
+        font-size: 16px;
+
+        h5 {
+          color: $white;
+          font-family: $font-chivo;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 1.2;
+          letter-spacing: 0.02em;
+          text-transform: capitalize;
+          margin-bottom: 10px;
+        }
+        span {
+          color: $white;
+          font-family: $font-chivo;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 1.2;
+          letter-spacing: 0.02em;
+          text-transform: capitalize;
+        }
+        ol {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: baseline;
+          width: 100%;
+          max-width: 330px;
+          gap: 0.5em 30px;
+
+          li {
+            position: relative;
+            width: calc(50% - 15px);
+            padding-left: 1em;
+
+            &:after {
+              position: absolute;
+              content: "";
+              top: 50%;
+              left: 0;
+              width: 0.55em;
+              height: 0.55em;
+              border-radius: 50%;
+              transform: translateY(-50%);
+              background: $primary;
+              background: linear-gradient(
+                141.84deg,
+                #9c61f7 14.84%,
+                #6ee4f6 81.58%
+              );
+            }
+          }
+        }
+      }
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          z-index: #{4 - $i};
+
+          .ourprocess__banner-item-line {
+            width: #{(11 + ($i * 2.5)) * 1%};
+          }
+        }
+      }
+    }
+  }
+  &-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    a {
+      display: flex;
+      height: 42px;
+      width: auto;
+      transition: 0.2s ease-out;
+      img {
+        height: 100%;
+        width: auto;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+  .bg {
+    background: $black-secondary;
+    &__image {
+      width: 100%;
+      height: calc(100% - 50px);
+      max-height: 650px;
+      top: unset;
+      bottom: 25px;
+      opacity: 0.08;
+      mix-blend-mode: color-dodge;
+
+      img {
+        object-fit: fill;
+      }
+    }
+  }
+}

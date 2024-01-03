@@ -16,15 +16,36 @@ const CaseStudy = () => {
           <div className="caseStudy__inner-banner">
             <div className="caseStudy__banner">
               <div className="caseStudy__banner-bg">
-                <img className="bg" src={bannerURL + "bg-circles.png"} />
+                <img
+                  className="bg"
+                  src={bannerURL + "bg-circles.png"}
+                  alt="bg-circles"
+                />
               </div>
-              <img className="item item1" src={bannerURL + "item-1.png"} />
-              <img className="item item2" src={bannerURL + "item-2.png"} />
-              <img className="item item3" src={bannerURL + "item-3.png"} />
-              <img className="item item4" src={bannerURL + "item-4.png"} />
+              <img
+                className="item item1"
+                src={bannerURL + "item-1.png"}
+                alt="item-1"
+              />
+              <img
+                className="item item2"
+                src={bannerURL + "item-2.png"}
+                alt="item-2"
+              />
+              <img
+                className="item item3"
+                src={bannerURL + "item-3.png"}
+                alt="item-3"
+              />
+              <img
+                className="item item4"
+                src={bannerURL + "item-4.png"}
+                alt="item-4"
+              />
               <img
                 className="man"
                 src={bannerURL + "man-with-arms-crossed.png"}
+                alt="man"
               />
             </div>
           </div>

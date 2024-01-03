@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import { AutoContainer } from "layouts/containers";
 import "./styles.scss";
 
-const Header = ({ active, setActive, children }) => {
+const Header = ({ active, setActive, headerStyle, children }) => {
   return (
-    <header className={`header ${active ? "active" : ""}`}>
+    <header id="header" className={`header ${active ? "active" : ""}`}>
       <AutoContainer>
         <div className="header__inner">
           <Link

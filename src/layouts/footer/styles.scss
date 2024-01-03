@@ -2,6 +2,8 @@
 @import "styles/main/mixin.scss";
 
 .footer {
+  margin-top: auto;
+  
   &__contact {
     position: relative;
     display: flex;

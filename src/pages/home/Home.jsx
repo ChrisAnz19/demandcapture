@@ -40,7 +40,6 @@ const Home = () => {
       </InfoBox>
       <Success />
       <CaseStudy />
-      <Footer />
     </>
   );
 };

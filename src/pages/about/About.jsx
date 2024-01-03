@@ -13,7 +13,6 @@ const About = () => {
       <Partners />
       <Features />
       <Faq />
-      <Footer />
     </>
   );
 };
