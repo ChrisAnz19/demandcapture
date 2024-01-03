@@ -6,6 +6,8 @@ import About from "pages/about";
 import Pricing from "pages/pricing";
 import { Policy, Terms } from "pages/policy";
 import OurProcess from "pages/OurProcess/OurProcess";
+import Case from "pages/case";
+import Contact from "pages/contact";
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -20,9 +22,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/our-process" element={<OurProcess />} />
           <Route path="/about-us" element={<About />} />
+          <Route path="/case-study" element={<Case />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/policy" element={<Policy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/contact-us" element={<Contact />} />
         </Routes>
         <Footer />
       </BrowserRouter>

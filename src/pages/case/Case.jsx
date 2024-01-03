@@ -1,21 +1,20 @@
 import React from "react";
 import Hero from "./sections/Hero";
-import Partners from "./sections/SubHero";
 import Features from "./sections/Features";
-import { FAQ } from "layouts";
+import Faq from "layouts/faq/Faq";
+import Research from "./sections/Research";
 
 import "./styles.scss";
 
-const About = () => {
+const Case = () => {
   return (
     <>
       <Hero />
-      <Partners />
-      <PartnersBanner />
+      <Research />
       <Features />
-      <FAQ />
+      <Faq />
     </>
   );
 };
 
-export default About;
+export default Case;
