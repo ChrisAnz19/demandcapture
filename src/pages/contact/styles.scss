@@ -30,6 +30,26 @@
   &__container {
     width: 390px;
     z-index: 2;
+    padding: 20px;
+    position: relative;
+    &::before,
+    &:after {
+      position: absolute;
+      content: "";
+      width: 100px;
+      height: 100px;
+      z-index: -1;
+    }
+    &::before {
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(270deg, #9575f7 -0.8%, #70e1f6 99.19%);
+    }
+    &::after {
+      top: 0;
+      right: 0;
+      background: linear-gradient(91deg, #9575f7 -15.37%, #70e1f6 214.03%);
+    }
     &-wrapper {
       background: $black-secondary;
       padding: 35px 40px 30px;
@@ -271,9 +291,7 @@
 @include xsm-sm {
   .contacts {
     &__container {
-      &.bgBorder {
-        padding: 12px;
-      }
+      padding: 12px;
     }
   }
 }

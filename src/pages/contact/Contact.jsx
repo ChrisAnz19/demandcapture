@@ -4,7 +4,7 @@ import PopUp from "./sections/PopUp";
 
 import "./styles.scss";
 const Contact = () => {
-  const [visiable, SetVisible] = useState(true);
+  const [visiable, SetVisible] = useState(false);
   return (
     <>
       <Help />

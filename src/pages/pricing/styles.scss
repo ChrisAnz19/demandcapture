@@ -9,7 +9,7 @@
     min-height: unset;
     .hero {
       &__inner {
-        padding: 40px 0 256px;
+        padding: 40px 0 90px;
         display: flex;
         flex-direction: column;
         gap: 60px;
@@ -122,7 +122,7 @@
       .hero {
         &__inner {
           gap: 50px;
-          padding: 30px 0 226px;
+          padding: 30px 0 80px;
           &-content {
             p {
               font-size: 18px;

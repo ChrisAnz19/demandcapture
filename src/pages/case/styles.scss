@@ -59,7 +59,7 @@
   }
 }
 .features {
-  padding: 155px 0 290px;
+  padding: 155px 0 154px;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -73,6 +73,7 @@
     &-image {
       width: calc(50% - 20px);
       max-width: 482px;
+      position: relative;
       .ratioImage {
         padding-bottom: 84%;
         &::after {
@@ -91,6 +92,25 @@
             mix-blend-mode: darken;
           }
         }
+      }
+      padding: 20px;
+      &::before,
+      &:after {
+        position: absolute;
+        content: "";
+        width: 100px;
+        height: 100px;
+        z-index: -1;
+      }
+      &::before {
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(270deg, #9575f7 -0.8%, #70e1f6 99.19%);
+      }
+      &::after {
+        top: 0;
+        right: 0;
+        background: linear-gradient(91deg, #9575f7 -15.37%, #70e1f6 214.03%);
       }
     }
     &-content {
@@ -276,7 +296,7 @@
     padding: 100px 0 200px;
   }
   .features {
-    padding: 130px 0 260px;
+    padding: 130px 0 130px;
     &__inner {
       gap: 170px;
     }
@@ -285,7 +305,7 @@
 // 1024
 @include lg-xlg {
   .features {
-    padding: 100px 0 220px;
+    padding: 100px 0 120px;
     &__inner {
       gap: 140px;
     }
@@ -319,7 +339,7 @@
     }
   }
   .features {
-    padding: 80px 0 190px;
+    padding: 80px 0 100px;
     &__inner {
       gap: 100px;
     }
@@ -399,16 +419,14 @@
     }
   }
   .features {
-    padding: 60px 0 160px;
+    padding: 60px 0 80px;
     &__inner {
       gap: 70px;
     }
     &__item {
       gap: 40px;
       &-image {
-        &.bgBorder {
-          padding: 12px;
-        }
+        padding: 12px;
       }
     }
   }
