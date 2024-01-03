@@ -1,10 +1,10 @@
 import React from "react";
 import Hero from "./sections/Hero";
 import Features from "./sections/Features";
-import Faq from "layouts/faq/Faq";
 import Research from "./sections/Research";
 
 import "./styles.scss";
+import { FAQ, Testimonials } from "layouts";
 
 const Case = () => {
   return (
@@ -12,7 +12,8 @@ const Case = () => {
       <Hero />
       <Research />
       <Features />
-      <Faq />
+      <Testimonials />
+      <FAQ />
     </>
   );
 };

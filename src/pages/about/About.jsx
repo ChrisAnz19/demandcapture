@@ -1,10 +1,10 @@
 import React from "react";
 import Hero from "./sections/Hero";
 import Partners from "./sections/SubHero";
-import Features from "./sections/Features";
-import { FAQ } from "layouts";
+import { FAQ, Testimonials } from "layouts";
 
 import "./styles.scss";
+import PartnersBanner from "./sections/PartnersBanner";
 
 const About = () => {
   return (
@@ -12,7 +12,7 @@ const About = () => {
       <Hero />
       <Partners />
       <PartnersBanner />
-      <Features />
+      <Testimonials />
       <FAQ />
     </>
   );
