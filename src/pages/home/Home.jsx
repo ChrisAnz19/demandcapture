@@ -9,11 +9,12 @@ import "./styles.scss";
 import Privilegies from "./sections/Privilegies";
 import Success from "./sections/success/Success";
 import CaseStudy from "./sections/CaseStudy";
+import OurProcessHero from "pages/OurProcess/sections/OurProcessHero";
 
-const Home = () => {
+const Home = ({ showContactPopup }) => {
   return (
     <>
-      <Hero />
+      <Hero showContactPopup={showContactPopup} />
       <SubHero />
       <PartnersBanner />
       <InfoBox>
@@ -30,7 +31,8 @@ const Home = () => {
         </p>
       </InfoBox>
       <SystemBanner />
-      <Privilegies />
+      {/* <Privilegies /> */}
+      <OurProcessHero modifier="ourprocess--home" />
       <InfoBox style={{ minHeight: 190 }}>
         <h3>The DemandCapture Promise</h3>
         <p className="_xlg">

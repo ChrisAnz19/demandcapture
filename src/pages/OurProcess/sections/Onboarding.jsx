@@ -10,27 +10,56 @@ const Onboarding = () => {
           <h2>Oboarding</h2>
           <div className="oboarding__inner-list">
             <OnboardingItem icon={SVGs.icon1}>
-              Discovery Meeting (Inclusive Of Your ICP, Value Proposition &
-              Sales Workflows)
+              <span>Discovery Meeting</span>
+              <br />
+              <span>(Inclusive Of Your ICP,</span>
+              <br />
+              <span>Value Proposition &</span>
+              <br />
+              <span>Sales Workflows)</span>
             </OnboardingItem>
             <OnboardingItem icon={SVGs.icon2}>
-              Based on Discover Meeting Learnings Our Data Science Team Runs
-              KnowledgeCore
+              <span>Based on Discover</span>
+              <br />
+              <span>Meeting Learnings Our</span>
+              <br />
+              <span>Data Science Team</span>
+              <br />
+              <span>Runs KnowledgeCore</span>
             </OnboardingItem>
             <OnboardingItem icon={SVGs.icon3}>
-              Review KnowledgeCore Findings With Your Organization And Our Sales
-              Leaders
+              <span>Review KnowledgeCore</span>
+              <br />
+              <span>Findings With Your</span>
+              <br />
+              <span>Organization And Our</span>
+              <br />
+              <span>Sales Leaders</span>
             </OnboardingItem>
             <OnboardingItem icon={SVGs.icon4}>
-              Outbound marketing communication crafted and optimized
+              <span>Outbound marketing</span>
+              <br />
+              <span>communication crafted</span>
+              <br />
+              <span>and optimized</span>
             </OnboardingItem>
             <OnboardingItem icon={SVGs.icon5}>
-              Our Sales Team begins outreach and schedules meetings on Your
-              behalf
+              <span>Our Sales Team</span>
+              <br />
+              <span>begins outreach and</span>
+              <br />
+              <span>schedules meetings</span>
+              <br />
+              <span>on Your behalf</span>
             </OnboardingItem>
             <OnboardingItem icon={SVGs.icon6}>
-              Bi-weekly joint meeting to review latest progress and proposed
-              next steps
+              <span>Bi-weekly joint</span>
+              <br />
+              <span>meeting to review</span>
+              <br />
+              <span>latest progress and </span>
+              <br />
+              <span>proposed next steps</span>
             </OnboardingItem>
             <div className="oboarding__inner-list-bg">{SVGs.jointsSVG}</div>
           </div>

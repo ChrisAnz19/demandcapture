@@ -13,7 +13,7 @@ const Hero = () => {
           <div className="hero__inner-content">
             <h2>On track to set nearly 1,000 meetings per month</h2>
             <p>
-              “ The ability to strike while the iron is hot has made lead
+              “The ability to strike while the iron is hot has made lead
               conversion a daily reality for the team who are on track to set
               nearly 1000 meetings per month with an organization-wide cancel
               rate of less than 5%.”
@@ -34,7 +34,7 @@ const Hero = () => {
                 href="/"
                 title="zoominfo"
               >
-                <img src={logoURL + "zoominfo.png"} alt="zoominfo" />
+                <img src={logoURL + "zoominfo.svg"} alt="zoominfo" />
               </a>
             </div>
             <div className="partners__inner-banner-shape">

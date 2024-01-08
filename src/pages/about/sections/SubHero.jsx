@@ -14,28 +14,28 @@ const SubHero = () => {
           <div className="customers__inner-row">
             <SubHeroItem
               href="/"
-              logoLink={logosURL + "zoominfo-white.png"}
+              logoLink={logosURL + "zoominfo_white.svg"}
               title="zoominfo"
             />
             <SubHeroItem
               href="/"
-              logoLink={logosURL + "google-white.png"}
+              logoLink={logosURL + "google_white.svg"}
               title="google"
             />
             <SubHeroItem
               href="/"
-              logoLink={logosURL + "nvidia-white.png"}
+              logoLink={logosURL + "nvidia_white.svg"}
               title="nvidia"
             />
             <SubHeroItem
               href="/"
-              logoLink={logosURL + "bombora-white.png"}
+              logoLink={logosURL + "bombara_white.svg"}
               title="bombora"
               sm="sm"
             />
             <SubHeroItem
               href="/"
-              logoLink={logosURL + "apollo-white.png"}
+              logoLink={logosURL + "apollo_white.svg"}
               title="apollo"
               sm="sm"
             />

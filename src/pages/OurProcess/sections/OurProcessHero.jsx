@@ -3,12 +3,12 @@ import { AutoContainer } from "layouts/containers";
 
 const imgURl = process.env.PUBLIC_URL + "images/our-process/hero/";
 
-const OurProcessHero = () => {
+const OurProcessHero = ({ modifier }) => {
   return (
-    <section className="ourprocess">
+    <section className={`ourprocess ${modifier ? "ourprocess--home" : ""}`}>
       <AutoContainer style={{ maxWidth: 1310 }}>
         <div className="ourprocess__inner">
-          <h1>Our Process</h1>
+          <h2>Our Process</h2>
           <ul className="ourprocess__banner">
             <OurProcessItem
               title={"Client ICP & Requirements Defined"}
@@ -49,22 +49,47 @@ const OurProcessHero = () => {
               title={"Outbound Activity by DemandCapture"}
               imgUrl={imgURl + "pyramid-part-3.svg"}
             >
-              <span>25,000+ Monthly Calls</span>
+              <ol className="_lg">
+                <li>
+                  <span>25,000+ Monthly Calls</span>
+                </li>
+              </ol>
             </OurProcessItem>
             <OurProcessItem
               title={"Appointments Set by DemandCapture"}
               imgUrl={imgURl + "pyramid-part-4.svg"}
             >
               <div className="ourprocess-group">
-                <span>200+ Integrations</span>
+                <ol className="_lg">
+                  <li>
+                    <span>200+ Integrations</span>
+                  </li>
+                </ol>
                 <a href="#">
                   <img
-                    src={imgURl + "links/salesforce_logo.png"}
+                    src={
+                      imgURl +
+                      `${
+                        modifier
+                          ? "links/salesforce_logo.svg"
+                          : "links/salesforce_logo_white.svg"
+                      }`
+                    }
                     alt="salesforce"
                   />
                 </a>
                 <a href="#">
-                  <img src={imgURl + "links/hubspot_logo.png "} alt="hubspot" />
+                  <img
+                    src={
+                      imgURl +
+                      `${
+                        modifier
+                          ? "links/hubspot_logo.svg"
+                          : "links/hubspot_logo_white.svg"
+                      }`
+                    }
+                    alt="hubspot"
+                  />
                 </a>
               </div>
             </OurProcessItem>
@@ -72,7 +97,7 @@ const OurProcessHero = () => {
         </div>
         <div className="bg">
           <div className="bg__image">
-            <img src={imgURl + "bg-lines.png"} alt="bg" />
+            <img src={imgURl + "bg-lines.webp"} alt="bg" />
           </div>
         </div>
       </AutoContainer>

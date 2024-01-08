@@ -4,6 +4,7 @@ import { AutoContainer } from "layouts/containers";
 const logosURL = process.env.PUBLIC_URL + "/images/logos/investors/";
 const shapeURL =
   process.env.PUBLIC_URL + "/images/illustrations/tabs-illustration.svg";
+const bg = process.env.PUBLIC_URL + "/images/bg.png";
 
 const PartnersBanner = () => {
   return (
@@ -20,28 +21,28 @@ const PartnersBanner = () => {
             <div className="partners__inner-banner-row">
               <PartnersItem
                 href={"/"}
-                logoLink={logosURL + "zoominfo.png "}
+                logoLink={logosURL + "zoominfo.svg "}
                 title={"zoominfo"}
               />
               <PartnersItem
                 href={"/"}
-                logoLink={logosURL + "google.png "}
+                logoLink={logosURL + "google.svg "}
                 title={"google"}
                 addClass="_sm"
               />
               <PartnersItem
                 href={"/"}
-                logoLink={logosURL + "nvidia.png "}
+                logoLink={logosURL + "nvidia.svg "}
                 title={"nvidia"}
               />
               <PartnersItem
                 href={"/"}
-                logoLink={logosURL + "bombora.png "}
+                logoLink={logosURL + "bombora.svg "}
                 title={"bombora"}
               />
               <PartnersItem
                 href={"/"}
-                logoLink={logosURL + "apollo.png "}
+                logoLink={logosURL + "apollo.svg "}
                 title={"apollo"}
               />
             </div>
@@ -51,6 +52,11 @@ const PartnersBanner = () => {
           </div>
         </div>
       </AutoContainer>
+      <div className="bg">
+        <div className="bg__image">
+          <img src={bg} alt="bg" />
+        </div>
+      </div>
     </section>
   );
 };

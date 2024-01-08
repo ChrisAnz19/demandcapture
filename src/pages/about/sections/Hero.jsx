@@ -1,7 +1,7 @@
 import React from "react";
 import { AutoContainer } from "layouts/containers";
 
-const heroUrl = process.env.PUBLIC_URL + "./images/about/about-hero.png";
+const heroUrl = process.env.PUBLIC_URL + "./images/about/about-hero.webp";
 
 const Hero = () => {
   return (

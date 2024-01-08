@@ -6,14 +6,14 @@ const imagesUrl = process.env.PUBLIC_URL + "/images/features/";
 const Features = () => {
   const featursItems = [
     {
-      image: "features-1.png",
+      image: "features-1.webp",
       alt: "about",
       subTitle: "ABOUT",
       title: "DEMANDCAPTURE",
       text: "DemandCapture, a New York-based technology company, is a leading provider of sales and marketing solutions designed to help businesses maximize their revenue potential. Leveraging advanced technology, data-driven insights, intent data capabilities, and human ingenuity, DemandCapture empowers organizations to effectively engage their target audiences, optimize lead generation efforts, and accelerate sales growth. DemandCapture was born out of a vision to create a revenue-generating stopgap between technology and service.",
     },
     {
-      image: "features-2.png",
+      image: "features-2.webp",
       alt: "Sales",
       subTitle: "Sales",
       title: "OPPORTUNITY",
@@ -23,7 +23,7 @@ const Features = () => {
       order: "_order",
     },
     {
-      image: "features-3.png",
+      image: "features-3.webp",
       alt: "ACTION",
       subTitle: "ZoomInfo | DemandCapture",
       title: "ACTION",
@@ -31,11 +31,11 @@ const Features = () => {
       text2:
         "“We like to say that we deliver problem-aware, solution seeking prospects while they're in-market. I think the specific timing was the piece that we were missing, and that's really what ZoomInfo is able to provide for us” states Anzalone. “When working with such a large data set, you can unlock new possibilities when your data streams in real-time, and that’s exactly what MarketingOS allows us to do.”",
       button: "Read More",
+      href: "https://www.zoominfo.com/b2b/customer-success/DemandCapture",
     },
     {
-      image: "features-4.png",
+      image: "features-4.webp",
       alt: "IMPACT",
-      mixBlend: "_dark",
       subTitle: "innovative",
       title: "IMPACT",
       text: "With this innovative process in place, DemandCapture is sprinting ahead of its competitors. “The automation that Workflows provides on the backend helps us be really effective on the frontend. We are extremely proud of our consistent 90-second SLA with prospects who’s buying signals break our algorithms’ predetermined threshold,'' shared Anzalone. On the whole, the company has experienced exponential revenue growth month over month, and expects that this will continue to grow with time. And while these metrics consider the entire tech stack in play, MarketingOS will continue to serve as a key component in DemandCapture’s winning game.",
@@ -52,9 +52,7 @@ const Features = () => {
               key={i}
             >
               <div className="features__item-image">
-                <div
-                  className={`ratioImage ${item.mixBlend ? item.mixBlend : ""}`}
-                >
+                <div className="ratioImage">
                   <img src={imagesUrl + item.image} alt={item.alt} />
                 </div>
               </div>
@@ -68,9 +66,14 @@ const Features = () => {
                   </div>
                 </div>
                 {item.button ? (
-                  <button className="buttonText">
+                  <a
+                    className="buttonText"
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <span>Read More</span>
-                  </button>
+                  </a>
                 ) : (
                   ""
                 )}

@@ -3,7 +3,7 @@
 
 .footer {
   margin-top: auto;
-  
+
   &__contact {
     position: relative;
     display: flex;
@@ -98,10 +98,8 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
-
       width: 35%;
       max-width: 370px;
-
       .input {
         font-size: 14px;
 
@@ -113,8 +111,12 @@
             right: 11px;
             padding: 0.6em 1.15em;
             min-width: 145px;
+            box-shadow: unset;
           }
         }
+      }
+      h6 {
+        text-align: center;
       }
     }
   }
@@ -159,6 +161,12 @@
     opacity: 0.8;
 
     &:hover {
+      opacity: 1;
+    }
+    &._lg {
+      font-weight: 700;
+      color: $white;
+      font-size: 20px;
       opacity: 1;
     }
   }
@@ -239,6 +247,11 @@
       &-links {
         order: 1;
         width: 100%;
+      }
+    }
+    &-link {
+      &._lg {
+        font-size: 18px;
       }
     }
   }

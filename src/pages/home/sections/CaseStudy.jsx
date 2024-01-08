@@ -18,34 +18,29 @@ const CaseStudy = () => {
               <div className="caseStudy__banner-bg">
                 <img
                   className="bg"
-                  src={bannerURL + "bg-circles.png"}
+                  src={bannerURL + "man-with-arms-crossed.webp"}
                   alt="bg-circles"
                 />
               </div>
               <img
                 className="item item1"
-                src={bannerURL + "item-1.png"}
+                src={bannerURL + "item-1.svg"}
                 alt="item-1"
               />
               <img
                 className="item item2"
-                src={bannerURL + "item-2.png"}
+                src={bannerURL + "item-2.svg"}
                 alt="item-2"
               />
               <img
                 className="item item3"
-                src={bannerURL + "item-3.png"}
+                src={bannerURL + "item-3.svg"}
                 alt="item-3"
               />
               <img
                 className="item item4"
-                src={bannerURL + "item-4.png"}
+                src={bannerURL + "item-4.svg"}
                 alt="item-4"
-              />
-              <img
-                className="man"
-                src={bannerURL + "man-with-arms-crossed.png"}
-                alt="man"
               />
             </div>
           </div>

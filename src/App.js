@@ -38,14 +38,20 @@ function App() {
         />
       </Header>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={<Home showContactPopup={showContactPopup} />}
+        />
         <Route
           path="/our-process"
           element={<OurProcess setHeaderStyle={setHeaderStyle} />}
         />
         <Route path="/about-us" element={<About />} />
         <Route path="/case-study" element={<Case />} />
-        <Route path="/pricing" element={<Pricing showContactPopup={showContactPopup}/>} />
+        <Route
+          path="/pricing"
+          element={<Pricing showContactPopup={showContactPopup} />}
+        />
         <Route path="/policy" element={<Policy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/contact-us" element={<Contact />} />

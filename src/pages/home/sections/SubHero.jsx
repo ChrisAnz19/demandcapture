@@ -11,25 +11,25 @@ const SubHero = () => {
           <div className="customers__inner-row">
             <SubHeroItem
               href="/"
-              logoLink={logosURL + "amazon.png"}
+              logoLink={logosURL + "amazon.svg"}
               title="amazon"
             />
             <SubHeroItem
               href="/"
-              logoLink={logosURL + "walmart.png"}
+              logoLink={logosURL + "walmart.svg"}
               title="walmart"
             />
             <SubHeroItem
               href="/"
-              logoLink={logosURL + "microsoft.png"}
+              logoLink={logosURL + "microsoft.svg"}
               title="microsoft"
             />
             <SubHeroItem
               href="/"
-              logoLink={logosURL + "morgan-stanley.png"}
-              title="morgan-stanley"
+              logoLink={logosURL + "morgan.svg"}
+              title="morgan"
             />
-            <SubHeroItem href="/" logoLink={logosURL + "ibm.png"} title="ibm" />
+            <SubHeroItem href="/" logoLink={logosURL + "ibm.svg"} title="ibm" />
           </div>
           <h6>Our Customers Have Closed 43% Of The Fortune 100</h6>
         </div>

@@ -9,7 +9,7 @@
   &__inner {
     color: $white;
 
-    h1 {
+    h2 {
       text-align: center;
       margin-bottom: 1.4em;
     }
@@ -112,12 +112,16 @@
           width: 100%;
           max-width: 330px;
           gap: 0.5em 30px;
-
+          &._lg {
+            width: auto;
+            li {
+              width: auto;
+            }
+          }
           li {
             position: relative;
             width: calc(50% - 15px);
             padding-left: 1em;
-
             &:after {
               position: absolute;
               content: "";
@@ -175,16 +179,35 @@
     background: $black-secondary;
     &__image {
       width: 100%;
-      height: calc(100% - 50px);
-      max-height: 650px;
-      top: unset;
-      bottom: 25px;
-      opacity: 0.08;
-      mix-blend-mode: color-dodge;
-
+      height: 100%;
+      top: 0;
       img {
-        object-fit: fill;
+        object-fit: cover;
       }
+    }
+  }
+  &--home {
+    background: #f7f7f7;
+    min-height: unset !important;
+    .ourprocess {
+      &__banner {
+        &-item {
+          &-content {
+            h5 {
+              color: $black;
+            }
+            span {
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+    h2 {
+      color: $black;
+    }
+    .bg {
+      display: none;
     }
   }
 }

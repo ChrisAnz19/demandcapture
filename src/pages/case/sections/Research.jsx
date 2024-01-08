@@ -39,7 +39,7 @@ const Research = () => {
             <img src={imageURL + "research.png"} alt="research" />
           </div>
           <div className="research__bg-shape">
-            <img src={imageURL + "bg-shape.png"} alt="research" />
+            <img src={imageURL + "bg-shape.webp"} alt="research" />
           </div>
         </div>
       </section>

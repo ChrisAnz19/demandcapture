@@ -2,18 +2,16 @@ import React from "react";
 import { AutoContainer } from "layouts/containers";
 
 const TestimonialsNote = () => {
-    
   return (
     <section className="tNote">
-      <AutoContainer style={{maxWidth: 1085}}>
+      <AutoContainer style={{ maxWidth: 1085 }}>
         <div className="tNote__inner">
           <div className="tNote__inner-primary">
+            <h5 className="_primary">
+              Unlock success with our <br />
+              performance guarantee
+            </h5>
             <p className="_xlg">
-              <b>
-                Unlock success with our <br />
-                performance guarantee
-              </b>
-              <br />
               <br />
               <i>
                 Pay only for meetings with top-tier <br />

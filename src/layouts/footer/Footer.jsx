@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "components/Logo";
 import { AutoContainer } from "layouts/containers";
 import "./styles.scss";
-import Button, { BUTTON_VARIANTS, IconButton } from "components/Button";
+import Button, { BUTTON_VARIANTS, LinkButton } from "components/Button";
 import Input, { InputWrapper } from "components/Input";
 import {
   Link,
@@ -21,23 +21,33 @@ const Footer = ({ showContactPopup }) => {
             <Logo white />
             <p>
               “First vendor to engage a prospect and guide the solution
-              evaluation process Resulting in a 74% win rate.” - Forrester
-              Research
+              evaluation process Resulting in a 74% win rate.”{" "}
+              <span className="noBreak">- Forrester Research</span>
             </p>
             <div className="footer__inner-info-social">
-              <IconButton icoURL={icoURL + "facebook.svg"} />
-              <IconButton icoURL={icoURL + "instagram.svg"} />
+              <LinkButton
+                icoURL={icoURL + "facebook.svg"}
+                href="https://www.linkedin.com/company/demandcapture"
+              />
+              <LinkButton
+                icoURL={icoURL + "instagram.svg"}
+                href="https://www.instagram.com/demand_capture/"
+              />
             </div>
           </div>
           <div className="footer__inner-links">
             <div className="footer__inner-links-column">
-              <h6>Our Process</h6>
+              <Link to="/our-process" className="footer-link _lg">
+                Our Process
+              </Link>
               <Link to="/case-study" className="footer-link">
                 Case Studies
               </Link>
             </div>
             <div className="footer__inner-links-column">
-              <h6>Company</h6>
+              <Link to="/about-us" className="footer-link _lg">
+                Company
+              </Link>
               <Link to="/about-us" className="footer-link">
                 About
               </Link>
@@ -49,7 +59,9 @@ const Footer = ({ showContactPopup }) => {
               </Link>
             </div>
             <div className="footer__inner-links-column">
-              <h6>Pricing</h6>
+              <Link to="/Pricing" className="footer-link _lg">
+                Pricing
+              </Link>
               <Link to="/contact-us" className="footer-link">
                 Contact Us
               </Link>
@@ -90,7 +102,7 @@ const FooterContact = ({ showContactPopup }) => {
 const FooterCopyright = () => {
   return (
     <div className="footer__copyright">
-      ©️ 2023 Demand Capture | All Rights Reserved
+      ©️ 2024 Demand Capture | All Rights Reserved
     </div>
   );
 };
