@@ -9,7 +9,7 @@ const SuccessKnowledge = () => {
     <div className="successKnowledge">
       <div className="successKnowledge__label">
         <div className="successKnowledge__label-image">
-          <img src={successFolder + "knowledge.png"} alt="knowledge core" />
+          <img src={successFolder + "knowledge.svg"} alt="knowledge core" />
         </div>
       </div>
       <div className="successKnowledge__row">
