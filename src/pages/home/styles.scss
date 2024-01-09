@@ -286,12 +286,33 @@
       display: flex;
       justify-content: center;
 
-      img {
+      & > div {
         position: relative;
         left: 1%;
         width: 85%;
         max-width: 890px;
         height: auto;
+
+        img {
+          &._shape {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+          }
+          &._logo {
+            position: absolute;
+            top: calc(23.6%);
+            left: 38.5%;
+            width: 16.5%;
+            z-index: 1;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+        }
       }
     }
     .systemBanner {
@@ -1024,6 +1045,12 @@
   }
 }
 
+@media (min-width: 1240px) {
+  .systemBanner__inner .systemBanner-message:nth-child(3) {
+    max-width: unset;
+    width: 260px;
+  }
+}
 @include xlg-xxlg {
   .hero {
     &__inner {
