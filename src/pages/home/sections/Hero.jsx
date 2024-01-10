@@ -26,12 +26,8 @@ const Hero = ({ showContactPopup }) => {
               <br />- Forrester Research
             </p>
             <InputWrapper>
-              <Input placeholder="Enter your email" shadow />
-              <Button
-                text={"Contact Sales"}
-                onClick={showContactPopup}
-                shadow
-              />
+              <Input placeholder="Enter your email" />
+              <Button text={"Contact Sales"} onClick={showContactPopup} />
             </InputWrapper>
           </div>
           <div className="hero__inner-banner">
