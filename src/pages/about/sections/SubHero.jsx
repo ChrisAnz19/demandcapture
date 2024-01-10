@@ -7,10 +7,7 @@ const SubHero = () => {
     <section className="customers customers--about">
       <AutoContainer>
         <div className="customers__inner">
-          <h5 className="sm">
-            Our
-            <span> Investors & Partners</span>
-          </h5>
+          <h5 className="sm">Our Investors & Partners</h5>
           <div className="customers__inner-row">
             <SubHeroItem
               href="/"

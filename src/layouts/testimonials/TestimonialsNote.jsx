@@ -19,10 +19,12 @@ const TestimonialsNote = () => {
               </i>
               <br />
               <br />
-              <b> The DemandCapture Promise</b>
+            </p>
+            <h5 className="_primary">The DemandCapture Promise</h5>
+            <p>
               <br />
               <br />
-              <i>Quality Connections, Measurable Results</i>
+              <i>Quality Connections, Measurable Results</i>А
             </p>
           </div>
           <div className="tNote__inner-secondary">

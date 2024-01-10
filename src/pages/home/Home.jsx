@@ -32,7 +32,11 @@ const Home = ({ showContactPopup }) => {
       </InfoBox>
       <SystemBanner />
       {/* <Privilegies /> */}
-      <OurProcessHero modifier="ourprocess--home" />
+      <OurProcessHero
+        modifier="ourprocess--home"
+        title="The Artistry & Precision of Our Winning DNA"
+        subtitle="Quality Connections, Measurable Results"
+      />
       <InfoBox style={{ minHeight: 190 }}>
         <h3>The DemandCapture Promise</h3>
         <p className="_xlg">

@@ -77,6 +77,16 @@
       }
     }
   }
+  .input__wrapper {
+    .input {
+      input {
+        box-shadow: unset !important;
+      }
+    }
+    .buttonPrimary {
+      box-shadow: unset;
+    }
+  }
 }
 .customers {
   padding: 30px 0;
@@ -85,9 +95,16 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 28px;
     align-items: center;
-
+    &-slider {
+      width: 100%;
+    }
+    &-title {
+      padding: 0 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
     h6 {
       color: $white-2;
       font-family: $font-chivo;
@@ -109,11 +126,28 @@
   &-item {
     display: inline-flex;
     height: 38px;
-
+    pointer-events: none;
     img {
       height: 100%;
       width: auto;
     }
+  }
+  .swiper {
+    width: 100%;
+    pointer-events: none;
+    &-slide {
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-wrapper {
+      transition-timing-function: linear !important;
+    }
+  }
+  .autocontainer {
+    max-width: 1920px;
+    padding: 0;
   }
 }
 .partners {
@@ -179,12 +213,12 @@
       &-shape {
         position: relative;
         z-index: -1;
-        top: -2px;
+        top: -3px;
         width: 100%;
         left: 0px;
-        transform: rotate(0.15deg);
+        transform: rotate(0.35deg);
         img {
-          width: 100%;
+          width: calc(100% - 5px);
           height: auto;
         }
       }
@@ -1432,6 +1466,26 @@
     padding: 40px 0;
   }
 }
+@include sm-md {
+  .customers {
+    .swiper {
+      &-slide {
+        margin: 0 20px;
+      }
+    }
+  }
+  .partners {
+    &__inner {
+      h3 {
+        max-width: 500px;
+        margin: 0 auto;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
 @include xsm-sm {
   .hero {
     &__inner {
@@ -1440,6 +1494,9 @@
       }
       p {
         font-size: 18px;
+        br {
+          display: none;
+        }
       }
       .input {
         font-size: 14px;
@@ -1472,7 +1529,7 @@
     &__inner {
       gap: 30px;
       h6 {
-        font-size: 22px;
+        font-size: 20px;
         color: $white;
         line-height: 1.3;
       }

@@ -1,7 +1,7 @@
 import React from "react";
 import { createPortal } from "react-dom";
 
-const PopUp = ({ close }) => {
+const PopUp = ({ close, showContactPopup }) => {
   const iconURL = process.env.PUBLIC_URL + "/images/icons/";
 
   return createPortal(
@@ -17,7 +17,10 @@ const PopUp = ({ close }) => {
                 <img src={iconURL + "logo-sm.svg"} alt="logo" />
               </div>
               <h6 className="_sm">Accelerate Revenue Generation</h6>
-              <h6>Let Us Help You Reach Your Full Market Potential</h6>
+              <h6>
+                Let Us Help You Reach Your
+                <span className="noBreak">Full Market Potential</span>
+              </h6>
             </div>
             <div className="popUp__form">
               <div className="popUp__form-row">
@@ -48,7 +51,7 @@ const PopUp = ({ close }) => {
               </div>
               <button
                 type="button"
-                className="buttonPrimary buttonPrimary--default _shadow"
+                className="buttonPrimary buttonPrimary--default"
                 onClick={close}
               >
                 <span>Submit</span>

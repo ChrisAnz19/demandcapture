@@ -23,7 +23,8 @@ const Hero = ({ showContactPopup }) => {
             <p>
               "First vendor to engage a prospect and guide the solution
               evaluation process resulting in a 74% win rate.”
-              <br />- Forrester Research
+              <br />
+              <span className="noBreak">- Forrester Research</span>
             </p>
             <InputWrapper>
               <Input placeholder="Enter your email" />

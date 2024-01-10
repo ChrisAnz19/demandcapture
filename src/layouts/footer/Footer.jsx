@@ -87,13 +87,17 @@ const FooterContact = ({ showContactPopup }) => {
   return (
     <div className="footer__contact">
       <h6>
-        Is your organization ready to accelerate revenue generation? <br />
-        We want to see your company reach its full market potential. 
+        <span>
+          Is your organization ready to accelerate revenue generation?
+        </span>
+        <br />
+        <span>
+          We want to see your company reach its full market potential. 
+        </span>
       </h6>
       <Button
         variant={BUTTON_VARIANTS.WHITE}
         text="Contact Sales"
-        shadow
         onClick={showContactPopup}
       />
     </div>
