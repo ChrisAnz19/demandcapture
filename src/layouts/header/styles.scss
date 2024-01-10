@@ -2,14 +2,13 @@
 @import "styles/main/variables.scss";
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 25px 0;
   z-index: 5;
   transition: 0.2s ease-out;
-  transition-property: opacity, transform, padding;
   &__inner {
     position: relative;
     display: flex;
