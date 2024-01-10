@@ -3,6 +3,8 @@
 
 .footer {
   margin-top: auto;
+  position: relative;
+  z-index: 0;
   &__contact {
     position: relative;
     display: flex;
@@ -16,7 +18,7 @@
     background: linear-gradient(90deg, #6bf6f5 -14.26%, #a054f7 99.49%);
     border-radius: 18px;
     padding: 35px 40px 40px 40px;
-
+    z-index: 2;
     h6 {
       flex-grow: 1;
       max-width: 630px;
@@ -245,11 +247,37 @@
       &-links {
         order: 1;
         width: 100%;
+        &-column {
+          text-align: center;
+        }
       }
     }
     &-link {
       &._lg {
         font-size: 18px;
+      }
+    }
+  }
+}
+@include sm-md {
+  .footer {
+    &__contact {
+      h6 {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+      }
+      .button {
+        &Primary {
+          &--white {
+            color: $white;
+            background: $primary;
+            &:hover {
+              color: $primary;
+              background: $white;
+            }
+          }
+        }
       }
     }
   }
