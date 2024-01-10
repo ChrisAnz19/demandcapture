@@ -26,7 +26,7 @@ const PartnersBanner = () => {
               />
               <PartnersItem
                 href={"/"}
-                logoLink={logosURL + "google.svg "}
+                logoLink={logosURL + "google-logo.svg "}
                 title={"google"}
                 addClass="_sm"
               />

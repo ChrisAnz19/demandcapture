@@ -37,7 +37,6 @@ const SubHero = () => {
               href="/"
               logoLink={logosURL + "apollo_white.svg"}
               title="apollo"
-              sm="sm"
             />
           </div>
         </div>
