@@ -26,7 +26,7 @@ const Footer = ({ showContactPopup }) => {
             </p>
             <div className="footer__inner-info-social">
               <LinkButton
-                icoURL={icoURL + "linkedin.svg"}
+                icoURL={icoURL + "linkedin2.svg"}
                 href="https://www.linkedin.com/company/demandcapture"
               />
               <LinkButton

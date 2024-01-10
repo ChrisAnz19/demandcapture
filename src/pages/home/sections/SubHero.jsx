@@ -1,12 +1,66 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AutoContainer } from "layouts/containers";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
 const logosURL = process.env.PUBLIC_URL + "/images/logos/customers/";
+const newLogosURL = process.env.PUBLIC_URL + "/images/logos/fortune/";
 
+const logosArray = [
+  { href: "/", logoLink: logosURL + "amazon.svg", title: "amazon" },
+  { href: "/", logoLink: logosURL + "walmart.svg", title: "walmart" },
+  { href: "/", logoLink: logosURL + "microsoft.svg", title: "microsoft" },
+  { href: "/", logoLink: logosURL + "morgan.svg", title: "morgan" },
+  { href: "/", logoLink: logosURL + "ibm.svg", title: "ibm" },
+  { href: "/", logoLink: newLogosURL + "Merck.svg", title: "Merck" },
+  {
+    href: "/",
+    logoLink: newLogosURL + "American Express.svg",
+    title: "American Express",
+  },
+  { href: "/", logoLink: newLogosURL + "CBS_logo.svg", title: "CBS_logo" },
+  { href: "/", logoLink: newLogosURL + "Comcast.svg", title: "Comcast" },
+  { href: "/", logoLink: newLogosURL + "Fidelity.svg", title: "Fidelity" },
+  {
+    href: "/",
+    logoLink: newLogosURL + "General Motors.svg",
+    title: "General Motors",
+  },
+  {
+    href: "/",
+    logoLink: newLogosURL + "Johnson and Johnson.svg",
+    title: "Johnson and Johnson",
+  },
+  {
+    href: "/",
+    logoLink: newLogosURL + "Liberty Mutual.svg",
+    title: "Liberty Mutual",
+    addClass: "_lg",
+  },
+];
+
+const logosArrayTest = [
+  {
+    href: "/",
+    logoLink: newLogosURL + "Liberty Mutual.svg",
+    title: "Liberty Mutual",
+  },
+  { href: "/", logoLink: newLogosURL + "Fidelity.svg", title: "Fidelity" },
+  {
+    href: "/",
+    logoLink: newLogosURL + "General Motors.svg",
+    title: "General Motors",
+  },
+];
 const SubHero = () => {
   const [swiper, setSwiper] = React.useState(null);
+  useEffect(() => {
+    if (swiper?.autoplay?.start) {
+      swiper.autoplay.start();
+      window.autoplay = swiper.autoplay;
+    }
+  }, [swiper]);
+
   return (
     <section className="customers">
       <AutoContainer>
@@ -23,6 +77,7 @@ const SubHero = () => {
               loop={true}
               autoplay={{
                 delay: 0,
+                disableOnInteraction: false,
               }}
               modules={[Autoplay]}
               breakpoints={{
@@ -31,160 +86,13 @@ const SubHero = () => {
                 },
               }}
             >
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "amazon.svg"}
-                  title="amazon"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "walmart.svg"}
-                  title="walmart"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "microsoft.svg"}
-                  title="microsoft"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "morgan.svg"}
-                  title="morgan"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "ibm.svg"}
-                  title="ibm"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "amazon.svg"}
-                  title="amazon"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "walmart.svg"}
-                  title="walmart"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "microsoft.svg"}
-                  title="microsoft"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "morgan.svg"}
-                  title="morgan"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "ibm.svg"}
-                  title="ibm"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "amazon.svg"}
-                  title="amazon"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "amazon.svg"}
-                  title="amazon"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "walmart.svg"}
-                  title="walmart"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "microsoft.svg"}
-                  title="microsoft"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "morgan.svg"}
-                  title="morgan"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "ibm.svg"}
-                  title="ibm"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "amazon.svg"}
-                  title="amazon"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "walmart.svg"}
-                  title="walmart"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "microsoft.svg"}
-                  title="microsoft"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "morgan.svg"}
-                  title="morgan"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "ibm.svg"}
-                  title="ibm"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SubHeroItem
-                  href="/"
-                  logoLink={logosURL + "amazon.svg"}
-                  title="amazon"
-                />
-              </SwiperSlide>
+              {[...logosArray, ...logosArray, ...logosArray].map(
+                (data, index) => (
+                  <SwiperSlide key={index}>
+                    <SubHeroItem {...data} />
+                  </SwiperSlide>
+                )
+              )}
             </Swiper>
           </div>
           <div className="customers__inner-title">
@@ -199,9 +107,9 @@ const SubHero = () => {
   );
 };
 
-const SubHeroItem = ({ href, logoLink, title }) => {
+const SubHeroItem = ({ href, logoLink, title, addClass = "" }) => {
   return (
-    <a className="customers-item" href={href} title={title}>
+    <a className={`customers-item ${addClass}`} href={href} title={title}>
       <img src={logoLink} alt={title} />
     </a>
   );

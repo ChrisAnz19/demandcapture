@@ -21,8 +21,7 @@ const TestimonialsNote = () => {
               <br />
             </p>
             <h5 className="_primary">The DemandCapture Promise</h5>
-            <p>
-              <br />
+            <p className="_xlg">
               <br />
               <i>Quality Connections, Measurable Results</i>
             </p>

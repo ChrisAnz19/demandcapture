@@ -20,28 +20,23 @@ const PartnersBanner = () => {
             <h5>Our Investors & Partners</h5>
             <div className="partners__inner-banner-row">
               <PartnersItem
-                href={"/"}
                 logoLink={logosURL + "zoominfo.svg "}
                 title={"zoominfo"}
               />
               <PartnersItem
-                href={"/"}
                 logoLink={logosURL + "google-logo.svg "}
                 title={"google"}
                 addClass="_sm"
               />
               <PartnersItem
-                href={"/"}
                 logoLink={logosURL + "nvidia.svg "}
                 title={"nvidia"}
               />
               <PartnersItem
-                href={"/"}
                 logoLink={logosURL + "bombora.svg "}
                 title={"bombora"}
               />
               <PartnersItem
-                href={"/"}
                 logoLink={logosURL + "apollo.svg "}
                 title={"apollo"}
               />
@@ -63,9 +58,9 @@ const PartnersBanner = () => {
 
 const PartnersItem = ({ href, logoLink, title, addClass = "" }) => {
   return (
-    <a className={`partners-item ${addClass}`} href={href} title={title}>
+    <span className={`partners-item ${addClass}`} href={href} title={title}>
       <img src={logoLink} alt={title} />
-    </a>
+    </span>
   );
 };
 export default PartnersBanner;
