@@ -24,7 +24,8 @@
         flex-wrap: unset;
       }
       &-shape {
-        width: calc(100% - 20px);
+        top: -2px;
+        width: calc(100% - 18px);
       }
       &-text {
         font-size: 50px;

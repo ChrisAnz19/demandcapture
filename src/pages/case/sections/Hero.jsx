@@ -15,7 +15,7 @@ const Hero = () => {
             <p>
               “The ability to strike while the iron is hot has made lead
               conversion a daily reality for the team who are on track to set
-              nearly 1000 meetings per month with an organization-wide cancel
+              nearly 1,000 meetings per month with an organization-wide cancel
               rate of less than 5%.”
             </p>
           </div>
@@ -34,7 +34,7 @@ const Hero = () => {
                 href="/"
                 title="zoominfo"
               >
-                <img src={logoURL + "zoominfo.svg"} alt="zoominfo" />
+                <img src={logoURL + "logos/investors/zoominfo-logo.svg"} alt="zoominfo" />
               </a>
             </div>
             <div className="partners__inner-banner-shape">

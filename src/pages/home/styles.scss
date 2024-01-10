@@ -352,8 +352,8 @@
     .systemBanner {
       &__info {
         position: absolute;
-        bottom: 14%;
-        left: 58%;
+        bottom: 14.75%;
+        left: 57.9%;
         width: 40vw;
       }
       &-message {
@@ -361,15 +361,15 @@
 
         &:nth-child(1) {
           bottom: 93%;
-          left: calc(51% - 32px);
+          left: calc(51% - 30px);
         }
         &:nth-child(2) {
-          bottom: 74.6%;
-          left: 16.5%;
+          bottom: 74.9%;
+          left: 17.1%;
         }
         &:nth-child(3) {
-          bottom: 75%;
-          left: 78.5%;
+          bottom: 75.4%;
+          left: 79.5%;
         }
       }
     }
@@ -1572,13 +1572,15 @@
   .systemBanner {
     padding: 60px 0;
     min-height: 85vh;
-
+    
     &-message {
       max-width: 180px;
       font-size: 12px;
       font-weight: 500;
     }
     &__inner {
+      padding-top: 55px;
+
       .systemBanner__info {
         width: 95%;
       }
@@ -1683,6 +1685,9 @@
     }
   }
   .systemBanner {
+    &__inner {
+      padding-top: 45px;
+    }
     &-message {
       max-width: 140px;
       padding: 10px 6px;

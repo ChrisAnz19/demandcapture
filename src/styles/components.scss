@@ -202,7 +202,7 @@
     height: 1.7em;
 
     color: $white;
-    font-size: 16px;
+    font-size: 18px;
     box-shadow: 0 0 0 transparent;
 
     transform: scale(1);
@@ -214,18 +214,18 @@
     img {
       pointer-events: none;
       color: inherit;
-      width: 0.8;
-      height: 0.8;
+      width: 0.9em;
+      height: 0.9em;
       object-fit: contain;
     }
 
     &:hover {
-      box-shadow: 0 0 0 3px rgba($mint, 0.5);
+      box-shadow: 0 0 0 3px rgba($white, 0.16);
       transform: scale(1.1);
     }
     &:active {
       transform: scale(1);
-      box-shadow: 0 0 0 2px rgba($mint, 0.8);
+      box-shadow: 0 0 0 2px rgba($white, 0.8);
     }
     &--ico {
       background: transparent;

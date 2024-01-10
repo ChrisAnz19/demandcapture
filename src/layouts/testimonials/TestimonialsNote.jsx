@@ -24,7 +24,7 @@ const TestimonialsNote = () => {
             <p>
               <br />
               <br />
-              <i>Quality Connections, Measurable Results</i>А
+              <i>Quality Connections, Measurable Results</i>
             </p>
           </div>
           <div className="tNote__inner-secondary">

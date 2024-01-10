@@ -3,8 +3,8 @@
 
 .ourprocess {
   position: relative;
-  min-height: 100vh;
-  padding: 75px 0 100px 0;
+  min-height: calc(100vh - 100px);
+  padding: 70px 0 50px 0;
 
   &__inner {
     color: $white;

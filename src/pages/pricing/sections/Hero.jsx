@@ -9,7 +9,7 @@ const Hero = ({ showContactPopup }) => {
       <AutoContainer>
         <div className="hero__inner">
           <div className="hero__inner-content">
-            <h2>Pricing & PLANS</h2>
+            <h2>PRICING & PLANS</h2>
             <p>
               DemandCapture provides versatile packages tailored to meet your
               appointment-setting needs. Reach out to our Sales Team to initiate

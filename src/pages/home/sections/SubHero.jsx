@@ -13,24 +13,101 @@ const SubHero = () => {
         <div className="customers__inner">
           <div className="customers__inner-slider">
             <Swiper
-              speed={5000}
-              slidesPerView={3}
+              speed={8000}
+              slidesPerView={"auto"}
+              slidesPerGroup={1}
+              spaceBetween={20}
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => setSwiper(swiper)}
               pagination={false}
               loop={true}
               autoplay={{
                 delay: 0,
-                disableOnInteraction: false,
               }}
               modules={[Autoplay]}
               breakpoints={{
                 680: {
-                  slidesPerView: 5,
-                  spaceBetween: 10,
+                  spaceBetween: 120,
                 },
               }}
             >
+              <SwiperSlide>
+                <SubHeroItem
+                  href="/"
+                  logoLink={logosURL + "amazon.svg"}
+                  title="amazon"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SubHeroItem
+                  href="/"
+                  logoLink={logosURL + "walmart.svg"}
+                  title="walmart"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SubHeroItem
+                  href="/"
+                  logoLink={logosURL + "microsoft.svg"}
+                  title="microsoft"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SubHeroItem
+                  href="/"
+                  logoLink={logosURL + "morgan.svg"}
+                  title="morgan"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SubHeroItem
+                  href="/"
+                  logoLink={logosURL + "ibm.svg"}
+                  title="ibm"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SubHeroItem
+                  href="/"
+                  logoLink={logosURL + "amazon.svg"}
+                  title="amazon"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SubHeroItem
+                  href="/"
+                  logoLink={logosURL + "walmart.svg"}
+                  title="walmart"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SubHeroItem
+                  href="/"
+                  logoLink={logosURL + "microsoft.svg"}
+                  title="microsoft"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SubHeroItem
+                  href="/"
+                  logoLink={logosURL + "morgan.svg"}
+                  title="morgan"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SubHeroItem
+                  href="/"
+                  logoLink={logosURL + "ibm.svg"}
+                  title="ibm"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SubHeroItem
+                  href="/"
+                  logoLink={logosURL + "amazon.svg"}
+                  title="amazon"
+                />
+              </SwiperSlide>
               <SwiperSlide>
                 <SubHeroItem
                   href="/"
@@ -131,5 +208,3 @@ const SubHeroItem = ({ href, logoLink, title }) => {
 };
 
 export default SubHero;
-
-
