@@ -38,7 +38,7 @@ const Faq = () => {
           </div>
           <div className="faq__inner-column">
             {faqItems.map((item, i) => (
-              <FaqItem key={i} {...item} />
+              <FaqItem key={i} {...item} activeDefault={i === 0} />
             ))}
           </div>
         </div>
@@ -47,8 +47,8 @@ const Faq = () => {
   );
 };
 
-const FaqItem = ({ title, text }) => {
-  const [active, setActive] = useState(true);
+const FaqItem = ({ title, text, activeDefault = false }) => {
+const [active, setActive] = useState(activeDefault);
   const toggle = () => setActive(!active);
 
   return (

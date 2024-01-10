@@ -40,15 +40,26 @@ const TestimonialsSwiper = () => {
           </div>
           <div className="testimonials__inner-swiper">
             <TestimonialsSlide
+<<<<<<< HEAD
               avatarURL={avatarURL + "user-1.svg"}
               name="Karl M."
               position="Benefits Point Solution"
+=======
+              avatarURL={avatarURL + "user-2.jpeg"}
+              name="Karl Mills"
+              position="EDHC"
+>>>>>>> ee9691ab8f298413c8efe630a12d97b6b619a515
               text={`As a Sales Leader, I am truly impressed by DemandCapture's ability to orchestrate a substantial number of outbound meetings with prospective buyers. Their strategic approach and execution have significantly contributed to the overall success of our pipeline growth initiatives.`}
               modifier="active"
             />
             <TestimonialsSlide
+<<<<<<< HEAD
               avatarURL={avatarURL + "user-1.svg"}
               name="Emma C."
+=======
+              avatarURL={avatarURL + "salesloft.svg"}
+              name="Emma Cromwell"
+>>>>>>> ee9691ab8f298413c8efe630a12d97b6b619a515
               position="Salesloft"
               text={`DemandCapture is a leader in Achieving optimization and success in sales. through our partnership, the team is accelerating revenue growth, conquering markets, and creating lasting customer connections.`}
             />
@@ -80,7 +91,7 @@ const TestimonialsSwiper = () => {
 //   >
 //     <SwiperSlide>
 //       <TestimonialsSlide
-//         avatarURL={avatarURL + "user-1.svg "}
+//         avatarURL={avatarURL + "salesloft.svg "}
 //         name="Karl Mills"
 //         position="EDHC"
 //         text={`As a Sales Leader, I am truly impressed by DemandCapture's ability to orchestrate a substantial number of outbound meetings with prospective buyers. Their strategic approach and execution have significantly contributed to the overall success of our pipeline growth initiatives.`}
@@ -88,7 +99,7 @@ const TestimonialsSwiper = () => {
 //     </SwiperSlide>
 //     <SwiperSlide>
 //       <TestimonialsSlide
-//         avatarURL={avatarURL + "user-1.svg "}
+//         avatarURL={avatarURL + "salesloft.svg "}
 //         name="Emma Cromwell"
 //         position="Salesloft"
 //         text={`DemandCapture is a leader in Achieving optimization and success in sales. through our partnership, the team is accelerating revenue growth, conquering markets, and creating lasting customer connections.`}
@@ -112,7 +123,7 @@ const TestimonialsSwiper = () => {
 //     </SwiperSlide>
 //     <SwiperSlide>
 //       <TestimonialsSlide
-//         avatarURL={avatarURL + "user-1.svg "}
+//         avatarURL={avatarURL + "salesloft.svg "}
 //         name="Emma Cromwell"
 //         position="Salesloft"
 //         text={`DemandCapture is a leader in Achieving optimization and success in sales. through our partnership, the team is accelerating revenue growth, conquering markets, and creating lasting customer connections.`}
