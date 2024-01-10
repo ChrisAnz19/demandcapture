@@ -8,10 +8,19 @@
 
   &__inner {
     color: $white;
-
     h2 {
       text-align: center;
-      margin-bottom: 1.4em;
+      text-transform: uppercase;
+    }
+    &-header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 72px;
+      h5 {
+        color: $black;
+      }
     }
   }
   &__banner {
@@ -23,17 +32,17 @@
     padding-top: 70px;
     padding-bottom: 30px;
 
-    &:after {
-      position: absolute;
-      content: "";
-      bottom: 30px;
-      left: 25%;
-      width: 12%;
-      transform: translate(-55%, -50%);
-      border-radius: 50%;
-      box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.2),
-        0 0 15px 5px rgba(0, 0, 0, 0.4);
-    }
+    // &:after {
+    //   position: absolute;
+    //   content: "";
+    //   bottom: 30px;
+    //   left: 25%;
+    //   width: 12%;
+    //   transform: translate(-55%, -50%);
+    //   border-radius: 50%;
+    //   box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.2),
+    //     0 0 15px 5px rgba(0, 0, 0, 0.4);
+    // }
     &-item {
       position: relative;
       padding-left: 60%;
@@ -162,13 +171,10 @@
       height: 42px;
       width: auto;
       transition: 0.2s ease-out;
+      pointer-events: none;
       img {
         height: 100%;
         width: auto;
-      }
-
-      &:hover {
-        opacity: 0.8;
       }
       &:active {
         opacity: 0.6;
@@ -190,6 +196,16 @@
     background: #f7f7f7;
     min-height: unset !important;
     .ourprocess {
+      &__inner {
+        &-header {
+          h2 {
+            text-transform: capitalize;
+          }
+          h5 {
+            text-transform: uppercase;
+          }
+        }
+      }
       &__banner {
         &-item {
           &-content {

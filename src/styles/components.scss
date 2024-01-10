@@ -57,6 +57,23 @@
     position: relative;
     z-index: 2;
     .input {
+      &__selected {
+        &:after {
+          color: inherit;
+          content: "";
+          position: absolute;
+          display: block;
+          top: 50%;
+          right: 1.2em;
+          width: 0;
+          height: 0;
+          border-bottom: 6px solid #a3a3a3;
+          border-right: 6px solid transparent;
+          border-left: 6px solid transparent;
+          transform: translateY(-50%) rotate(180deg);
+          transition: 0.3s ease;
+        }
+      }
       &__dropdown {
         position: absolute;
         top: calc(100% + 5px);
@@ -86,6 +103,11 @@
       }
     }
     &.active .input {
+      &__selected {
+        &:after {
+          transform: translateY(-50%) rotate(0);
+        }
+      }
       &__dropdown {
         opacity: 1;
         pointer-events: all;

@@ -105,7 +105,7 @@
         width: 100%;
         bottom: 0;
         left: 0;
-        height: calc(100% - 258px);
+        height: calc(100% - 240px);
         background: $secondary-2;
         z-index: 1;
         .bg__image {
@@ -138,7 +138,7 @@
     &-content {
       background: $white;
       border-radius: 20px;
-      box-shadow: 0px 0px 30px 0px #956df8;
+      // box-shadow: 0px 0px 30px 0px #956df8;
       padding: 40px 30px;
       width: 100%;
       max-width: 820px;
@@ -232,6 +232,7 @@
     }
   }
 }
+
 // 1024px
 @include lg-xlg {
   .contacts {
@@ -247,7 +248,7 @@
     .bg {
       &__image {
         &-wrapper {
-          height: calc(100% - 218px);
+          height: calc(100% - 190px);
         }
       }
     }
@@ -284,7 +285,7 @@
     .bg {
       &__image {
         &-wrapper {
-          height: calc(100% - 92px);
+          height: calc(100% - 76px);
         }
       }
     }
@@ -295,6 +296,13 @@
   .contacts {
     &__container {
       padding: 12px;
+    }
+    .bg {
+      &__image {
+        &-wrapper {
+          height: calc(100% - 66px);
+        }
+      }
     }
   }
 }

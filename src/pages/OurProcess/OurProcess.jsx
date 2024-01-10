@@ -15,7 +15,7 @@ const OurProcess = ({ setHeaderStyle }) => {
 
   return (
     <>
-      <OurProcessHero />
+      <OurProcessHero title="Our Process" />
       <Onboarding />
       <Testimonials />
       <FAQ />

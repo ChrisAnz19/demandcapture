@@ -17,8 +17,14 @@ function App() {
 
   const location = useLocation();
   const isHome = location.pathname === "/";
-  const showContactPopup = () => setContactPopup(true);
-
+  const showContactPopup = () => {
+    document.body.classList.add("active");
+    setContactPopup(true);
+  };
+  const PopUpColose = () => {
+    document.body.classList.remove("active");
+    setContactPopup(false);
+  };
   useEffect(() => {
     setMenu(false);
     window.scrollTo(0, 0);
@@ -57,7 +63,9 @@ function App() {
         <Route path="/contact-us" element={<Contact />} />
       </Routes>
       <Footer showContactPopup={showContactPopup} />
-      {contactPopup && <PopUp close={() => setContactPopup(false)} />}
+      {contactPopup && (
+        <PopUp close={PopUpColose} showContactPopup={showContactPopup} />
+      )}
     </>
   );
 }

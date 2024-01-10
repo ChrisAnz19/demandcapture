@@ -3,12 +3,15 @@ import { AutoContainer } from "layouts/containers";
 
 const imgURl = process.env.PUBLIC_URL + "images/our-process/hero/";
 
-const OurProcessHero = ({ modifier }) => {
+const OurProcessHero = ({ modifier, title, subtitle }) => {
   return (
     <section className={`ourprocess ${modifier ? "ourprocess--home" : ""}`}>
       <AutoContainer style={{ maxWidth: 1310 }}>
         <div className="ourprocess__inner">
-          <h2>Our Process</h2>
+          <div className="ourprocess__inner-header">
+            <h2>{title}</h2>
+            {subtitle ? <h5>{subtitle}</h5> : ""}
+          </div>
           <ul className="ourprocess__banner">
             <OurProcessItem
               title={"Client ICP & Requirements Defined"}
