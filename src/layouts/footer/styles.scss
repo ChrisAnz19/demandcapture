@@ -127,13 +127,14 @@
     justify-content: center;
     min-height: 50px;
     padding: 15px 0;
+    gap: 5px;
 
     color: $white;
     font-family: $font-primary;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.2;
+    line-height: 1;
     text-align: center;
 
     //bg
@@ -288,6 +289,9 @@
       &-news {
         padding: 35px 0;
       }
+    }
+    &__copyright {
+      margin: 0 -10px;
     }
   }
 }
