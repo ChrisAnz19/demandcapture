@@ -19,7 +19,9 @@ const SystemBanner = () => {
             Intent Data from 200MM Sales Calls
           </SystemBannerMessage>
           <SystemBannerMessage>
-            7 Proprietary Deep learning Algorithms
+            <span className="noBreak">7 Proprietary Deep</span>
+            <br />
+            <span className="noBreak">learning Algorithms</span>
           </SystemBannerMessage>
           <SystemBannerInfo title={"Outcome"}>
             <p>

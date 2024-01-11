@@ -12,7 +12,7 @@ const PartnersBanner = () => {
       <AutoContainer>
         <div className="partners__inner">
           <h3>
-            Appointment Setting Is A Facet Of Our Story;
+            Appointment Setting Is A Facet Of Our Story;{" "}
             <br />
             Technology Leadership Is Our Defining Narrative
           </h3>

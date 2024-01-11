@@ -18,7 +18,7 @@ const PopUp = ({ close, showContactPopup }) => {
               </div>
               <h6 className="_sm">Accelerate Revenue Generation</h6>
               <h6>
-                Let Us Help You Reach Your
+                Let Us Help You Reach Your{" "}
                 <span className="noBreak">Full Market Potential</span>
               </h6>
             </div>

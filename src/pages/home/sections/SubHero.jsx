@@ -62,7 +62,7 @@ const SubHero = () => {
   }, [swiper]);
 
   return (
-    <section className="customers">
+    <section className="customers customers--lg">
       <AutoContainer>
         <div className="customers__inner">
           <div className="customers__inner-slider">
@@ -97,7 +97,7 @@ const SubHero = () => {
           </div>
           <div className="customers__inner-title">
             <h6>
-              Our Customers Have Closed
+              Our Customers Have Closed{" "}
               <span className="noBreak">43% Of The Fortune 100</span>
             </h6>
           </div>

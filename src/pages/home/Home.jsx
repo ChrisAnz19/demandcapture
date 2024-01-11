@@ -18,7 +18,10 @@ const Home = ({ showContactPopup }) => {
       <SubHero />
       <PartnersBanner />
       <InfoBox>
-        <h3>Orchestrating 1,000+ Meetings Each Month</h3>
+        <h3>
+          <span className="noBreak">Orchestrating 1,000+</span>{" "}
+          <span className="noBreak">Meetings Each Month</span>
+        </h3>
         <p className="_lg">
           Through our proprietary technology, KnowledgeCore, DemandCapture
           leverages <br /> 22 billion data points to accelerate businesses

@@ -31,9 +31,8 @@ const Faq = () => {
               <span> Questions</span>
             </h3>
             <p>
-              Learn More About
-              <br />
-              DemandCapture
+              <span className="noBreak">Learn More About</span> <br />
+              <span className="noBreak">DemandCapture</span>
             </p>
           </div>
           <div className="faq__inner-column">
@@ -48,7 +47,7 @@ const Faq = () => {
 };
 
 const FaqItem = ({ title, text, activeDefault = false }) => {
-const [active, setActive] = useState(activeDefault);
+  const [active, setActive] = useState(activeDefault);
   const toggle = () => setActive(!active);
 
   return (
