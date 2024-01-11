@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 25px 0;
+  padding: 20px 0;
   z-index: 5;
   transition: 0.3s ease;
   &__inner {
@@ -40,12 +40,12 @@
     }
   }
   &:not(._white) + section {
-    padding-top: 100px;
+    padding-top: 90px;
   }
   &._white {
     background: $white;
     & + section {
-      margin-top: 100px;
+      margin-top: 90px;
     }
   }
   .logo {
@@ -133,7 +133,7 @@
 // 1024px
 @include lg-xlg {
   .header {
-    padding: 20px 0;
+    padding: 15px 0;
     &__inner {
       justify-content: space-between;
 
@@ -143,11 +143,11 @@
       }
     }
     &:not(._white) + section {
-      padding-top: 90px;
+      padding-top: 80px;
     }
     &._white {
       & + section {
-        margin-top: 90px;
+        margin-top: 80px;
       }
     }
     &--sticky {

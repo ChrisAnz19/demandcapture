@@ -105,7 +105,7 @@
         width: 100%;
         bottom: 0;
         left: 0;
-        height: calc(100% - 240px);
+        height: calc(100% - 230px);
         background: $secondary-2;
         z-index: 1;
         .bg__image {
@@ -248,7 +248,7 @@
     .bg {
       &__image {
         &-wrapper {
-          height: calc(100% - 190px);
+          height: calc(100% - 180px);
         }
       }
     }
@@ -272,6 +272,7 @@
       padding: 0 0 255px;
       &-content {
         gap: 40px;
+        padding-top: 30px;
       }
     }
     &__container {

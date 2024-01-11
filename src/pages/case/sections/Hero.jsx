@@ -34,7 +34,10 @@ const Hero = () => {
                 href="/"
                 title="zoominfo"
               >
-                <img src={logoURL + "logos/investors/zoominfo-logo.svg"} alt="zoominfo" />
+                <img
+                  src={logoURL + "logos/investors/zoominfo-logo.svg"}
+                  alt="zoominfo"
+                />
               </a>
             </div>
             <div className="partners__inner-banner-shape">
