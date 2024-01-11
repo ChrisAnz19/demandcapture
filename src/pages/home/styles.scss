@@ -1506,6 +1506,13 @@
       }
     }
   }
+  .infobox {
+    p {
+      br {
+        display: none;
+      }
+    }
+  }
 }
 @include xsm-sm {
   .hero {
