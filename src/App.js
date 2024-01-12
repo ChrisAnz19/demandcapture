@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "pages/home";
 import { Footer, Header, Nav } from "layouts";
 import About from "pages/about";
@@ -9,14 +9,20 @@ import OurProcess from "pages/OurProcess/OurProcess";
 import Case from "pages/case";
 import Contact from "pages/contact";
 import PopUp from "layouts/PopUp";
+import usePathChange from "hooks/usePathChange";
+import useHeroAutoHeight from "hooks/useHeroAutoHeight";
 
 function App() {
   const [headerStyle, setHeaderStyle] = useState(false);
   const [menu, setMenu] = useState(false);
   const [contactPopup, setContactPopup] = useState(false);
 
-  const location = useLocation();
+  useHeroAutoHeight();
+  const location = usePathChange({
+    onLocationChange: () => setMenu(false),
+  });
   const isHome = location.pathname === "/";
+
   const showContactPopup = () => {
     document.body.classList.add("active");
     setContactPopup(true);
@@ -25,10 +31,6 @@ function App() {
     document.body.classList.remove("active");
     setContactPopup(false);
   };
-  useEffect(() => {
-    setMenu(false);
-    window.scrollTo(0, 0);
-  }, [location]);
 
   useEffect(() => {
     if (contactPopup && menu) setMenu(false);
