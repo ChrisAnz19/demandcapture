@@ -6,6 +6,7 @@ const shapeURL =
 const systemIllustrationURL =
   process.env.PUBLIC_URL + "/images/illustrations/system-illustration.svg";
 const systemLogoURL = process.env.PUBLIC_URL + "/images/knowledge-core.png";
+const systemLogoURL2 = process.env.PUBLIC_URL + "/images/knowledge-core.svg";
 
 const SystemBanner = () => {
   return (
@@ -42,15 +43,12 @@ const SystemBanner = () => {
                 alt="system-graph"
                 className="_shape"
               />
-              <img src={systemLogoURL} alt="shape" className="_logo" />
+              <img src={systemLogoURL2} alt="shape" className="_logo" />
             </div>
           </div>
         </div>
         <div className="bg">
           <div className="bg__image">
-            <img src={shapeURL} alt="shape" />
-          </div>
-          <div className="bg__image _logo">
             <img src={shapeURL} alt="shape" />
           </div>
         </div>
