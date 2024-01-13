@@ -40,20 +40,20 @@ const TestimonialsSwiper = () => {
           </div>
           <div className="testimonials__inner-swiper">
             <TestimonialsSlide
-              avatarURL={avatarURL + "bps.png"}
+              avatarURL={avatarURL + "bps.svg"}
               name="Karl M."
               position="Benefits Point Solution"
               text={`As a Sales Leader, I am truly impressed by DemandCapture's ability to orchestrate a substantial number of outbound meetings with prospective buyers. Their strategic approach and execution have significantly contributed to the overall success of our pipeline growth initiatives.`}
               modifier="active"
             />
             <TestimonialsSlide
-              avatarURL={avatarURL + "user-1.svg"}
+              avatarURL={avatarURL + "salesloft.svg"}
               name="Emma C."
               position="Salesloft"
               text={`DemandCapture is a leader in Achieving optimization and success in sales. through our partnership, the team is accelerating revenue growth, conquering markets, and creating lasting customer connections.`}
             />
             <TestimonialsSlide
-              avatarURL={avatarURL + "cadenz-tech.png"}
+              avatarURL={avatarURL + "cadenz-tech.svg"}
               name="Dylan B."
               position="Cadenza Tech"
               text={` DemandCapture changed their approach until they got it just right for us, showing they were really dedicated to our project. I appreciate that they always promptly address our inquiries and encourage a collaborative work environment.`}
