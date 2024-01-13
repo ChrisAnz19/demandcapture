@@ -13,7 +13,8 @@ const SystemBanner = () => {
       <AutoContainer>
         <div className="systemBanner__inner">
           <SystemBannerMessage>
-            2,800 Data Points Per COntact
+            2,800 Data Points <br />
+            Per COntact
           </SystemBannerMessage>
           <SystemBannerMessage>
             Intent Data from 200MM Sales Calls

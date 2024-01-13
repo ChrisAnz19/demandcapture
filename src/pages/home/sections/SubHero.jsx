@@ -71,7 +71,7 @@ const SubHero = () => {
               slidesPerView={"auto"}
               slidesPerGroup={1}
               spaceBetween={20}
-              onSlideChange={() => console.log("slide change")}
+              // onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => setSwiper(swiper)}
               pagination={false}
               loop={true}

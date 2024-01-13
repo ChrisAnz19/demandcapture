@@ -16,7 +16,9 @@ const Success = () => {
         <div className="success__inner">
           <div className="success__inner-group">
             <div className="success__title">
-              <h3>Navigating Success through Collaboration</h3>
+              <h3>
+                Navigating Success <br /> through Collaboration
+              </h3>
               <h5>Our Results, Your Victories</h5>
             </div>
             <SuccessKnowledge />
@@ -24,7 +26,9 @@ const Success = () => {
           <div className="success__inner-group">
             <div className="success__title">
               <h3>Fostering a Winning Culture</h3>
-              <h5>outperforming Established Industry Benchmarks</h5>
+              <h5>
+                outperforming Industry <br /> Established Benchmarks
+              </h5>
             </div>
             <SuccessStatistics />
           </div>

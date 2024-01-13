@@ -14,6 +14,7 @@
   position: relative;
   display: flex;
   min-height: 100vh;
+  transition: 0.3s ease;
 
   &__inner {
     display: flex;
@@ -1542,7 +1543,8 @@
     }
   }
   .customers {
-    padding: 40px 0;
+    padding: 30px 0;
+
     &-item {
       display: flex;
       align-items: center;
@@ -1555,7 +1557,8 @@
       }
     }
     &__inner {
-      gap: 30px;
+      gap: 25px;
+
       h6 {
         font-size: 20px;
         color: $white;
@@ -1576,6 +1579,8 @@
       }
     }
     &--about {
+      padding: 40px 0;
+
       .customers {
         &__inner {
           gap: 30px;

@@ -11,7 +11,7 @@ const CaseStudy = () => {
       <AutoContainer>
         <div className="caseStudy__inner">
           <h3 className="caseStudy__inner-title">
-            Case Study Cyber Security Company
+            Case Study <br /> Cyber Security Company
           </h3>
           <div className="caseStudy__inner-banner">
             <div className="caseStudy__banner">
