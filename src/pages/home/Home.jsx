@@ -16,7 +16,7 @@ const Home = ({ showContactPopup }) => {
     <>
       <Hero showContactPopup={showContactPopup} />
       <SubHero />
-      <PartnersBanner />
+      {/* <PartnersBanner /> */}
       <InfoBox>
         <h3>
           <span className="noBreak">Orchestrating 1,000+</span>{" "}

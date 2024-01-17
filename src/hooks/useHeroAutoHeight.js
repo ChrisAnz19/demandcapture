@@ -9,6 +9,8 @@ const useHeroAutoHeight = () => {
 
   useEffect(() => {
     const hero = document.querySelector(".hero");
+    if (hero?.classList && hero.classList.contains("hero--sm")) return;
+
     if (minWidth < 640 && hero) {
       let docHeight = document.documentElement.clientHeight;
       console.log(`${docHeight}px`);

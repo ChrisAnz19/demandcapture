@@ -2,7 +2,7 @@ import React from "react";
 import { AutoContainer } from "layouts/containers";
 
 const Hero = ({ showContactPopup }) => {
-  const bgURL = process.env.PUBLIC_URL + "/images/pricing/hero-bg.png";
+  const bgURL = process.env.PUBLIC_URL + "/images/pricing/hero-bg.webp";
   const shapeUrl = process.env.PUBLIC_URL + "/images/pricing/hero-shape.png";
   return (
     <section className="hero hero--sm">

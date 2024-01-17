@@ -36,7 +36,7 @@ const Research = () => {
         </AutoContainer>
         <div className="research__bg">
           <div className="research__bg-image">
-            <img src={imageURL + "research.png"} alt="research" />
+            <img src={imageURL + "research.webp"} alt="research" />
           </div>
           <div className="research__bg-shape">
             <img src={imageURL + "bg-shape.webp"} alt="research" />

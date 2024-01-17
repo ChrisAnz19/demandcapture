@@ -61,7 +61,7 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 192px;
+    gap: 155px;
   }
   &__item {
     display: flex;
@@ -261,9 +261,7 @@
   }
   .features {
     padding: 130px 0 130px;
-    &__inner {
-      gap: 170px;
-    }
+
   }
 }
 // 1024
@@ -271,7 +269,7 @@
   .features {
     padding: 100px 0 120px;
     &__inner {
-      gap: 140px;
+      gap: 130px;
     }
     &__item {
       align-items: flex-start;

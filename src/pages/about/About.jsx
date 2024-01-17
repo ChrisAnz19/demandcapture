@@ -10,7 +10,7 @@ const About = () => {
   return (
     <>
       <Hero />
-      <Partners />
+      {/* <Partners /> */}
       <PartnersBanner />
       <Testimonials />
       <FAQ />
