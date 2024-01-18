@@ -34,7 +34,7 @@ const Home = ({ showContactPopup }) => {
         </p>
       </InfoBox>
       <SystemBanner />
-      {/* <Privilegies /> */}
+      <Privilegies />
       <OurProcessHero
         modifier="ourprocess--home"
         title="The Artistry & Precision of Our Winning DNA"
