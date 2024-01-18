@@ -146,21 +146,19 @@
         top: 50%;
         width: 4px;
         height: 80%;
-        transform: translateY(-50%);
+        transform: translateY(-50%) !important;
         opacity: 0.2;
         border-radius: 0 !important;
       }
 
       &:hover {
         &:after {
-          width: 2px;
           height: 100%;
         }
       }
       &.active {
         &:after {
           width: 4px;
-          transform: translateY(-50%);
         }
       }
     }
