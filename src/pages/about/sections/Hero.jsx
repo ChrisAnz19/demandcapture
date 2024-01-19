@@ -11,18 +11,18 @@ const Hero = () => {
           <div className="hero__inner-content">
             <h2>DemandCapture</h2>
             <p>
-              DemandCapture stands as the foremost name in pipeline development
-              services within the industry. Our headquarters are nestled in the
-              heart of New York City, where we excel at assisting businesses in
-              pinpointing prospective clients by delivering actionable insights
-              and actively engaging potential leads.
+              DemandCapture stands as the foremost name in appointment-setting
+              services. Our headquarters are nestled in the heart of New York
+              City, where we excel at assisting businesses in pinpointing
+              prospective clients by delivering actionable insights and actively
+              engaging potential leads.
               <br />
               <br />
-              This strategic approach empowers businesses to customize their
-              sales strategies for unparalleled effectiveness. Our unwavering
-              dedication to excellence and our commitment to innovation has
-              paved the way for our clients to close business with an impressive
-              43% of the Fortune 100.
+              Our strategic approach enables businesses to craft a pipeline of
+              highly qualified prospects and cultivate a portfolio of
+              sought-after brand names. Our unwavering dedication to excellence
+              and our commitment to innovation has paved the way for our clients
+              to close business with an impressive 43% of the Fortune 100.
             </p>
           </div>
         </div>

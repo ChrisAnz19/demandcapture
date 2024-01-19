@@ -1,8 +1,10 @@
+import Spinner, { SpinnerWrapper } from "components/Spinner";
 import useHubSpotForm from "hooks/useHubSpotForm";
-import React from "react";
+import React, { useState } from "react";
 import { createPortal } from "react-dom";
 
 const PopUp = ({ close, showContactPopup }) => {
+  const [isReady, setReady] = useState(false);
   const iconURL = process.env.PUBLIC_URL + "/images/icons/";
 
   useHubSpotForm({
@@ -10,6 +12,7 @@ const PopUp = ({ close, showContactPopup }) => {
     region: "na1",
     portalId: "44155674",
     formId: "b0fac1b5-ed3c-46bf-80f0-730bb2684310",
+    onFormReady: () => setReady(true),
   });
 
   return createPortal(
@@ -30,7 +33,22 @@ const PopUp = ({ close, showContactPopup }) => {
                 <span className="noBreak">Full Market Potential</span>
               </h6>
             </div>
-            <div className="popUp__form" id="hbspt-form">
+            {!isReady && (
+              <SpinnerWrapper
+                style={{
+                  minHeight: 240,
+                }}
+              >
+                <Spinner />
+              </SpinnerWrapper>
+            )}
+            <div
+              className="popUp__form"
+              id="hbspt-form"
+              style={{
+                display: isReady ? undefined : "none",
+              }}
+            >
               {/* <div className="popUp__form-row">
                 <div className="input__wrapper">
                   <label htmlFor="name">First Name</label>
