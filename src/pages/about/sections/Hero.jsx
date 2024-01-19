@@ -27,9 +27,15 @@ const Hero = () => {
           </div>
         </div>
       </AutoContainer>
-      <div className="bg">
+      <div className="bg _noeffects">
         <div className="bg__image">
-          <img src={heroUrl} alt="bg" />
+          <img
+            src={heroUrl}
+            alt="bg"
+            style={{
+              objectPosition: '30% center',
+            }}
+          />
         </div>
       </div>
     </section>

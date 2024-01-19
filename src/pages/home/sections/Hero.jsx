@@ -5,7 +5,7 @@ import Button from "components/Button";
 
 const bannerURL = process.env.PUBLIC_URL + "/images/hero/hero.webp";
 const bgURL = process.env.PUBLIC_URL + "/images/hero/hero-bg.png";
-const bgBannerURL = process.env.PUBLIC_URL + "/images/hero/hero.png";
+const bgBannerURL = process.env.PUBLIC_URL + "/images/hero/hero-mobile.webp";
 
 const Hero = ({ showContactPopup }) => {
   return (

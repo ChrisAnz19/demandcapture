@@ -69,7 +69,12 @@
   .bg {
     opacity: 0.8;
     &__image {
+      align-items: center;
+      justify-content: center;
+
       img {
+        width: 101%;
+        height: 101%;
         object-position: top;
       }
       &._man {
@@ -1293,6 +1298,11 @@
         z-index: 2;
         background: $gradient;
         opacity: 0.5;
+      }
+      &._noeffects {
+        &::after {
+          display: none;
+        }
       }
     }
   }
