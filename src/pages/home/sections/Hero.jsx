@@ -18,7 +18,8 @@ const Hero = ({ showContactPopup }) => {
         <div className="hero__inner">
           <div className="hero__inner-content">
             <h1>
-              Leader in <br /> Appointment-Setting Services
+              <span className="noBreak">Leader in</span>{" "}
+              <span className="noBreak">Appointment-Setting</span> Services
             </h1>
             <p>
               "First vendor to engage a prospect and guide the solution
@@ -27,7 +28,10 @@ const Hero = ({ showContactPopup }) => {
               <span className="noBreak">- Forrester Research</span>
             </p>
             <InputWrapper>
-              <Input placeholder="Enter your email" />
+              <Input
+                placeholder="Enter your email"
+                onFocus={showContactPopup}
+              />
               <Button text={"Contact Sales"} onClick={showContactPopup} />
             </InputWrapper>
           </div>

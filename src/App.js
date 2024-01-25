@@ -8,9 +8,10 @@ import { Policy, Terms } from "pages/policy";
 import OurProcess from "pages/OurProcess/OurProcess";
 import Case from "pages/case";
 import Contact from "pages/contact";
-import PopUp from "layouts/PopUp";
+import Popup from "components/Popup";
 import usePathChange from "hooks/usePathChange";
 import useHeroAutoHeight from "hooks/useHeroAutoHeight";
+import ContactSalesPopup from "forms/ContactSalesPopup";
 
 function App() {
   const [headerStyle, setHeaderStyle] = useState(false);
@@ -23,14 +24,8 @@ function App() {
   });
   const isHome = location.pathname === "/";
 
-  const showContactPopup = () => {
-    document.body.classList.add("active");
-    setContactPopup(true);
-  };
-  const PopUpColose = () => {
-    document.body.classList.remove("active");
-    setContactPopup(false);
-  };
+  const showContactPopup = () => setContactPopup(true);
+  const popupClose = () => setContactPopup(false);
 
   useEffect(() => {
     if (contactPopup && menu) setMenu(false);
@@ -65,9 +60,7 @@ function App() {
         <Route path="/contact-us" element={<Contact />} />
       </Routes>
       <Footer showContactPopup={showContactPopup} />
-      {contactPopup && (
-        <PopUp close={PopUpColose} showContactPopup={showContactPopup} />
-      )}
+      {contactPopup && <ContactSalesPopup close={popupClose} />}
     </>
   );
 }

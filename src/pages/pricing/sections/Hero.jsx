@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { AutoContainer } from "layouts/containers";
+import PricingStarterPopup from "forms/PricingStarterPopup";
+import PricingProPopup from "forms/PricingProPopup";
+import PricingEnterprisePopup from "forms/PricingEnterprisePopup";
 
-const Hero = ({ showContactPopup }) => {
+const FORM_TYPES = {
+  starter: "Starter",
+  professional: "Professional",
+  enterprise: "Enterprise",
+};
+const Hero = () => {
+  const [form, setForm] = useState(null);
+
   const bgURL = process.env.PUBLIC_URL + "/images/pricing/hero-bg.webp";
   const shapeUrl = process.env.PUBLIC_URL + "/images/pricing/hero-shape.png";
+
+  const popupClose = () => setForm(null);
+
   return (
     <section className="hero hero--sm">
       <AutoContainer>
@@ -28,7 +41,7 @@ const Hero = ({ showContactPopup }) => {
                   </p>
                   <button
                     className="buttonPrimary buttonPrimary--default"
-                    onClick={showContactPopup}
+                    onClick={() => setForm(FORM_TYPES.starter)}
                   >
                     <span>Contact Sales</span>
                   </button>
@@ -61,7 +74,7 @@ const Hero = ({ showContactPopup }) => {
                   </p>
                   <button
                     className="buttonPrimary buttonPrimary--default"
-                    onClick={showContactPopup}
+                    onClick={() => setForm(FORM_TYPES.professional)}
                   >
                     <span>Contact Sales</span>
                   </button>
@@ -95,7 +108,7 @@ const Hero = ({ showContactPopup }) => {
                   </p>
                   <button
                     className="buttonPrimary buttonPrimary--default"
-                    onClick={showContactPopup}
+                    onClick={() => setForm(FORM_TYPES.enterprise)}
                   >
                     <span>Contact Sales</span>
                   </button>
@@ -126,8 +139,16 @@ const Hero = ({ showContactPopup }) => {
           <img src={bgURL} alt="bg" />
         </div>
       </div>
+      {form === FORM_TYPES.starter && (
+        <PricingStarterPopup close={popupClose} />
+      )}
+      {form === FORM_TYPES.professional && (
+        <PricingProPopup close={popupClose} />
+      )}
+      {form === FORM_TYPES.enterprise && (
+        <PricingEnterprisePopup close={popupClose} />
+      )}
     </section>
   );
 };
-
 export default Hero;

@@ -17,6 +17,7 @@ const Hero = () => {
               prospective clients by delivering actionable insights and actively
               engaging potential leads.
               <br />
+              &nbsp;&nbsp;&nbsp;
               <br />
               Our strategic approach enables businesses to craft a pipeline of
               highly qualified prospects and cultivate a portfolio of
@@ -33,7 +34,7 @@ const Hero = () => {
             src={heroUrl}
             alt="bg"
             style={{
-              objectPosition: '30% center',
+              objectPosition: "30% center",
             }}
           />
         </div>

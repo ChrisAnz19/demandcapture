@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "components/Logo";
 import { AutoContainer } from "layouts/containers";
 import "./styles.scss";
@@ -8,10 +8,15 @@ import {
   Link,
   // useNavigate
 } from "react-router-dom";
+import SubscribePopup from "forms/SubscribePopup";
 
 const icoURL = process.env.PUBLIC_URL + "/images/icons/socials/";
 
 const Footer = ({ showContactPopup }) => {
+  const [popupVisible, setPopupVisible] = useState(false);
+  const popupClose = () => setPopupVisible(false);
+  const popupShow = () => setPopupVisible(true);
+
   return (
     <footer className="footer">
       <AutoContainer>
@@ -72,13 +77,20 @@ const Footer = ({ showContactPopup }) => {
           <div className="footer__inner-news">
             <h6>SUBSCRIBE TO OUR NEWSLETTER</h6>
             <InputWrapper>
-              <Input placeholder="Enter your email" shadow />
-              <Button text={"Subscribe"} shadow />
+              <Input
+                placeholder="Enter your email"
+                shadow
+                onFocus={popupShow}
+              />
+              <Button text={"Subscribe"} shadow onClick={popupShow} />
             </InputWrapper>
           </div>
         </div>
         <FooterCopyright />
       </AutoContainer>
+      {popupVisible && (
+        <SubscribePopup close={popupClose} style={{ maxWidth: 600 }} />
+      )}
     </footer>
   );
 };
