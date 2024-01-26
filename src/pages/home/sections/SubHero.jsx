@@ -54,11 +54,15 @@ const logosArrayTest = [
 ];
 const SubHero = () => {
   const [swiper, setSwiper] = React.useState(null);
+  const startAutoplay = (swiper) => {
+    if (!swiper.autoplay) return;
+
+    console.log("start swiper");
+    swiper.autoplay.start();
+    window.autoplay = swiper.autoplay;
+  };
   useEffect(() => {
-    if (swiper?.autoplay?.start) {
-      swiper.autoplay.start();
-      window.autoplay = swiper.autoplay;
-    }
+    if (swiper) startAutoplay(swiper);
   }, [swiper]);
 
   return (
@@ -72,7 +76,7 @@ const SubHero = () => {
               slidesPerGroup={1}
               spaceBetween={20}
               // onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => setSwiper(swiper)}
+              onSwiper={(swiper) => startAutoplay(swiper)}
               pagination={false}
               loop={true}
               autoplay={{

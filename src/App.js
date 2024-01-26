@@ -24,7 +24,9 @@ function App() {
   });
   const isHome = location.pathname === "/";
 
-  const showContactPopup = () => setContactPopup(true);
+  const showContactPopup = () => {
+    setContactPopup(true);
+  };
   const popupClose = () => setContactPopup(false);
 
   useEffect(() => {

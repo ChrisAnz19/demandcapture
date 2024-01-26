@@ -16,6 +16,10 @@ const Footer = ({ showContactPopup }) => {
   const [popupVisible, setPopupVisible] = useState(false);
   const popupClose = () => setPopupVisible(false);
   const popupShow = () => setPopupVisible(true);
+  const triggerPopup = (e) => {
+    if (e?.preventDefault) e.preventDefault();
+    popupShow();
+  };
 
   return (
     <footer className="footer">
@@ -80,7 +84,9 @@ const Footer = ({ showContactPopup }) => {
               <Input
                 placeholder="Enter your email"
                 shadow
-                onFocus={popupShow}
+                onFocus={triggerPopup}
+                inputmode="none"
+                readOnly
               />
               <Button text={"Subscribe"} shadow onClick={popupShow} />
             </InputWrapper>

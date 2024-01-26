@@ -8,7 +8,10 @@ const Help = () => {
   const [formVisible, setFormVisible] = useState(false);
 
   const popupClose = () => setFormVisible(false);
-  const popupShow = () => setFormVisible(true);
+  const popupShow = (e) => {
+    if (e?.preventDefault) e.preventDefault();
+    setFormVisible(true);
+  };
 
   return (
     <section className="contacts">
@@ -49,25 +52,49 @@ const Help = () => {
                 <div className="input__wrapper">
                   <label htmlFor="input-2">Name</label>
                   <div className="input input--rounded">
-                    <input type="text" id="input-2" onFocus={popupShow} />
+                    <input
+                      type="text"
+                      inputmode="none"
+                      readOnly
+                      id="input-2"
+                      onFocus={popupShow}
+                    />
                   </div>
                 </div>
                 <div className="input__wrapper">
                   <label htmlFor="input-3">Email</label>
                   <div className="input input--rounded">
-                    <input type="text" id="input-3" onFocus={popupShow} />
+                    <input
+                      type="text"
+                      inputmode="none"
+                      readOnly
+                      id="input-3"
+                      onFocus={popupShow}
+                    />
                   </div>
                 </div>
                 <div className="input__wrapper">
                   <label htmlFor="input-4">Phone</label>
                   <div className="input input--rounded">
-                    <input type="text" id="input-4" onFocus={popupShow} />
+                    <input
+                      type="text"
+                      inputmode="none"
+                      readOnly
+                      id="input-4"
+                      onFocus={popupShow}
+                    />
                   </div>
                 </div>
                 <div className="input__wrapper ">
                   <label htmlFor="input-5">Job Title</label>
                   <div className="input input--rounded">
-                    <input type="text" id="input-5" onFocus={popupShow} />
+                    <input
+                      type="text"
+                      inputmode="none"
+                      readOnly
+                      id="input-5"
+                      onFocus={popupShow}
+                    />
                   </div>
                 </div>
               </div>

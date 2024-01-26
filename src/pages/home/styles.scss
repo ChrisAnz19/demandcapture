@@ -1556,6 +1556,9 @@
           }
         }
       }
+      .noBreak {
+        white-space: unset !important;
+      }
     }
   }
   .customers {

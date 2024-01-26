@@ -8,6 +8,10 @@ const bgURL = process.env.PUBLIC_URL + "/images/hero/hero-bg.png";
 const bgBannerURL = process.env.PUBLIC_URL + "/images/hero/hero-mobile.webp";
 
 const Hero = ({ showContactPopup }) => {
+  const triggerPopup = (e) => {
+    if (e?.preventDefault) e.preventDefault();
+    showContactPopup();
+  };
   return (
     <section className="hero">
       <AutoContainer
@@ -30,7 +34,9 @@ const Hero = ({ showContactPopup }) => {
             <InputWrapper>
               <Input
                 placeholder="Enter your email"
-                onFocus={showContactPopup}
+                onFocus={triggerPopup}
+                inputmode="none"
+                readOnly
               />
               <Button text={"Contact Sales"} onClick={showContactPopup} />
             </InputWrapper>
