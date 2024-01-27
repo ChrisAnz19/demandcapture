@@ -39,19 +39,7 @@ const logosArray = [
   },
 ];
 
-const logosArrayTest = [
-  {
-    href: "/",
-    logoLink: newLogosURL + "Liberty Mutual.svg",
-    title: "Liberty Mutual",
-  },
-  { href: "/", logoLink: newLogosURL + "Fidelity.svg", title: "Fidelity" },
-  {
-    href: "/",
-    logoLink: newLogosURL + "General Motors.svg",
-    title: "General Motors",
-  },
-];
+
 const SubHero = () => {
   const [swiper, setSwiper] = React.useState(null);
   const startAutoplay = (swiper) => {
@@ -60,6 +48,10 @@ const SubHero = () => {
     console.log("start swiper");
     swiper.autoplay.start();
     window.autoplay = swiper.autoplay;
+
+    window.onload = () => {
+      if (window?.autoplay?.play) window.autoplay.play();
+    };
   };
   useEffect(() => {
     if (swiper) startAutoplay(swiper);

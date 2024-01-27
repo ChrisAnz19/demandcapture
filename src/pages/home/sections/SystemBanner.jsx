@@ -30,7 +30,7 @@ const SystemBanner = () => {
               IBM's Marketing Department comprises of 3,267 professionals,
               featuring 414 key decision-makers holding positions of marketing
               director or above. Leveraging our user compatibility matrix,
-              KnowledgeCore precisely identifies the optimal 12 individuals
+              KnowledgeCore precisely identifies the 12 optimal individuals
               within IBM to engage
               <br />
               <b>- Precision-Driven Performance</b>
