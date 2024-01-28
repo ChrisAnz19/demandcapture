@@ -31,7 +31,7 @@ const SystemBanner = () => {
               featuring 414 key decision-makers holding positions of marketing
               director or above. Leveraging our user compatibility matrix,
               KnowledgeCore precisely identifies the 12 optimal individuals
-              within IBM to engage
+              within IBM to engage.
               <br />
               <b>- Precision-Driven Performance</b>
             </p>
