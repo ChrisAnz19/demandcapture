@@ -54,7 +54,7 @@ const Help = () => {
                   <div className="input input--rounded">
                     <input
                       type="text"
-                      inputmode="none"
+                      inputMode="none"
                       readOnly
                       id="input-2"
                       onFocus={popupShow}
@@ -66,7 +66,7 @@ const Help = () => {
                   <div className="input input--rounded">
                     <input
                       type="text"
-                      inputmode="none"
+                      inputMode="none"
                       readOnly
                       id="input-3"
                       onFocus={popupShow}
@@ -78,7 +78,7 @@ const Help = () => {
                   <div className="input input--rounded">
                     <input
                       type="text"
-                      inputmode="none"
+                      inputMode="none"
                       readOnly
                       id="input-4"
                       onFocus={popupShow}
@@ -90,7 +90,7 @@ const Help = () => {
                   <div className="input input--rounded">
                     <input
                       type="text"
-                      inputmode="none"
+                      inputMode="none"
                       readOnly
                       id="input-5"
                       onFocus={popupShow}

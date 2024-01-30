@@ -1,19 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "pages/home";
 import { Footer, Header, Nav } from "layouts";
-import About from "pages/about";
-import Pricing from "pages/pricing";
-import { Policy, Terms } from "pages/policy";
-import OurProcess from "pages/OurProcess/OurProcess";
-import Case from "pages/case";
-import Contact from "pages/contact";
-import Popup from "components/Popup";
+
 import usePathChange from "hooks/usePathChange";
 import useHeroAutoHeight from "hooks/useHeroAutoHeight";
 import ContactSalesPopup from "forms/ContactSalesPopup";
+import { SpinnerPageLoader } from "components/Spinner";
 
 function App() {
+  // --- >>>>: lazy import pagess ------
+  const Home = React.lazy(() => import("pages/home"));
+  const OurProcess = React.lazy(() => import("pages/OurProcess/OurProcess"));
+  const About = React.lazy(() => import("pages/about"));
+  const Case = React.lazy(() => import("pages/case"));
+  const Pricing = React.lazy(() => import("pages/pricing"));
+  const Policy = React.lazy(() => import("pages/policy"));
+  const Terms = React.lazy(() => import("pages/policy"));
+  const Contact = React.lazy(() => import("pages/contact"));
+  // --- <<<<: lazy import pagess ------
+
   const [headerStyle, setHeaderStyle] = useState(false);
   const [menu, setMenu] = useState(false);
   const [contactPopup, setContactPopup] = useState(false);
@@ -34,7 +39,7 @@ function App() {
   }, [contactPopup]);
 
   return (
-    <>
+    <Suspense fallback={<SpinnerPageLoader />}>
       <Header active={menu} setActive={setMenu} headerStyle={headerStyle}>
         <Nav
           active={menu}
@@ -63,7 +68,7 @@ function App() {
       </Routes>
       <Footer showContactPopup={showContactPopup} />
       {contactPopup && <ContactSalesPopup close={popupClose} />}
-    </>
+    </Suspense>
   );
 }
 

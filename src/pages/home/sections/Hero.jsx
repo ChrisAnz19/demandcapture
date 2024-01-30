@@ -35,7 +35,7 @@ const Hero = ({ showContactPopup }) => {
               <Input
                 placeholder="Enter your email"
                 onFocus={triggerPopup}
-                inputmode="none"
+                inputMode="none"
                 readOnly
               />
               <Button text={"Contact Sales"} onClick={showContactPopup} />

@@ -1,5 +1,6 @@
 import React from "react";
 import { AutoContainer } from "layouts/containers";
+import "../styles.scss";
 
 const imgURl = process.env.PUBLIC_URL + "images/our-process/hero/";
 

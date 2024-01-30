@@ -85,7 +85,7 @@ const Footer = ({ showContactPopup }) => {
                 placeholder="Enter your email"
                 shadow
                 onFocus={triggerPopup}
-                inputmode="none"
+                inputMode="none"
                 readOnly
               />
               <Button text={"Subscribe"} shadow onClick={popupShow} />
