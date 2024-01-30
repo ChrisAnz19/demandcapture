@@ -14,8 +14,8 @@ function App() {
   const About = React.lazy(() => import("pages/about"));
   const Case = React.lazy(() => import("pages/case"));
   const Pricing = React.lazy(() => import("pages/pricing"));
-  const Policy = React.lazy(() => import("pages/policy"));
-  const Terms = React.lazy(() => import("pages/policy"));
+  const Policy = React.lazy(() => import("pages/policy/Policy"));
+  const Terms = React.lazy(() => import("pages/policy/Terms"));
   const Contact = React.lazy(() => import("pages/contact"));
   // --- <<<<: lazy import pagess ------
 
