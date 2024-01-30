@@ -466,7 +466,7 @@
     }
   }
 }
-// 580
+// 570
 @include xsm-sm {
   .hero {
     &__inner {
@@ -500,7 +500,7 @@
       .hero {
         &__inner {
           &-content {
-            padding: 0 0 26vh;
+            padding: 40px 0 26vh;
             margin: auto 0;
           }
         }

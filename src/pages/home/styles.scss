@@ -853,20 +853,6 @@
   }
 }
 @include xlg-xxlg {
-  .hero {
-    &__inner {
-      &-content {
-        width: calc(50% - 50px);
-
-        p {
-          font-size: 20px;
-        }
-      }
-      &-banner {
-        width: calc(50vw - 60px);
-      }
-    }
-  }
   .systemBanner {
     &__inner {
       .systemBanner-message:nth-child(3) {
@@ -947,9 +933,6 @@
       }
     }
   }
-}
-@include md-lg {
- 
 }
 @include md-lg {
   .systemBanner {
