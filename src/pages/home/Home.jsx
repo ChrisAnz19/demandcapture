@@ -6,6 +6,8 @@ import InfoBox from "./sections/InfoBox";
 import SystemBanner from "./sections/SystemBanner";
 
 import "./styles.scss";
+import "../../styles/ourprocess.scss";
+import "../../styles/customers.scss";
 import Privilegies from "./sections/Privilegies";
 import Success from "./sections/success/Success";
 import CaseStudy from "./sections/CaseStudy";

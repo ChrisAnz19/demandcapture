@@ -6,6 +6,8 @@ import { useHeaderStyles } from "layouts/header";
 import { FAQ, Testimonials } from "layouts";
 
 import "./styles.scss";
+import "../../styles/ourprocess.scss"
+
 
 const OurProcess = ({ setHeaderStyle }) => {
   useHeaderStyles({

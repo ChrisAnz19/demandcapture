@@ -7,7 +7,7 @@ const Hero = () => {
   const logoURL = process.env.PUBLIC_URL + "/images/";
 
   return (
-    <section className="hero hero--sm hero--case">
+    <section className="hero hero--case">
       <AutoContainer>
         <div className="hero__inner">
           <div className="hero__inner-content">

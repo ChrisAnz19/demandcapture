@@ -3,7 +3,7 @@ import Hero from "./sections/Hero";
 import Partners from "./sections/SubHero";
 import { FAQ, Testimonials } from "layouts";
 
-import "./styles.scss";
+import "../../styles/customers.scss";
 import PartnersBanner from "./sections/PartnersBanner";
 
 const About = () => {

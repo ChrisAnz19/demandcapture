@@ -1,0 +1,249 @@
+@import "./main/variables.scss";
+@import "./main/mixin.scss";
+
+.customers {
+  padding: 30px 0;
+  background: $black-secondary;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+    &-slider {
+      width: 100%;
+    }
+    &-title {
+      padding: 0 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h6 {
+      color: $white-2;
+      font-family: $font-chivo;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.12;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 15px 0;
+      width: 100%;
+      max-width: 1050px;
+    }
+  }
+  &-item {
+    display: inline-flex;
+    height: 38px;
+    max-width: 200px;
+    pointer-events: none;
+    &._lg {
+      height: 46px;
+    }
+    img,
+    svg {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+  .swiper {
+    width: 100%;
+    pointer-events: all;
+
+    &-slide {
+      width: auto !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: unset !important;
+    }
+    &-wrapper {
+      transition-timing-function: linear !important;
+    }
+  }
+  &--lg {
+    .autocontainer {
+      max-width: 1920px;
+      padding: 0;
+    }
+  }
+  &--about {
+    .customers {
+      &__inner {
+        gap: 15px;
+        &-row {
+          align-items: center;
+          padding: unset;
+        }
+      }
+      &-item {
+        height: 54px;
+        &--sm {
+          height: 33px;
+        }
+      }
+    }
+    h5 {
+      color: $white;
+      span {
+        background: var(
+          --Grad-1,
+          linear-gradient(267deg, #6bedf6 10.47%, #9e59f7 97.78%)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+@include xlg-xxlg {
+  .customers {
+    &--about {
+      .customers {
+        &-item {
+          height: 50px;
+          &--sm {
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@include lg-xlg {
+  .customers {
+    padding: 20px 0;
+    &-item {
+      height: 34px;
+    }
+    &--about {
+      .customers {
+        &__inner {
+          gap: 16.5px;
+        }
+        &-item {
+          height: 42px;
+          &--sm {
+            height: 27px;
+          }
+        }
+      }
+    }
+  }
+}
+@include md-lg {
+  .customers {
+    &__inner {
+      &-row {
+        padding: 10px 0;
+      }
+      h6 {
+        font-size: 16px;
+      }
+    }
+    &--about {
+      .customers {
+        &__inner {
+          gap: 18px;
+        }
+        &-item {
+          height: 35px;
+          &--sm {
+            height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+@include sm-md {
+  .customers {
+    .swiper {
+      &-slide {
+        margin: 0 20px;
+      }
+    }
+    &--about {
+      .customers {
+        &__inner {
+          gap: 18px;
+        }
+        &-item {
+          height: 27px;
+          &--sm {
+            height: 19px;
+          }
+        }
+      }
+    }
+  }
+}
+@include xsm-sm {
+  .customers {
+    padding: 30px 0;
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &__inner {
+      gap: 25px;
+
+      h6 {
+        font-size: 20px;
+        color: $white;
+        line-height: 1.3;
+      }
+      &-row {
+        order: 1;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 30px 10px;
+        .customers-item {
+          height: 35px;
+          width: calc(50% - 10px);
+        }
+      }
+      &-title {
+        order: -1;
+      }
+    }
+    &--about {
+      padding: 40px 0;
+
+      .customers {
+        &__inner {
+          gap: 30px;
+          &-row {
+            flex-direction: column;
+            .customers {
+              &-item {
+                width: 100%;
+                height: 40px;
+                &--sm {
+                  height: 30px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include xxsm-xsm {
+}

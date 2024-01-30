@@ -1,66 +1,99 @@
-@import "styles/main/variables.scss";
-@import "styles/main/mixin.scss";
+@import "./main/variables.scss";
+@import "./main/mixin.scss";
 
-.hero {
-  &--about {
-    .hero {
-      &__inner {
-        &-content {
-          width: 100%;
-          max-width: 890px;
-          margin: 0 auto auto;
-          text-align: center;
-          gap: 24px;
-          padding: 6vh 0 60px;
-        }
-      }
-    }
-    h2 {
-      color: $black-2;
-      text-transform: uppercase;
-    }
-    p {
-      color: $black;
-      font-size: 16px;
-      line-height: 1.3;
-    }
-    .bg {
-      opacity: 1;
-    }
-  }
-}
-.customers {
-  &--about {
-    .customers {
-      &__inner {
-        gap: 15px;
-        &-row {
-          align-items: center;
-          padding: unset;
-        }
-      }
-      &-item {
-        height: 54px;
-        &--sm {
-          height: 33px;
-        }
-      }
-    }
-    h5 {
-      color: $white;
-      span {
-        background: var(
-          --Grad-1,
-          linear-gradient(267deg, #6bedf6 10.47%, #9e59f7 97.78%)
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-  }
-}
 .partners {
+  display: flex;
+  min-height: calc(100vh - 250px);
+  padding: 30px 0;
+  position: relative;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    margin: 0 auto;
+    min-height: 100%;
+    gap: 35px;
+    justify-content: center;
+
+    h3 {
+      color: $black-2;
+      font-family: $font-livvic;
+      font-style: normal;
+      line-height: 1.25;
+      text-align: center;
+    }
+    &-banner {
+      position: relative;
+
+      // background
+      &:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 140px;
+        z-index: -1;
+        border-radius: 5px;
+        background: $gradient2;
+      }
+
+      h5 {
+        padding: 0.4em 1em;
+
+        color: $white;
+        text-align: center;
+        font-family: $font-chivo;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.12;
+        letter-spacing: 0.52px;
+        text-transform: capitalize;
+      }
+      &-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+        padding: 40px 20px 30px 20px;
+        border-radius: 5px;
+        background: #fff;
+        box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.25);
+      }
+      &-shape {
+        position: relative;
+        z-index: -1;
+        top: -3px;
+        width: 100%;
+        left: 0px;
+        transform: rotate(0.35deg);
+        img {
+          width: calc(100% - 5px);
+          height: auto;
+        }
+      }
+      &-row,
+      &-shape {
+        width: calc(100% - 50px);
+        margin: 0 auto;
+      }
+    }
+  }
+  &-item {
+    display: inline-flex;
+    height: 38px;
+    max-width: 160px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .bg {
+    filter: blur(162px);
+  }
   &--about {
     padding-bottom: 28px;
     min-height: 60vh;
@@ -125,20 +158,7 @@
   }
 }
 
-// 1160
 @include xlg-xxlg {
-  .customers {
-    &--about {
-      .customers {
-        &-item {
-          height: 50px;
-          &--sm {
-            height: 30px;
-          }
-        }
-      }
-    }
-  }
   .partners {
     &--about {
       .partners {
@@ -154,24 +174,40 @@
     }
   }
 }
-// 1024
 @include lg-xlg {
-  .customers {
-    &--about {
-      .customers {
-        &__inner {
-          gap: 16.5px;
+  .partners {
+    padding: 60px 0;
+    &__inner {
+      gap: 40px;
+
+      &-banner {
+        max-width: 600px;
+        margin: 0 auto;
+
+        // background
+        &:after {
+          height: calc(100% - 100px);
         }
-        &-item {
-          height: 42px;
-          &--sm {
-            height: 27px;
-          }
+        h5 {
+          padding: 0.6em 1em;
+        }
+        &-row {
+          justify-content: space-around;
+          flex-wrap: wrap;
+          gap: 2rem;
+          padding: 40px 20px;
         }
       }
     }
-  }
-  .partners {
+    &-item {
+      height: auto;
+      width: calc(33% - 20px);
+      height: 55px;
+
+      &._sm {
+        height: 45px;
+      }
+    }
     &--about {
       .partners {
         &__inner {
@@ -187,23 +223,7 @@
     }
   }
 }
-// 840
 @include md-lg {
-  .customers {
-    &--about {
-      .customers {
-        &__inner {
-          gap: 18px;
-        }
-        &-item {
-          height: 35px;
-          &--sm {
-            height: 22px;
-          }
-        }
-      }
-    }
-  }
   .partners {
     &--about {
       .partners {
@@ -224,24 +244,17 @@
     }
   }
 }
-// 700
 @include sm-md {
-  .customers {
-    &--about {
-      .customers {
-        &__inner {
-          gap: 18px;
-        }
-        &-item {
-          height: 27px;
-          &--sm {
-            height: 19px;
-          }
+  .partners {
+    &__inner {
+      h3 {
+        max-width: 500px;
+        margin: 0 auto;
+        br {
+          display: none;
         }
       }
     }
-  }
-  .partners {
     &--about {
       .partners {
         &__inner {
@@ -262,36 +275,27 @@
     }
   }
 }
-// 570
 @include xsm-sm {
-  .hero {
-    &--about {
-      .hero {
-        &__inner {
-          &-content {
-            padding: 0 0 26vh;
-            margin: auto 0;
-          }
-        }
-      }
-    }
-  }
-  .customers {
-    &--about {
-      .customers {
-        &__inner {
-          gap: 24px;
-        }
-        &-item {
-          height: 35px;
-          &--sm {
-            height: 25px;
-          }
-        }
-      }
-    }
-  }
   .partners {
+    &-item {
+      height: 40px;
+      width: 100%;
+      &._sm {
+        height: 35px;
+      }
+    }
+    &__inner {
+      &-banner {
+        &-row {
+          gap: 30px 15px;
+          flex-direction: column;
+        }
+      }
+      h3 {
+        max-width: 360px;
+        margin: 0 auto;
+      }
+    }
     &--about {
       padding: 30px 0;
       .partners {
@@ -314,7 +318,6 @@
     }
   }
 }
-// 480
 @include xxsm-xsm {
   .partners {
     &--about {
