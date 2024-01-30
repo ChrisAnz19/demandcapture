@@ -356,6 +356,9 @@
           }
           ol {
             gap: 4px 10px;
+            li {
+              width: calc(50% - 7px);
+            }
           }
         }
       }
