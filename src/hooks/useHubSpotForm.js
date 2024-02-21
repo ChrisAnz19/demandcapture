@@ -8,6 +8,10 @@ const useHubSpotForm = ({
   ...params
 }) => {
   useLayoutEffect(() => {
+    if (window.zi_init) {
+      console.log("zi_init");
+      window.zi_init();
+    }
     const script = document.createElement("script");
     // script.src = "https://js.hsforms.net/forms/shell.js";
     // script.src = "https://js.hsforms.net/forms/embed/v2.js";
@@ -26,6 +30,7 @@ const useHubSpotForm = ({
         });
       }
     });
+    return () => script.remove();
   }, []);
 };
 

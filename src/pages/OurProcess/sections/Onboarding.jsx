@@ -7,7 +7,7 @@ const Onboarding = () => {
     <section className="oboarding">
       <AutoContainer style={{ maxWidth: 1060 }}>
         <div className="oboarding__inner">
-          <h2>Oboarding</h2>
+          <h2>Onboarding </h2>
           <div className="oboarding__inner-list">
             <OnboardingItem icon={SVGs.icon1}>
               <span>Discovery Meeting</span>
@@ -19,7 +19,7 @@ const Onboarding = () => {
               <span>Sales Workflows)</span>
             </OnboardingItem>
             <OnboardingItem icon={SVGs.icon2}>
-              <span>Based on Discover</span>
+              <span>Based on Discovery</span>
               <br />
               <span>Meeting Learnings Our</span>
               <br />
@@ -53,7 +53,7 @@ const Onboarding = () => {
               <span>on Your behalf</span>
             </OnboardingItem>
             <OnboardingItem icon={SVGs.icon6}>
-              <span>Bi-weekly joint</span>
+              <span>Weekly joint</span>
               <br />
               <span>meeting to review</span>
               <br />
