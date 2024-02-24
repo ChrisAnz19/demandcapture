@@ -3,6 +3,7 @@ import { AutoContainer } from "layouts/containers";
 import PricingStarterPopup from "forms/PricingStarterPopup";
 import PricingProPopup from "forms/PricingProPopup";
 import PricingEnterprisePopup from "forms/PricingEnterprisePopup";
+import useHeroAutoHeight from "hooks/useHeroAutoHeight";
 
 const FORM_TYPES = {
   starter: "Starter",
@@ -11,6 +12,7 @@ const FORM_TYPES = {
 };
 const Hero = () => {
   const [form, setForm] = useState(null);
+  useHeroAutoHeight();
 
   const bgURL = process.env.PUBLIC_URL + "/images/pricing/hero-bg.webp";
   const shapeUrl = process.env.PUBLIC_URL + "/images/pricing/hero-shape.png";

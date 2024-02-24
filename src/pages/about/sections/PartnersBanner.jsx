@@ -14,7 +14,7 @@ const PartnersBanner = () => {
           <div className="partners__inner-banner">
             <div className="partners__inner-banner-row">
               <h6>
-                First vendor to engage a prospect and guide the solution
+                “First Vendor to engage a prospect and guide the solution
                 evaluation process Resulting in a 74% win rate.” - Forrester
                 Research
               </h6>
@@ -27,13 +27,13 @@ const PartnersBanner = () => {
             <div className="partners__inner-container-item">
               <strong>Sales & Engineering Headquarters in New York City</strong>
               <div className="partners__inner-container-bg">
-              <img src={borderURL} alt="border" />
+                <img src={borderURL} alt="border" />
               </div>
             </div>
             <div className="partners__inner-container-item">
               <strong>NPS Score of 96</strong>
               <div className="partners__inner-container-bg">
-              <img src={borderURL} alt="border" />
+                <img src={borderURL} alt="border" />
               </div>
             </div>
             <div className="partners__inner-container-item">

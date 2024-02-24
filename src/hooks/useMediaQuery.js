@@ -6,6 +6,10 @@ const mediaQueries = [
     media: "(min-width: 980px)",
     minWidth: 980,
   },
+  {
+    media: "(min-width: 1024px)",
+    minWidth: 1024,
+  },
 ];
 
 const useMediaQuery = () => {

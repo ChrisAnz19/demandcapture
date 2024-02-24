@@ -1,7 +1,10 @@
 import React from "react";
 import { AutoContainer } from "layouts/containers";
+import useHeroAutoHeight from "hooks/useHeroAutoHeight";
 
 const Hero = () => {
+  useHeroAutoHeight();
+
   const shapeURL =
     process.env.PUBLIC_URL + "/images/illustrations/tabs-illustration.svg";
   const logoURL = process.env.PUBLIC_URL + "/images/";

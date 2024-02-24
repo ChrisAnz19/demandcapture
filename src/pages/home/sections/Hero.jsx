@@ -2,12 +2,15 @@ import React from "react";
 import { AutoContainer } from "layouts/containers";
 import Input, { InputWrapper } from "components/Input";
 import Button from "components/Button";
+import useHeroAutoHeight from "hooks/useHeroAutoHeight";
 
 const bannerURL = process.env.PUBLIC_URL + "/images/hero/hero.webp";
 const bgURL = process.env.PUBLIC_URL + "/images/hero/hero-bg.png";
 const bgBannerURL = process.env.PUBLIC_URL + "/images/hero/hero-mobile.webp";
 
 const Hero = ({ showContactPopup }) => {
+  useHeroAutoHeight();
+
   const triggerPopup = (e) => {
     if (e?.preventDefault) e.preventDefault();
     showContactPopup();

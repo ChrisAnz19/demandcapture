@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import { Footer, Header, Nav } from "layouts";
 
 import usePathChange from "hooks/usePathChange";
-import useHeroAutoHeight from "hooks/useHeroAutoHeight";
 import ContactSalesPopup from "forms/ContactSalesPopup";
 import { SpinnerPageLoader } from "components/Spinner";
 
@@ -23,7 +22,6 @@ function App() {
   const [menu, setMenu] = useState(false);
   const [contactPopup, setContactPopup] = useState(false);
 
-  useHeroAutoHeight();
   const location = usePathChange({
     onLocationChange: () => setMenu(false),
   });
