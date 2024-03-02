@@ -14,6 +14,8 @@ import CaseStudy from "./sections/CaseStudy";
 import OurProcessHero from "pages/OurProcess/sections/OurProcessHero";
 
 const Home = ({ showContactPopup }) => {
+  console.log("Home");
+
   return (
     <>
       <Hero showContactPopup={showContactPopup} />

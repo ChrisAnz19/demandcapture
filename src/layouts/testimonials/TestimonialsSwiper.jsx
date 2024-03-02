@@ -1,14 +1,11 @@
 import React from "react";
 import { AutoContainer } from "layouts/containers";
-import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
 import Stars from "components/Stars";
 
 const avatarURL = process.env.PUBLIC_URL + "/images/avatars/";
 
 const TestimonialsSwiper = () => {
-  const [swiper, setSwiper] = React.useState(null);
 
   return (
     <section className="testimonials testimonials--secondary">

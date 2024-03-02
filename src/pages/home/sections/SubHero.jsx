@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { AutoContainer } from "layouts/containers";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const logosURL = process.env.PUBLIC_URL + "/images/logos/customers/";
 const newLogosURL = process.env.PUBLIC_URL + "/images/logos/fortune/";
@@ -39,57 +41,31 @@ const logosArray = [
   },
 ];
 
+const sliderSettings = {
+  dots: false,
+  arrows: false,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 5000,
+  autoplaySpeed: 0,
+  cssEase: "linear",
+  variableWidth: true,
+  pauseOnHover: false,
+};
 
 const SubHero = () => {
-  const [swiper, setSwiper] = React.useState(null);
-  const startAutoplay = (swiper) => {
-    if (!swiper.autoplay) return;
-
-    console.log("start swiper");
-    swiper.autoplay.start();
-    window.autoplay = swiper.autoplay;
-
-    window.onload = () => {
-      if (window?.autoplay?.play) window.autoplay.play();
-    };
-  };
-  useEffect(() => {
-    if (swiper) startAutoplay(swiper);
-  }, [swiper]);
-
   return (
     <section className="customers customers--lg">
       <AutoContainer>
         <div className="customers__inner">
           <div className="customers__inner-slider">
-            <Swiper
-              speed={8000}
-              slidesPerView={"auto"}
-              slidesPerGroup={1}
-              spaceBetween={20}
-              // onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => startAutoplay(swiper)}
-              pagination={false}
-              loop={true}
-              autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-              }}
-              modules={[Autoplay]}
-              breakpoints={{
-                680: {
-                  spaceBetween: 120,
-                },
-              }}
-            >
-              {[...logosArray, ...logosArray, ...logosArray].map(
-                (data, index) => (
-                  <SwiperSlide key={index}>
-                    <SubHeroItem {...data} />
-                  </SwiperSlide>
-                )
-              )}
-            </Swiper>
+            <Slider {...sliderSettings}>
+              {[...logosArray].map((data, index) => (
+                <SubHeroItem key={index} {...data} />
+              ))}
+            </Slider>
           </div>
           <div className="customers__inner-title">
             <h6>
