@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AutoContainer } from "layouts/containers";
 
 import Slider from "react-slick";
@@ -56,16 +56,27 @@ const sliderSettings = {
 };
 
 const SubHero = () => {
+  const [init, setInit] = useState(false);
+
+  const ref = useRef(null);
+  useEffect(() => {
+    if (ref.current) setInit(true);
+  }, [ref.current]);
+
+  console.log("ref.current", !!ref.current);
+
   return (
     <section className="customers customers--lg">
       <AutoContainer>
-        <div className="customers__inner">
+        <div className="customers__inner" ref={ref}>
           <div className="customers__inner-slider">
-            <Slider {...sliderSettings}>
-              {[...logosArray].map((data, index) => (
-                <SubHeroItem key={index} {...data} />
-              ))}
-            </Slider>
+            {!!init && (
+              <Slider {...sliderSettings}>
+                {[...logosArray].map((data, index) => (
+                  <SubHeroItem key={index} {...data} />
+                ))}
+              </Slider>
+            )}
           </div>
           <div className="customers__inner-title">
             <h6>

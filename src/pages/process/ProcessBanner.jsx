@@ -1,10 +1,11 @@
 import React from "react";
 import { AutoContainer } from "layouts/containers";
-import "../styles.scss";
+
+import "styles/ourprocess.scss";
 
 const imgURl = process.env.PUBLIC_URL + "images/our-process/hero/";
 
-const OurProcessHero = ({ modifier, title, subtitle }) => {
+const ProcessBanner = ({ modifier, title, subtitle }) => {
   return (
     <section className={`ourprocess ${modifier ? "ourprocess--home" : ""}`}>
       <AutoContainer style={{ maxWidth: 1310 }}>
@@ -14,7 +15,7 @@ const OurProcessHero = ({ modifier, title, subtitle }) => {
             {subtitle ? <h5>{subtitle}</h5> : ""}
           </div>
           <ul className="ourprocess__banner">
-            <OurProcessItem
+            <ProcessItem
               title={"Client ICP & Requirements Defined"}
               imgUrl={imgURl + "pyramid-part-1.svg"}
             >
@@ -32,8 +33,8 @@ const OurProcessHero = ({ modifier, title, subtitle }) => {
                   <span>Sales Activity</span>
                 </li>
               </ol>
-            </OurProcessItem>
-            <OurProcessItem
+            </ProcessItem>
+            <ProcessItem
               title={"KnowledgeCore Deployed"}
               imgUrl={imgURl + "pyramid-part-2.svg"}
             >
@@ -48,8 +49,8 @@ const OurProcessHero = ({ modifier, title, subtitle }) => {
                   <span>CoreNow</span>
                 </li>
               </ol>
-            </OurProcessItem>
-            <OurProcessItem
+            </ProcessItem>
+            <ProcessItem
               title={"Outbound Activity by DemandCapture"}
               imgUrl={imgURl + "pyramid-part-3.svg"}
             >
@@ -58,8 +59,8 @@ const OurProcessHero = ({ modifier, title, subtitle }) => {
                   <span>25,000+ Monthly Calls</span>
                 </li>
               </ol>
-            </OurProcessItem>
-            <OurProcessItem
+            </ProcessItem>
+            <ProcessItem
               title={"Appointments Set by DemandCapture"}
               imgUrl={imgURl + "pyramid-part-4.svg"}
             >
@@ -96,7 +97,7 @@ const OurProcessHero = ({ modifier, title, subtitle }) => {
                   />
                 </a>
               </div>
-            </OurProcessItem>
+            </ProcessItem>
           </ul>
         </div>
         <div className="bg">
@@ -109,7 +110,7 @@ const OurProcessHero = ({ modifier, title, subtitle }) => {
   );
 };
 
-const OurProcessItem = ({ imgUrl, title, children }) => {
+const ProcessItem = ({ imgUrl, title, children }) => {
   return (
     <li className="ourprocess__banner-item">
       <span className="ourprocess__banner-item-line"></span>
@@ -123,4 +124,4 @@ const OurProcessItem = ({ imgUrl, title, children }) => {
     </li>
   );
 };
-export default OurProcessHero;
+export default ProcessBanner;

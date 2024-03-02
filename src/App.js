@@ -9,7 +9,7 @@ import { SpinnerPageLoader } from "components/Spinner";
 function App() {
   // --- >>>>: lazy import pagess ------
   const Home = React.lazy(() => import("pages/home"));
-  const OurProcess = React.lazy(() => import("pages/OurProcess/OurProcess"));
+  const OurProcess = React.lazy(() => import("pages/process/OurProcess"));
   const About = React.lazy(() => import("pages/about"));
   const Case = React.lazy(() => import("pages/case"));
   const Pricing = React.lazy(() => import("pages/pricing"));

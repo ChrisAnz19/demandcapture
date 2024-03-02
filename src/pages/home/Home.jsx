@@ -11,7 +11,7 @@ import "../../styles/customers.scss";
 import Privilegies from "./sections/Privilegies";
 import Success from "./sections/success/Success";
 import CaseStudy from "./sections/CaseStudy";
-import OurProcessHero from "pages/OurProcess/sections/OurProcessHero";
+import ProcessBanner from "pages/process/ProcessBanner";
 
 const Home = ({ showContactPopup }) => {
   console.log("Home");
@@ -39,7 +39,7 @@ const Home = ({ showContactPopup }) => {
       </InfoBox>
       <SystemBanner />
       {/* <Privilegies /> */}
-      <OurProcessHero
+      <ProcessBanner
         modifier="ourprocess--home"
         title="The Artistry & Precision of Our Winning DNA"
         subtitle="Quality Connections, Measurable Results"
