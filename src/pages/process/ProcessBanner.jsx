@@ -35,7 +35,7 @@ const ProcessBanner = ({ modifier, title, subtitle }) => {
               </ol>
             </ProcessItem>
             <ProcessItem
-              title={"KnowledgeCore Deployed"}
+              title={"Knowledge Deployed"}
               imgUrl={imgURl + "pyramid-part-2.svg"}
             >
               <ol>

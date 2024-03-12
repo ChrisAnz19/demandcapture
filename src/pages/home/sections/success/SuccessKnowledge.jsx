@@ -2,6 +2,7 @@ import React from "react";
 import { border1, border2, border3 } from "./svgs/Borders";
 
 const successFolder = process.env.PUBLIC_URL + "/images/success/";
+const logoURL = process.env.PUBLIC_URL + "/images/logo.svg";
 const borders = [border1, border2, border3];
 
 const SuccessKnowledge = () => {
@@ -9,7 +10,7 @@ const SuccessKnowledge = () => {
     <div className="successKnowledge">
       <div className="successKnowledge__label">
         <div className="successKnowledge__label-image">
-          <img src={successFolder + "knowledge.svg"} alt="knowledge core" />
+          <img src={logoURL} alt="deman capture" />
         </div>
       </div>
       <div className="successKnowledge__row">

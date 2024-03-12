@@ -5,8 +5,7 @@ const shapeURL =
   process.env.PUBLIC_URL + "/images/illustrations/tabs-illustration.svg";
 const systemIllustrationURL =
   process.env.PUBLIC_URL + "/images/illustrations/system-illustration.svg";
-const systemLogoURL = process.env.PUBLIC_URL + "/images/knowledge-core.png";
-const systemLogoURL2 = process.env.PUBLIC_URL + "/images/knowledge-core.svg";
+const systemLogoURL = process.env.PUBLIC_URL + "/images/knowledge-white.svg";
 
 const SystemBanner = () => {
   return (
@@ -30,7 +29,7 @@ const SystemBanner = () => {
               IBM's Marketing Department comprises of 3,267 professionals,
               featuring 414 key decision-makers holding positions of marketing
               director or above. Leveraging our user compatibility matrix,
-              KnowledgeCore precisely identifies the 12 optimal individuals
+              Knowledge precisely identifies the 12 optimal individuals
               within IBM to engage.
               <br />
               <b>- Precision-Driven Performance</b>
@@ -43,7 +42,7 @@ const SystemBanner = () => {
                 alt="system-graph"
                 className="_shape"
               />
-              <img src={systemLogoURL2} alt="shape" className="_logo" />
+              <img src={systemLogoURL} alt="shape" className="_logo" />
             </div>
           </div>
         </div>

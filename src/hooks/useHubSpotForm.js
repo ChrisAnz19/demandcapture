@@ -27,6 +27,11 @@ const useHubSpotForm = ({
           portalId,
           formId,
           ...params,
+          onFormSubmitted: function () {
+            if (window._zi_fc && window._zi_fc.fcTriggerSubmit) {
+              window._zi_fc.fcTriggerSubmit();
+            }
+          },
         });
       }
     });

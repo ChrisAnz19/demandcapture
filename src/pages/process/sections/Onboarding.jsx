@@ -25,10 +25,10 @@ const Onboarding = () => {
               <br />
               <span>Data Science Team</span>
               <br />
-              <span>Runs KnowledgeCore</span>
+              <span>Runs Knowledge</span>
             </OnboardingItem>
             <OnboardingItem icon={SVGs.icon3}>
-              <span>Review KnowledgeCore</span>
+              <span>Review Knowledge</span>
               <br />
               <span>Findings With Your</span>
               <br />

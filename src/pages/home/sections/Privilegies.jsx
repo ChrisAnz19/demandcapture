@@ -42,7 +42,7 @@ const Privilegies = () => {
               </div>
               <div className="privilegiesGraph__column">
                 <div className="privilegiesGraph__column-list">
-                  <strong>KnowledgeCore Deployed</strong>
+                  <strong>Knowledge Deployed</strong>
                   <ul>
                     <li>
                       <span>CoreFocus</span>

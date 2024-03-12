@@ -30,7 +30,7 @@ const TestimonialsNote = () => {
             <h5>Partnership Includes:</h5>
             <ul>
               <li>Premium Data</li>
-              <li>KnowlegdeCore Deployed</li>
+              <li>Knowledge Deployed</li>
               <li>Enterprise Sales Representatives</li>
               <li>Performance Dashboard</li>
               <li>Campaign Manager</li>

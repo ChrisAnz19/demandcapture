@@ -51,7 +51,7 @@ const Hero = () => {
                 <div className="hero__item-box">
                   <h6 className="_sm">Included:</h6>
                   <ul className="list list--gray">
-                    <li className="list__item">KnowledgeCore Deployed</li>
+                    <li className="list__item">Knowledge Deployed</li>
                     <li className="list__item">
                       3+ Enterprise Sales Representatives
                     </li>
@@ -84,7 +84,7 @@ const Hero = () => {
                 <div className="hero__item-box">
                   <h6 className="_sm">Included:</h6>
                   <ul className="list list--gray">
-                    <li className="list__item">KnowledgeCore Deployed</li>
+                    <li className="list__item">Knowledge Deployed</li>
                     <li className="list__item">
                       5+ Enterprise Sales Representatives
                     </li>
@@ -118,7 +118,7 @@ const Hero = () => {
                 <div className="hero__item-box">
                   <h6 className="_sm">Included:</h6>
                   <ul className="list list--gray">
-                    <li className="list__item">KnowledgeCore Deployed</li>
+                    <li className="list__item">Knowledge Deployed</li>
                     <li className="list__item">
                       10+ Enterprise Sales Representatives
                     </li>

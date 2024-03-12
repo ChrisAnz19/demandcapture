@@ -5,8 +5,8 @@ import "./styles.scss";
 const Faq = () => {
   const faqItems = [
     {
-      title: "What Makes KnowledgeCore Special?",
-      text: "KnowledgeCore harnesses the power of seven advanced deep learning models, including XGBoost for lead prioritization and a novel Tinder-inspired vector algorithm, introducing the first-of-its-kind user compatibility matrix designed to cater specifically to the needs of sales professionals.",
+      title: "What Makes Knowledge Special?",
+      text: "Knowledge harnesses the power of seven advanced deep learning models, including XGBoost for lead prioritization and a novel Tinder-inspired vector algorithm, introducing the first-of-its-kind user compatibility matrix designed to cater specifically to the needs of sales professionals.",
     },
     {
       title: "Does DemandCapture Offer A Pilot?",

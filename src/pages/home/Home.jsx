@@ -27,7 +27,7 @@ const Home = ({ showContactPopup }) => {
           <span className="noBreak">Meetings Each Month</span>
         </h3>
         <p className="_lg">
-          Through our proprietary technology, KnowledgeCore, DemandCapture
+          Through our proprietary technology, Knowledge, DemandCapture
           leverages <br /> 22 billion data points to accelerate businesses
           revenue generation.
         </p>

@@ -11,7 +11,6 @@
   }
 }
 
-
 .infobox {
   min-height: 250px;
   padding: 50px 0;
@@ -530,10 +529,11 @@
         justify-content: center;
         border-radius: 20px;
         background: $white-0;
-        padding: 9px 16px;
+        padding: 16px;
+        min-width: 250px;
 
         img {
-          height: 88px;
+          height: 60px;
           width: auto;
         }
       }
@@ -1157,11 +1157,15 @@
       }
     }
     &Knowledge {
-      &__label-image {
-        padding: 8px;
-        img {
-          height: 60px;
-          width: auto;
+      &__label {
+        border-width: 5px;
+        
+        &-image {
+          min-width: 200px;
+          img {
+            height: 55px;
+            width: auto;
+          }
         }
       }
       gap: 30px;
