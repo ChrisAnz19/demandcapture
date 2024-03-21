@@ -5,10 +5,11 @@ import { Footer, Header, Nav } from "layouts";
 import usePathChange from "hooks/usePathChange";
 import ContactSalesPopup from "forms/ContactSalesPopup";
 import { SpinnerPageLoader } from "components/Spinner";
+import Home from "pages/home";
 
 function App() {
   // --- >>>>: lazy import pagess ------
-  const Home = React.lazy(() => import("pages/home"));
+  // const Home = React.lazy(() => import("pages/home"));
   const OurProcess = React.lazy(() => import("pages/process/OurProcess"));
   const About = React.lazy(() => import("pages/about"));
   const Case = React.lazy(() => import("pages/case"));

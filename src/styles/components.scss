@@ -986,14 +986,15 @@
 }
 
 .slick {
-  &-slider {
+  &-track {
+    will-change: auto;
   }
   &-slide {
     height: unset !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 3em;
+    padding: 0 2em;
     min-width: 140px;
   }
 }

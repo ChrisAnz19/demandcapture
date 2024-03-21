@@ -7,7 +7,7 @@ import useMediaQuery from "hooks/useMediaQuery";
 
 const Nav = ({ active, isHome, showContactPopup }) => {
   const minWidth = useMediaQuery();
-  console.log({ minWidth });
+
   return (
     <nav className={`nav ${active ? "active" : ""}`}>
       <div className="nav__inner">

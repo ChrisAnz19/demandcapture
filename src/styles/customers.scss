@@ -1,6 +1,15 @@
 @import "./main/variables.scss";
 @import "./main/mixin.scss";
 
+@keyframes carousel {
+  from {
+    transform: translate(150%, -50%);
+  }
+  to {
+    transform: translate(-150%, -50%);
+  }
+}
+
 .customers {
   padding: 30px 0;
   background: $black-secondary;
@@ -8,10 +17,19 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 18px;
     align-items: center;
     &-slider {
       width: 100%;
+
+      .slick {
+        &-slide {
+          width: auto;
+        }
+        &-track {
+          padding: 10px 0;
+        }
+      }
     }
     &-title {
       padding: 0 16px;
@@ -37,36 +55,39 @@
     }
   }
   &-item {
+    position: relative;
     display: inline-flex;
     height: 38px;
-    max-width: 200px;
+    width: 200px;
     pointer-events: none;
-    &._lg {
-      height: 46px;
-    }
+
     img,
     svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
       height: 100%;
-      width: auto;
-      max-width: 100%;
+      width: 100%;
       object-fit: contain;
+      transform: translate(-50%, -50%);
     }
-  }
-  .swiper {
-    width: 100%;
-    pointer-events: all;
 
-    &-slide {
-      width: auto !important;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: unset !important;
+    &._lg {
+      img,
+      svg {
+        height: 120%;
+        width: 120%;
+      }
     }
-    &-wrapper {
-      transition-timing-function: linear !important;
+    &._xlg {
+      img,
+      svg {
+        height: 160%;
+        width: 130%;
+      }
     }
   }
+
   &--lg {
     .autocontainer {
       max-width: 1920px;
@@ -103,9 +124,61 @@
     }
   }
 }
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  width: 100vw;
+  font-size: 18px;
+  height: 3em;
+
+  &-item {
+    flex: 0;
+    padding: 0 2.8em;
+
+    height: 1.6em;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+
+    &._lg {
+      height: 1.8em;
+    }
+    &._xlg {
+      height: 2.5em;
+    }
+  }
+  &-track {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(100%);
+    animation: carousel 96s linear infinite;
+    // animation-play-state: paused;
+    will-change: transform;
+
+    &:nth-child(2) {
+      animation-delay: 32s;
+    }
+    &:nth-child(3) {
+      animation-delay: -64s;
+    }
+    &:nth-child(4) {
+      animation-delay: -32s;
+    }
+  }
+}
 
 @include xlg-xxlg {
   .customers {
+    &-item {
+      width: 100%;
+    }
     &--about {
       .customers {
         &-item {
@@ -166,10 +239,14 @@
 }
 @include sm-md {
   .customers {
-    .swiper {
+    .slick {
       &-slide {
-        margin: 0 20px;
+        padding: 0 1.5em;
+        width: unset;
       }
+    }
+    &-item {
+      height: 27px;
     }
     &--about {
       .customers {
@@ -178,6 +255,8 @@
         }
         &-item {
           height: 27px;
+          width: 160px;
+
           &--sm {
             height: 19px;
           }
@@ -243,7 +322,33 @@
         }
       }
     }
+    .slick {
+      &-slide {
+        padding: 0 1em;
+        width: unset;
+      }
+    }
+  }
+  .carousel {
+    font-size: 15px;
   }
 }
 @include xxsm-xsm {
+  .customers {
+    &-item {
+      height: 25px;
+    }
+    .slick {
+      &-slide {
+        padding: 0 0.75em;
+        width: unset;
+      }
+    }
+  }
+  .carousel {
+    font-size: 13px;
+    &-item {
+      padding: 0 2.2em;
+    }
+  }
 }
