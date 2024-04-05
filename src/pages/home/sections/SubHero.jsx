@@ -56,98 +56,134 @@ const logosArray = [
   },
 ];
 
-const sliderSettings = {
-  dots: false,
-  arrows: false,
-  infinite: true,
-  slidesToShow: 6.5,
-  slidesToScroll: 1,
-  autoplay: true,
-  speed: 5000,
-  autoplaySpeed: 0,
-  cssEase: "linear",
-  pauseOnHover: false,
-  responsive: [
-    {
-      breakpoint: 1280,
-      settings: {
-        slidesToShow: 6,
-        variableWidth: false,
-      },
-    },
-    {
-      breakpoint: 1180,
-      settings: {
-        slidesToShow: 5,
-        variableWidth: false,
-      },
-    },
-    {
-      breakpoint: 860,
-      settings: {
-        slidesToShow: 4.5,
-        variableWidth: false,
-      },
-    },
-    {
-      breakpoint: 760,
-      settings: {
-        slidesToShow: 3.5,
-        variableWidth: false,
-      },
-    },
-    {
-      breakpoint: 540,
-      settings: {
-        slidesToShow: 3,
-        variableWidth: false,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2.2,
-        variableWidth: false,
-      },
-    },
-  ],
-};
+// const sliderSettings = {
+//   dots: false,
+//   arrows: false,
+//   infinite: true,
+//   slidesToShow: 6.5,
+//   slidesToScroll: 1,
+//   autoplay: true,
+//   speed: 5000,
+//   autoplaySpeed: 0,
+//   cssEase: "linear",
+//   pauseOnHover: false,
+//   responsive: [
+//     {
+//       breakpoint: 1280,
+//       settings: {
+//         slidesToShow: 6,
+//         variableWidth: false,
+//       },
+//     },
+//     {
+//       breakpoint: 1180,
+//       settings: {
+//         slidesToShow: 5,
+//         variableWidth: false,
+//       },
+//     },
+//     {
+//       breakpoint: 860,
+//       settings: {
+//         slidesToShow: 4.5,
+//         variableWidth: false,
+//       },
+//     },
+//     {
+//       breakpoint: 760,
+//       settings: {
+//         slidesToShow: 3.5,
+//         variableWidth: false,
+//       },
+//     },
+//     {
+//       breakpoint: 540,
+//       settings: {
+//         slidesToShow: 3,
+//         variableWidth: false,
+//       },
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         slidesToShow: 2.2,
+//         variableWidth: false,
+//       },
+//     },
+//   ],
+// };
+const ratios = [
+  {
+    width: "95.5469px",
+    height: "28.7969px",
+  },
+  {
+    width: "119.25px",
+    height: "28.7969px",
+  },
+  {
+    width: "134.828px",
+    height: "28.7969px",
+  },
+  {
+    width: "189.234px",
+    height: "28.7969px",
+  },
+  {
+    width: "72.6094px",
+    height: "28.7969px",
+  },
+  {
+    width: "96.3906px",
+    height: "28.7969px",
+  },
+  {
+    width: "79.5781px",
+    height: "28.7969px",
+  },
+  {
+    width: "94.5312px",
+    height: "28.7969px",
+  },
+  {
+    width: "81.4688px",
+    height: "28.7969px",
+  },
+  {
+    width: "118.062px",
+    height: "28.7969px",
+  },
+  {
+    width: "108.062px",
+    height: "28.7969px",
+  },
+  {
+    width: "158.781px",
+    height: "28.7969px",
+  },
+  {
+    width: "57.5938px",
+    height: "28.7969px",
+  },
+];
 
 const SubHero = () => {
-  const [init, setInit] = useState(false);
+  // const [init, setInit] = useState(false);
 
   const ref = useRef(null);
   // useEffect(() => {
   //   if (ref.current) setInit(true);
   // }, [ref.current]);
 
-  console.log("ref.current", !!ref.current);
-
   return (
     <section className="customers customers--lg">
       <AutoContainer>
         <div className="customers__inner" ref={ref}>
           <div className="carousel">
-            <div className="carousel-track">
-              {[...logosArray].map((data, index) => (
-                <SubHeroItem key={index} {...data} />
-              ))}
-            </div>
-            <div className="carousel-track">
-              {[...logosArray].map((data, index) => (
-                <SubHeroItem key={index} {...data} />
-              ))}
-            </div>
-            <div className="carousel-track">
-              {[...logosArray].map((data, index) => (
-                <SubHeroItem key={index} {...data} />
-              ))}
-            </div>
-            <div className="carousel-track">
-              {[...logosArray].map((data, index) => (
-                <SubHeroItem key={index} {...data} />
-              ))}
-            </div>
+            <CarouselTrack logosArray={logosArray} />
+            <CarouselTrack logosArray={logosArray} />
+            <CarouselTrack logosArray={logosArray} />
+            <CarouselTrack logosArray={logosArray} />
           </div>
           {/* <div className="customers__inner-slider">
             <Slider {...sliderSettings}>
@@ -168,9 +204,28 @@ const SubHero = () => {
   );
 };
 
-const SubHeroItem = ({ href, logoLink, title, addClass = "" }) => {
+const CarouselTrack = ({ logosArray }) => {
   return (
-    <a className={` carousel-item ${addClass}`} href={href} title={title}>
+    <div className="carousel-track">
+      {[...logosArray].map((data, index) => {
+        let ratio = ratios[index];
+        let width = `${(parseInt(ratio.width) / 18).toFixed(2)}em`;
+        let height = `${(parseInt(ratio.height) / 18).toFixed(2)}em`;
+        console.log({ width, height });
+        return <SubHeroItem key={index} {...data} style={{ width, height }} />;
+      })}
+    </div>
+  );
+};
+
+const SubHeroItem = ({ href, logoLink, title, addClass = "", style }) => {
+  return (
+    <a
+      className={` carousel-item ${addClass}`}
+      href={href}
+      title={title}
+      style={style}
+    >
       <img src={logoLink} alt={title} />
     </a>
   );

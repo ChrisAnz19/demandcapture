@@ -13,9 +13,7 @@ const useHubSpotForm = ({
       window.zi_init();
     }
     const script = document.createElement("script");
-    // script.src = "https://js.hsforms.net/forms/shell.js";
-    // script.src = "https://js.hsforms.net/forms/embed/v2.js";
-    script.src = "https://js.hsforms.net/forms/embed/v3.js";
+    script.src = "https://js.hsforms.net/forms/embed/v2.js";
 
     document.body.appendChild(script);
 

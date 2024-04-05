@@ -133,21 +133,21 @@
   height: 3em;
 
   &-item {
-    flex: 0;
-    padding: 0 2.8em;
-
+    padding: 0 55px;
     height: 1.6em;
+    box-sizing: content-box;
 
     img {
       height: 100%;
       width: auto;
+      object-fit: contain;
     }
 
     &._lg {
-      height: 1.8em;
+      font-size: 1.2em;
     }
     &._xlg {
-      height: 2.5em;
+      font-size: 1.6em;
     }
   }
   &-track {
@@ -331,6 +331,9 @@
   }
   .carousel {
     font-size: 15px;
+    &-item {
+      padding: 0 40px;
+    }
   }
 }
 @include xxsm-xsm {
@@ -347,8 +350,9 @@
   }
   .carousel {
     font-size: 13px;
+
     &-item {
-      padding: 0 2.2em;
+      padding: 0 30px;
     }
   }
 }

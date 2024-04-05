@@ -7,7 +7,7 @@ const SuccessStatistics = () => {
     <div className="successStatistics">
       <div className="successStatistics__title">
         <h4>Industry Averages</h4>
-        <h4>Demand Capture</h4>
+        <h4>DemandCapture</h4>
       </div>
       <GroupRow
         content={[

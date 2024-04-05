@@ -11,7 +11,7 @@ const Research = () => {
             <div className="research__inner-content">
               <h6>According to Forrester research,</h6>
               <p>
-                “Demand Capture is the first vendor to engage a prospect and
+                “DemandCapture is the first vendor to engage a prospect and
                 guide the solution evaluation process results in a 74% win
                 rate.”
               </p>
