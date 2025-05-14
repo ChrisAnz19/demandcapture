@@ -19,10 +19,10 @@ const PartnersBanner = () => {
           <div className="partners__inner-banner">
             <h5>Our Investors & Partners</h5>
             <div className="partners__inner-banner-row">
-              <PartnersItem
+              {/* <PartnersItem
                 logoLink={logosURL + "zoominfo.svg "}
                 title={"zoominfo"}
-              />
+              /> */}
               <PartnersItem
                 logoLink={logosURL + "google-logo.svg "}
                 title={"google"}

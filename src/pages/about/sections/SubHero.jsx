@@ -9,11 +9,11 @@ const SubHero = () => {
         <div className="customers__inner">
           <h5 className="sm">Our Investors & Partners</h5>
           <div className="customers__inner-row">
-            <SubHeroItem
+            {/* <SubHeroItem
               href="/"
               logoLink={logosURL + "zoominfo_white.svg"}
               title="zoominfo"
-            />
+            /> */}
             <SubHeroItem
               href="/"
               logoLink={logosURL + "google_white.svg"}
