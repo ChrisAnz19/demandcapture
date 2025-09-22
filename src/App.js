@@ -5,7 +5,7 @@ import { Footer, Header, Nav } from "layouts";
 import usePathChange from "hooks/usePathChange";
 import ContactSalesPopup from "forms/ContactSalesPopup";
 import { SpinnerPageLoader } from "components/Spinner";
-import Home from "pages/home";
+import NewMain from "pages/NewMain";
 
 function App() {
   // --- >>>>: lazy import pagess ------
@@ -39,33 +39,124 @@ function App() {
 
   return (
     <Suspense fallback={<SpinnerPageLoader />}>
-      <Header active={menu} setActive={setMenu} headerStyle={headerStyle}>
-        <Nav
-          active={menu}
-          isHome={isHome}
-          showContactPopup={showContactPopup}
-        />
-      </Header>
       <Routes>
         <Route
           path="/"
-          element={<Home showContactPopup={showContactPopup} />}
+          element={<NewMain />}
         />
         <Route
           path="/our-process"
-          element={<OurProcess setHeaderStyle={setHeaderStyle} />}
+          element={
+            <>
+              <Header active={menu} setActive={setMenu} headerStyle={headerStyle}>
+                <Nav
+                  active={menu}
+                  isHome={isHome}
+                  showContactPopup={showContactPopup}
+                />
+              </Header>
+              <OurProcess setHeaderStyle={setHeaderStyle} />
+              <Footer showContactPopup={showContactPopup} />
+            </>
+          }
         />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/case-study" element={<Case />} />
+        <Route 
+          path="/about-us" 
+          element={
+            <>
+              <Header active={menu} setActive={setMenu} headerStyle={headerStyle}>
+                <Nav
+                  active={menu}
+                  isHome={isHome}
+                  showContactPopup={showContactPopup}
+                />
+              </Header>
+              <About />
+              <Footer showContactPopup={showContactPopup} />
+            </>
+          } 
+        />
+        <Route 
+          path="/case-study" 
+          element={
+            <>
+              <Header active={menu} setActive={setMenu} headerStyle={headerStyle}>
+                <Nav
+                  active={menu}
+                  isHome={isHome}
+                  showContactPopup={showContactPopup}
+                />
+              </Header>
+              <Case />
+              <Footer showContactPopup={showContactPopup} />
+            </>
+          } 
+        />
         <Route
           path="/pricing"
-          element={<Pricing showContactPopup={showContactPopup} />}
+          element={
+            <>
+              <Header active={menu} setActive={setMenu} headerStyle={headerStyle}>
+                <Nav
+                  active={menu}
+                  isHome={isHome}
+                  showContactPopup={showContactPopup}
+                />
+              </Header>
+              <Pricing showContactPopup={showContactPopup} />
+              <Footer showContactPopup={showContactPopup} />
+            </>
+          }
         />
-        <Route path="/policy" element={<Policy />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/contact-us" element={<Contact />} />
+        <Route 
+          path="/policy" 
+          element={
+            <>
+              <Header active={menu} setActive={setMenu} headerStyle={headerStyle}>
+                <Nav
+                  active={menu}
+                  isHome={isHome}
+                  showContactPopup={showContactPopup}
+                />
+              </Header>
+              <Policy />
+              <Footer showContactPopup={showContactPopup} />
+            </>
+          } 
+        />
+        <Route 
+          path="/terms" 
+          element={
+            <>
+              <Header active={menu} setActive={setMenu} headerStyle={headerStyle}>
+                <Nav
+                  active={menu}
+                  isHome={isHome}
+                  showContactPopup={showContactPopup}
+                />
+              </Header>
+              <Terms />
+              <Footer showContactPopup={showContactPopup} />
+            </>
+          } 
+        />
+        <Route 
+          path="/contact-us" 
+          element={
+            <>
+              <Header active={menu} setActive={setMenu} headerStyle={headerStyle}>
+                <Nav
+                  active={menu}
+                  isHome={isHome}
+                  showContactPopup={showContactPopup}
+                />
+              </Header>
+              <Contact />
+              <Footer showContactPopup={showContactPopup} />
+            </>
+          } 
+        />
       </Routes>
-      <Footer showContactPopup={showContactPopup} />
       {contactPopup && <ContactSalesPopup close={popupClose} />}
     </Suspense>
   );
