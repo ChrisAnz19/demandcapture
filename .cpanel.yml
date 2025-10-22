@@ -1,0 +1,23 @@
+---
+# cPanel Git Deployment Configuration
+# This file configures automatic deployment of the DemandCapture React application
+deployment:
+  tasks:
+    # Export the deployment path for the public_html directory
+    - export DEPLOYPATH=/home/chrisanzalone/public_html/
+    
+    # Build the React application for production
+    - npm install
+    - npm run build
+    
+    # Copy the built React files to the deployment directory
+    - /bin/cp -R build/* $DEPLOYPATH
+    
+    # Ensure proper permissions for web files
+    - chmod -R 755 $DEPLOYPATH
+    
+    # Create .htaccess file for React Router (SPA routing)
+    - echo "RewriteEngine On" > $DEPLOYPATH/.htaccess
+    - echo "RewriteCond %{REQUEST_FILENAME} !-f" >> $DEPLOYPATH/.htaccess
+    - echo "RewriteCond %{REQUEST_FILENAME} !-d" >> $DEPLOYPATH/.htaccess
+    - echo "RewriteRule . /index.html [L]" >> $DEPLOYPATH/.htaccess
