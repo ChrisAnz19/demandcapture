@@ -1,7 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/demaumbe/repositories/demandcapture
-    - /bin/cp -R * $DEPLOYPATH
-    - cd $DEPLOYPATH && npm install --production
-    - cd $DEPLOYPATH && npm run build
+    - npm install --production
+    - npm run build
