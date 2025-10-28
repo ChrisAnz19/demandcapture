@@ -1,5 +1,8 @@
 ---
 deployment:
   tasks:
-    - npm install --production
-    - npm run build
+    - export DEPLOYPATH=/home/demaumbe/appointments.demandcapture.com/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
+    - /bin/cp -R public/* $DEPLOYPATH
+    - chmod -R 755 $DEPLOYPATH
